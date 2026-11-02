@@ -32,6 +32,11 @@ data class RuntimeManifest(
             val argv = if (argvJson != null) List(argvJson.length()) { argvJson.getString(it) } else emptyList()
             val envJson = launch.optJSONObject("env") ?: JSONObject()
             val env = envJson.keys().asSequence().associateWith { envJson.getString(it) }
+            // The manifest points PROOT_LOADER at nativeLibraryDir (apk_data_file). PRoot arms
+            // PR_SET_NO_NEW_PRIVS before it execs the loader, and Android 14+ refuses that exec
+            // for apk_data_file (EACCES, unaudited), so the same binary is staged on
+            // app_data_file instead - the type PRoot's traced execs already come from.
+            val launchEnv = ProotLoader.stage(context)?.let { env + ("PROOT_LOADER" to it) } ?: env
             return RuntimeManifest(
                 runtimeVersion = json.getString("runtimeVersion"),
                 abi = json.optString("abi"),
@@ -42,7 +47,7 @@ data class RuntimeManifest(
                 dshVersion = json.optString("dshVersion"),
                 nodeVersion = json.optString("nodeVersion"),
                 launchArgv = argv,
-                launchEnv = env,
+                launchEnv = launchEnv,
                 raw = json,
             )
         }
