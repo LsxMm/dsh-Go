@@ -13,7 +13,7 @@ on:
         required: false
         default: ''
   push:
-    branches: ['build/apk']
+    branches: ['build/apk-pro']
 
 permissions:
   contents: read
