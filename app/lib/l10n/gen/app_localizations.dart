@@ -18536,6 +18536,12 @@ abstract class L10n {
   /// **'操作'**
   String get phoneToolAction;
 
+  /// No description provided for @phoneToolShell.
+  ///
+  /// In zh, this message translates to:
+  /// **'root 命令'**
+  String get phoneToolShell;
+
   /// No description provided for @phoneDecisionContinued.
   ///
   /// In zh, this message translates to:
@@ -21764,6 +21770,12 @@ abstract class L10n {
   /// **'DSH Go 自身'**
   String get phoneYoursOwnApp;
 
+  /// No description provided for @phoneYoursRootShell.
+  ///
+  /// In zh, this message translates to:
+  /// **'完整 root'**
+  String get phoneYoursRootShell;
+
   /// No description provided for @phoneYoursDenyList.
   ///
   /// In zh, this message translates to:
@@ -21817,6 +21829,18 @@ abstract class L10n {
   /// In zh, this message translates to:
   /// **'在 DSH Go 里点按和输入'**
   String get phoneUnlockOwnAppHint;
+
+  /// No description provided for @phoneUnlockRootShell.
+  ///
+  /// In zh, this message translates to:
+  /// **'完整 root'**
+  String get phoneUnlockRootShell;
+
+  /// No description provided for @phoneUnlockRootShellHint.
+  ///
+  /// In zh, this message translates to:
+  /// **'以 root 读日志、读写文件、执行命令'**
+  String get phoneUnlockRootShellHint;
 
   /// No description provided for @phoneUnlockBusy.
   ///
@@ -21877,6 +21901,12 @@ abstract class L10n {
   /// In zh, this message translates to:
   /// **'允许 AI 操作 DSH Go 自身？'**
   String get phoneUnlockConfirmOwnAppTitle;
+
+  /// No description provided for @phoneUnlockConfirmRootShellTitle.
+  ///
+  /// In zh, this message translates to:
+  /// **'允许 AI 以 root 身份执行命令？'**
+  String get phoneUnlockConfirmRootShellTitle;
 
   /// No description provided for @phoneUnlockCanTitle.
   ///
@@ -21979,6 +22009,36 @@ abstract class L10n {
   /// In zh, this message translates to:
   /// **'这些界面上的内容会发给模型'**
   String get phoneUnlockOwnAppRisk2;
+
+  /// No description provided for @phoneUnlockRootShellCan1.
+  ///
+  /// In zh, this message translates to:
+  /// **'以 root 身份执行任何 shell 命令，包括读写 /data 里所有应用的数据'**
+  String get phoneUnlockRootShellCan1;
+
+  /// No description provided for @phoneUnlockRootShellCan2.
+  ///
+  /// In zh, this message translates to:
+  /// **'读取系统日志、崩溃记录、ANR 和墓碑，用于排查问题'**
+  String get phoneUnlockRootShellCan2;
+
+  /// No description provided for @phoneUnlockRootShellCan3.
+  ///
+  /// In zh, this message translates to:
+  /// **'安装模块、改系统属性、重启或刷写分区'**
+  String get phoneUnlockRootShellCan3;
+
+  /// No description provided for @phoneUnlockRootShellRisk1.
+  ///
+  /// In zh, this message translates to:
+  /// **'root 能改动整台设备：恶意指令可能删掉应用数据、改坏系统设置，甚至让手机无法开机'**
+  String get phoneUnlockRootShellRisk1;
+
+  /// No description provided for @phoneUnlockRootShellRisk2.
+  ///
+  /// In zh, this message translates to:
+  /// **'命令和输出都会发给模型，其中可能包含其他应用的密码、聊天记录等敏感内容'**
+  String get phoneUnlockRootShellRisk2;
 
   /// No description provided for @phoneUnlockDisclaimer1.
   ///
