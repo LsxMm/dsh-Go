@@ -75,6 +75,7 @@
   "phoneToolIntent": "System action",
   "phoneToolNotify": "Send notification",
   "phoneToolClipboard": "Clipboard",
+  "phoneToolShell": "Root command",
   "phoneToolAction": "Action",
   "phoneDecisionContinued": "You continued",
   "phoneDecisionDone": "Executed",
