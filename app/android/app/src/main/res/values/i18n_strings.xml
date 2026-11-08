@@ -244,6 +244,7 @@
     <string name="phone_log_tap_xy">Tap %1$s (%2$d,%3$d)</string>
     <string name="phone_log_key">Press %1$s</string>
     <string name="phone_log_handoff">Hand over to you</string>
+    <string name="phone_log_shell">Run root command</string>
     <string name="phone_log_long_tap">Press and hold %1$s#%2$d</string>
     <string name="phone_log_tap">Tap %1$s#%2$d</string>
     <string name="phone_log_submit">, submit</string>

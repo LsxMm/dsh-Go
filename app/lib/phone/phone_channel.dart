@@ -989,6 +989,12 @@ enum PhoneUnlock {
 
   /// DSH Go's own screens.
   ownApp,
+
+  /// 完整 root: the `shell` tool runs arbitrary commands as uid 0 through `su`.
+  /// Unlike the others this is not a screen rule — it reaches every app's
+  /// private data and the whole system — so the native side also refuses it
+  /// while a task runs.
+  rootShell,
 }
 
 /// How much the person is asked before DSH acts (`confirmMode`; the wire

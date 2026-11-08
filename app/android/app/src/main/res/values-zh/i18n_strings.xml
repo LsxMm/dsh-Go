@@ -239,6 +239,7 @@
     <string name="phone_log_tap_xy">点坐标 %1$s (%2$d,%3$d)</string>
     <string name="phone_log_key">按键 %1$s</string>
     <string name="phone_log_handoff">交还用户</string>
+    <string name="phone_log_shell">执行 root 命令</string>
     <string name="phone_log_long_tap">长按 %1$s#%2$d</string>
     <string name="phone_log_tap">点 %1$s#%2$d</string>
     <string name="phone_log_submit">，提交</string>
