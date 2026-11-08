@@ -1321,7 +1321,7 @@ class PhoneCore(
         }
         val timeout = (a.int("timeout_ms") ?: DEFAULT_SHELL_TIMEOUT_MS.toInt()).toLong()
             .coerceIn(RootShell.MIN_TIMEOUT_MS, RootShell.MAX_TIMEOUT_MS)
-        val result = rootShell.exec(command, a.str("cwd"), timeout)
+        val result = rootShell.run(command, a.str("cwd"), timeout)
         val text = buildString {
             if (result.timedOut) {
                 // l10n:keep agent tool result
