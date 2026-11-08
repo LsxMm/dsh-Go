@@ -26,7 +26,7 @@ class RootShell(private val spawn: (List<String>) -> Process = { ProcessBuilder(
         val started: Boolean = true,
     )
 
-    fun exec(command: String, cwd: String?, timeoutMs: Long): Result {
+    fun run(command: String, cwd: String?, timeoutMs: Long): Result {
         val shell = command.trim()
         if (shell.isEmpty()) return Result(false, -1, "", "命令为空")
         val line = if (cwd.isNullOrBlank()) shell else "cd " + quote(cwd.trim()) + " && " + shell
