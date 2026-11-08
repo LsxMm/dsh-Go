@@ -10325,6 +10325,9 @@ class L10nEn extends L10n {
   String get phoneToolAction => 'Action';
 
   @override
+  String get phoneToolShell => 'Root command';
+
+  @override
   String get phoneDecisionContinued => 'You continued';
 
   @override
@@ -12263,6 +12266,9 @@ class L10nEn extends L10n {
   String get phoneYoursOwnApp => 'DSH Go itself';
 
   @override
+  String get phoneYoursRootShell => 'Full root';
+
+  @override
   String get phoneYoursDenyList => 'Apps set to Hands off in App rules, banking and payment by default';
 
   @override
@@ -12288,6 +12294,12 @@ class L10nEn extends L10n {
 
   @override
   String get phoneUnlockOwnAppHint => 'Tap and type inside DSH Go';
+
+  @override
+  String get phoneUnlockRootShell => 'Full root';
+
+  @override
+  String get phoneUnlockRootShellHint => 'Read logs, read and write files, run commands as root';
 
   @override
   String get phoneUnlockBusy => 'Can’t turn on while a task is running';
@@ -12321,6 +12333,9 @@ class L10nEn extends L10n {
 
   @override
   String get phoneUnlockConfirmOwnAppTitle => 'Let AI operate DSH Go itself?';
+
+  @override
+  String get phoneUnlockConfirmRootShellTitle => 'Let AI run commands as root?';
 
   @override
   String get phoneUnlockCanTitle => 'Once on, AI can';
@@ -12377,6 +12392,21 @@ class L10nEn extends L10n {
 
   @override
   String get phoneUnlockOwnAppRisk2 => 'What’s on these screens is sent to the model';
+
+  @override
+  String get phoneUnlockRootShellCan1 => 'Run any shell command as root, including reading and writing every app’s data under /data';
+
+  @override
+  String get phoneUnlockRootShellCan2 => 'Read system logs, crash reports, ANRs and tombstones to diagnose problems';
+
+  @override
+  String get phoneUnlockRootShellCan3 => 'Install modules, change system properties, reboot or flash partitions';
+
+  @override
+  String get phoneUnlockRootShellRisk1 => 'Root can change the whole device: malicious instructions could delete app data, break system settings, or stop the phone from booting';
+
+  @override
+  String get phoneUnlockRootShellRisk2 => 'Commands and their output go to the model and may contain other apps’ passwords, chats and other sensitive content';
 
   @override
   String get phoneUnlockDisclaimer1 => 'Once on, AI can do the above without anyone confirming.';

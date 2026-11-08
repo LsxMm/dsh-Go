@@ -73,7 +73,7 @@ class PhoneToolSchemaTest {
         }
         assertFalse(json.contains("\"minimum\""))
         assertFalse(json.contains("\"maximum\""))
-        assertEquals(13, PhoneToolCatalog.tools.size)
+        assertEquals(14, PhoneToolCatalog.tools.size)
         val tap = PhoneToolCatalog.tools.single { it.name == PhoneToolCatalog.TAP_XY }
         assertEquals(listOf("observation", "x", "y"), tap.required)
         assertEquals(listOf("observation", "x", "y", "action", "x2", "y2", "duration_ms"), tap.properties.keys.toList())

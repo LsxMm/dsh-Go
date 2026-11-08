@@ -22,6 +22,7 @@ object PhoneToolCatalog {
     const val KEY = "key"
     const val TAP_XY = "tap_xy"
     const val HANDOFF = "handoff"
+    const val SHELL = "shell"
 
     class Tool(val name: String, val description: String, val properties: Map<String, Any?>, val required: List<String>) {
         fun toJson(): Map<String, Any?> = linkedMapOf(
@@ -252,6 +253,21 @@ object PhoneToolCatalog {
             // l10n:keep agent tool catalog
             linkedMapOf("reason" to str("要用户做什么，一句话")),
             listOf("reason"),
+        ),
+        Tool(
+            SHELL,
+            // l10n:keep agent tool catalog
+            "以 root 身份执行一条 shell 命令，读日志、读写 /data、跑系统工具。需要用户先在 设置 › 手机操控 › 解除限制 里打开「完整 root」。",
+            // l10n:keep agent tool catalog
+            linkedMapOf(
+                // l10n:keep agent tool catalog
+                "command" to str("要执行的命令，例如 ls -l /data/anr 或 logcat -d -b crash -t 200"),
+                // l10n:keep agent tool catalog
+                "cwd" to str("先切到这个目录再执行，可省略"),
+                // l10n:keep agent tool catalog
+                "timeout_ms" to int("超时毫秒数，1–120000，默认 30000"),
+            ),
+            listOf("command"),
         ),
     )
 

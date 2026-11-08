@@ -9826,6 +9826,9 @@ class L10nZh extends L10n {
   String get phoneToolAction => '操作';
 
   @override
+  String get phoneToolShell => 'root 命令';
+
+  @override
   String get phoneDecisionContinued => '你点了继续';
 
   @override
@@ -11648,6 +11651,9 @@ class L10nZh extends L10n {
   String get phoneYoursOwnApp => 'DSH Go 自身';
 
   @override
+  String get phoneYoursRootShell => '完整 root';
+
+  @override
   String get phoneYoursDenyList => '应用名单里「不碰」的 App，默认含银行、支付类';
 
   @override
@@ -11673,6 +11679,12 @@ class L10nZh extends L10n {
 
   @override
   String get phoneUnlockOwnAppHint => '在 DSH Go 里点按和输入';
+
+  @override
+  String get phoneUnlockRootShell => '完整 root';
+
+  @override
+  String get phoneUnlockRootShellHint => '以 root 读日志、读写文件、执行命令';
 
   @override
   String get phoneUnlockBusy => '任务进行中，结束后才能开启';
@@ -11706,6 +11718,9 @@ class L10nZh extends L10n {
 
   @override
   String get phoneUnlockConfirmOwnAppTitle => '允许 AI 操作 DSH Go 自身？';
+
+  @override
+  String get phoneUnlockConfirmRootShellTitle => '允许 AI 以 root 身份执行命令？';
 
   @override
   String get phoneUnlockCanTitle => '开启后，AI 可以';
@@ -11757,6 +11772,21 @@ class L10nZh extends L10n {
 
   @override
   String get phoneUnlockOwnAppRisk2 => '这些界面上的内容会发给模型';
+
+  @override
+  String get phoneUnlockRootShellCan1 => '以 root 身份执行任何 shell 命令，包括读写 /data 里所有应用的数据';
+
+  @override
+  String get phoneUnlockRootShellCan2 => '读取系统日志、崩溃记录、ANR 和墓碑，用于排查问题';
+
+  @override
+  String get phoneUnlockRootShellCan3 => '安装模块、改系统属性、重启或刷写分区';
+
+  @override
+  String get phoneUnlockRootShellRisk1 => 'root 能改动整台设备：恶意指令可能删掉应用数据、改坏系统设置，甚至让手机无法开机';
+
+  @override
+  String get phoneUnlockRootShellRisk2 => '命令和输出都会发给模型，其中可能包含其他应用的密码、聊天记录等敏感内容';
 
   @override
   String get phoneUnlockDisclaimer1 => '开启后，AI 可以在无人确认的情况下执行上述操作。';
