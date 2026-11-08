@@ -9,7 +9,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'harness.dart';
 import 'support.dart';
 
-const command = 'adb shell pm grant io.github.ccch1mneyyy.dsh_app android.permission.WRITE_SECURE_SETTINGS';
+const command = 'adb shell pm grant io.github.social.dsh_app android.permission.WRITE_SECURE_SETTINGS';
 
 void main() {
   setUp(() => SharedPreferences.setMockInitialValues({}));
