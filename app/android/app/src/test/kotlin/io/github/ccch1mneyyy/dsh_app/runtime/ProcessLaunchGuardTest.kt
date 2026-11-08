@@ -119,6 +119,10 @@ class ProcessLaunchGuardTest {
         // The bounded privileged logcat reader also uses Java's fd-closing launcher.
         // The test below restricts this owner to one fixed-command ProcessBuilder.
         diagnosticJavaOwner,
+        // 解除限制 › 完整 root: `su -c <command>` from the app process. Same fd-closing
+        // ProcessBuilder child as the root channel; only reachable while the person
+        // turned the 完整 root rule on, and PhoneCore checks that before calling.
+        "app/android/app/src/main/kotlin/io/github/ccch1mneyyy/dsh_app/phone/RootShell.kt",
     )
     private val localHelper = "app/lib/remote/ssh/remote_shell.dart"
 
