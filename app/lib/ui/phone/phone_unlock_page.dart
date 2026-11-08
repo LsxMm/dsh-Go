@@ -43,18 +43,21 @@ extension PhoneUnlockText on PhoneUnlock {
     PhoneUnlock.systemPages => l10n.phoneUnlockSystem,
     PhoneUnlock.secretFields => l10n.phoneUnlockSecrets,
     PhoneUnlock.ownApp => l10n.phoneUnlockOwnApp,
+    PhoneUnlock.rootShell => l10n.phoneUnlockRootShell,
   };
 
   String hint(L10n l10n) => switch (this) {
     PhoneUnlock.systemPages => l10n.phoneUnlockSystemHint,
     PhoneUnlock.secretFields => l10n.phoneUnlockSecretsHint,
     PhoneUnlock.ownApp => l10n.phoneUnlockOwnAppHint,
+    PhoneUnlock.rootShell => l10n.phoneUnlockRootShellHint,
   };
 
   IconData get icon => switch (this) {
     PhoneUnlock.systemPages => AppIcons.unlockSystem,
     PhoneUnlock.secretFields => AppIcons.unlockSecrets,
     PhoneUnlock.ownApp => AppIcons.unlockOwnApp,
+    PhoneUnlock.rootShell => AppIcons.terminal,
   };
 
   /// What stays with the person while this rule holds (确认方式's list).
@@ -62,12 +65,14 @@ extension PhoneUnlockText on PhoneUnlock {
     PhoneUnlock.systemPages => l10n.phoneYoursSystem,
     PhoneUnlock.secretFields => l10n.phoneYoursSecrets,
     PhoneUnlock.ownApp => l10n.phoneYoursOwnApp,
+    PhoneUnlock.rootShell => l10n.phoneYoursRootShell,
   };
 
   String confirmTitle(L10n l10n) => switch (this) {
     PhoneUnlock.systemPages => l10n.phoneUnlockConfirmSystemTitle,
     PhoneUnlock.secretFields => l10n.phoneUnlockConfirmSecretsTitle,
     PhoneUnlock.ownApp => l10n.phoneUnlockConfirmOwnAppTitle,
+    PhoneUnlock.rootShell => l10n.phoneUnlockConfirmRootShellTitle,
   };
 
   /// 开启后，AI 可以.
@@ -75,6 +80,11 @@ extension PhoneUnlockText on PhoneUnlock {
     PhoneUnlock.systemPages => [l10n.phoneUnlockSystemCan1, l10n.phoneUnlockSystemCan2, l10n.phoneUnlockSystemCan3],
     PhoneUnlock.secretFields => [l10n.phoneUnlockSecretsCan1, l10n.phoneUnlockSecretsCan2, l10n.phoneUnlockSecretsCan3],
     PhoneUnlock.ownApp => [l10n.phoneUnlockOwnAppCan1, l10n.phoneUnlockOwnAppCan2],
+    PhoneUnlock.rootShell => [
+      l10n.phoneUnlockRootShellCan1,
+      l10n.phoneUnlockRootShellCan2,
+      l10n.phoneUnlockRootShellCan3,
+    ],
   };
 
   /// 可能出什么事.
@@ -82,6 +92,7 @@ extension PhoneUnlockText on PhoneUnlock {
     PhoneUnlock.systemPages => [l10n.phoneUnlockSystemRisk1, l10n.phoneUnlockSystemRisk2],
     PhoneUnlock.secretFields => [l10n.phoneUnlockSecretsRisk1, l10n.phoneUnlockSecretsRisk2],
     PhoneUnlock.ownApp => [l10n.phoneUnlockOwnAppRisk1, l10n.phoneUnlockOwnAppRisk2],
+    PhoneUnlock.rootShell => [l10n.phoneUnlockRootShellRisk1, l10n.phoneUnlockRootShellRisk2],
   };
 }
 
