@@ -75,6 +75,7 @@
   "phoneToolIntent": "系统动作",
   "phoneToolNotify": "发通知",
   "phoneToolClipboard": "剪贴板",
+  "phoneToolShell": "root 命令",
   "phoneToolAction": "操作",
   "phoneDecisionContinued": "你点了继续",
   "phoneDecisionDone": "已执行",
