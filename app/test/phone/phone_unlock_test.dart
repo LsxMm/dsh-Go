@@ -54,13 +54,14 @@ void main() {
   setUp(() => SharedPreferences.setMockInitialValues({}));
 
   group('the page', () {
-    testWidgets('all three off by default, with the 不碰 list next door', (tester) async {
+    testWidgets('all four off by default, with the 不碰 list next door', (tester) async {
       await pumpPhone(tester, const PhoneUnlockPage());
       expect(find.text('解除限制'), findsWidgets);
       for (final (unlock, title, hint) in [
         (PhoneUnlock.systemPages, '系统设置', '含权限页、安装器、安全中心、通知栏'),
         (PhoneUnlock.secretFields, '密码和验证码', '填写密码、验证码和支付密码'),
         (PhoneUnlock.ownApp, 'DSH Go 自身', '在 DSH Go 里点按和输入'),
+        (PhoneUnlock.rootShell, '完整 root', '以 root 读日志、读写文件、执行命令'),
       ]) {
         expect(find.text(title), findsOneWidget);
         expect(find.text(hint), findsOneWidget);
