@@ -50,13 +50,21 @@ data class PhoneUnlocks(
     val secretFields: Boolean = false,
     /** DSH Go's own screens (not its overlay, which the screen reader never sees). */
     val ownApp: Boolean = false,
+    /**
+     * 完整 root: the `shell` tool runs arbitrary commands as uid 0 through `su`. This is not a
+     * screen rule — it reaches every app's private data and the whole system — so it stays off
+     * unless the person turns it on, and [PhoneCore] refuses the tool whenever a task is running
+     * on someone else's behalf without it.
+     */
+    val rootShell: Boolean = false,
 ) {
-    val any: Boolean get() = systemPages || secretFields || ownApp
+    val any: Boolean get() = systemPages || secretFields || ownApp || rootShell
 
     fun toMap(): Map<String, Any?> = linkedMapOf(
         "systemPages" to systemPages,
         "secretFields" to secretFields,
         "ownApp" to ownApp,
+        "rootShell" to rootShell,
     )
 
     companion object {
@@ -66,6 +74,7 @@ data class PhoneUnlocks(
                 flag("systemPages", base.systemPages),
                 flag("secretFields", base.secretFields),
                 flag("ownApp", base.ownApp),
+                flag("rootShell", base.rootShell),
             )
         }
     }

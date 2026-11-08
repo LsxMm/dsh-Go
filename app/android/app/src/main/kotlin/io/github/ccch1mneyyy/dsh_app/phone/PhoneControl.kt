@@ -101,6 +101,7 @@ class PhoneControl private constructor(private val app: Context) : PhoneEnv, Con
             "phone_log_tap_xy" -> R.string.phone_log_tap_xy
             "phone_log_key" -> R.string.phone_log_key
             "phone_log_handoff" -> R.string.phone_log_handoff
+            "phone_log_shell" -> R.string.phone_log_shell
             "phone_log_long_tap" -> R.string.phone_log_long_tap
             "phone_log_tap" -> R.string.phone_log_tap
             "phone_log_submit" -> R.string.phone_log_submit

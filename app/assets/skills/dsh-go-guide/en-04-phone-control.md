@@ -99,11 +99,12 @@ Set each app to **Hands off**, **Every step** or **As usual**. Payment, banking 
 <!-- nav: commonSettings,hubSettingsPhoneControl,phoneUnlockTitle -->
 `Settings › Phone control › Lift limits` · [Open](dshgo://open/phone-unlocks)
 
-All three are off by default, and each turns on separately:
+All four are off by default, and each turns on separately:
 
 - **System settings**: permissions, installers, security center, notifications.
 - **Passwords and codes**: fill in passwords, verification and payment codes. The action log shows •••• and never what was typed.
 - **DSH Go itself**: tap and type inside DSH Go.
+- **Full root**: AI can run commands as root through `su`, read and write logs and every app's data under /data. The device must be rooted (Magisk, KernelSU, APatch and so on); your root manager asks the first time, and su never runs before that. The page spells out that commands and their output go to the model, and that root can change the whole device.
 
 Turning one on opens a page first: what AI can then do, what could go wrong, and the disclaimer below. Press and hold **I understand the risks, turn on** for about 1.5 seconds to apply it. Turning one off takes a single tap. Nothing can be turned on while a task is running. While any is on, the Phone control page shows **Limits lifted**, the floating bar puts a small lock before its line, and **Limits lifted** in its card brings you back here. Banking and payment apps aren't here; change them in **App rules**.
 

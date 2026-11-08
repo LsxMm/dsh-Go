@@ -43,6 +43,9 @@ class PhoneCore(
     private val ui: PhoneUiText get() = env.uiText()
     val safety = SafetyGate(env::policies, tasks, env::gate, uiText = env.uiText())
 
+    /** Runs `su -c` for the `shell` tool; replaced in the JVM tests. */
+    var rootShell: RootShell = RootShell()
+
     /** The overlay's status line; 免确认 stays visible the whole time nothing is asked. */
     private fun say(text: String) {
         env.gate()?.status(if (safety.waived()) ui.get("phone_waived_status", "免确认 · %1\$s", text) else text) // l10n:keep test default
@@ -166,6 +169,7 @@ class PhoneCore(
             PhoneToolCatalog.TAP, PhoneToolCatalog.TYPE, PhoneToolCatalog.SCROLL, PhoneToolCatalog.TAP_XY -> act(name, a, scope, owner)
             PhoneToolCatalog.KEY -> key(a, owner)
             PhoneToolCatalog.HANDOFF -> handoff(a, scope, owner)
+            PhoneToolCatalog.SHELL -> shell(a, owner)
             // l10n:keep agent tool result
             else -> Out("没有这个手机工具：$name", error = true)
         }
@@ -699,6 +703,55 @@ class PhoneCore(
         }
     }
 
+    // ── 完整 root ───────────────────────────────────────────────────────────────────
+
+    /**
+     * The `shell` tool: one command as uid 0. Refused unless the person turned 完整 root on —
+     * the check reads the live policies, so switching the rule off closes this at once.
+     */
+    private fun shell(a: Args, owner: PhoneTasks.Owner): Out {
+        if (!current(owner)) return stoppedOut(PhoneToolCatalog.SHELL)
+        val command = a.text("command")?.trim().orEmpty()
+        // l10n:keep agent tool result
+        if (command.isEmpty()) return Out("shell 需要 command。", error = true)
+        if (!env.policies().unlocks.rootShell) {
+            // l10n:keep agent tool result
+            return Out(
+                "完整 root 没打开。请用户在 设置 › 手机操控 › 解除限制 里打开「完整 root」，" +
+                    "确认后会执行的命令以 root 身份运行。",
+                error = true,
+            )
+        }
+        val timeout = (a.int("timeout_ms") ?: DEFAULT_SHELL_TIMEOUT_MS.toInt()).toLong()
+            .coerceIn(RootShell.MIN_TIMEOUT_MS, RootShell.MAX_TIMEOUT_MS)
+        val result = rootShell.exec(command, a.str("cwd"), timeout)
+        val text = buildString {
+            if (result.timedOut) {
+                // l10n:keep agent tool result
+                append("命令超时（").append(timeout).append(" ms），已终止。\n")
+            } else {
+                // l10n:keep agent tool result
+                append("exit ").append(result.exitCode).append('\n')
+            }
+            if (result.stdout.isNotEmpty()) append(result.stdout.trimEnd())
+            if (result.stderr.isNotEmpty()) {
+                if (isNotEmpty() && !endsWith('\n')) append('\n')
+                // l10n:keep agent tool result
+                append("stderr:\n").append(result.stderr.trimEnd())
+            }
+            if (result.stdout.isEmpty() && result.stderr.isEmpty() && !result.timedOut) {
+                // l10n:keep agent tool result
+                append("（没有输出）")
+            }
+        }
+        return Out(
+            text,
+            error = !result.ok,
+            summary = ui.get("phone_log_shell", "执行 root 命令"),
+            decision = if (result.ok) "ok" else "error",
+        )
+    }
+
     private fun stoppedOut(summary: String) = Out(PhoneTasks.STOPPED_MESSAGE + "。", error = true,
         summary = summary, decision = "stopped")
 
@@ -713,6 +766,7 @@ class PhoneCore(
         private val DONE = setOf("ok", "allowed", "confirmed", "confirmed-app", "confirmed-task")
         const val SETTLE_AFTER_LAUNCH_MS = 1200L
         const val MAX_APPS = 150
+        const val DEFAULT_SHELL_TIMEOUT_MS = 30_000L
         const val MAX_COLLECT_CHARS = 16_000
 
         /** The call's own time, not counting waits for the person. */
@@ -723,6 +777,7 @@ class PhoneCore(
             PhoneToolCatalog.SCREEN -> 12_000L
             PhoneToolCatalog.COLLECT -> 120_000L
             PhoneToolCatalog.HANDOFF -> 30_000L
+            PhoneToolCatalog.SHELL -> 125_000L
             else -> 30_000L
         }
     }
