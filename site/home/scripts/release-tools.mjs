@@ -80,7 +80,7 @@ export async function validateConfig(config, distRoot = resolve(projectRoot, 'di
   }
 
   requiredText(author.id, 'author.id');
-  if (['DSH-GO 作者', 'DSH Go 作者'].includes(text(author.id))) error('author.id', '仍为默认占位 ID，请填写软件作者自己的 ID。');
+  if (['DSH-GO 作者', 'DSH Pro 作者'].includes(text(author.id))) error('author.id', '仍为默认占位 ID，请填写软件作者自己的 ID。');
   await image(author.avatar, 'author.avatar'); // Empty/default brand avatar is allowed.
   if (!text(author.message)) warn('author.message', '作者自述为空；如不打算留空，可保留原介绍。');
   requiredText(repository.label, 'repository.label');
@@ -129,7 +129,7 @@ export function metadataBlock(metadata) {
   const meta = (kind, name, value) => lines.push(`  <meta ${kind}="${name}" content="${escapeHtml(value)}">`);
   meta('name', 'description', metadata.description);
   meta('property', 'og:type', 'website');
-  meta('property', 'og:site_name', 'DSH Go');
+  meta('property', 'og:site_name', 'DSH Pro');
   meta('property', 'og:locale', 'zh_CN');
   meta('property', 'og:title', metadata.title);
   meta('property', 'og:description', metadata.description);

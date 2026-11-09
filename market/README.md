@@ -1,8 +1,8 @@
-# DSH Go 插件市场
+# DSH Pro 插件市场
 
-这是待拆出到公开仓库 `ccch1mneyyy/dsh-go-market` 的完整目录。安装入口是 DSH Go 的插件市场；本仓库只维护锁定版本的目录与静态检查结果，不托管或执行插件代码。
+这是待拆出到公开仓库 `ccch1mneyyy/dsh-go-market` 的完整目录。安装入口是 DSH Pro 的插件市场；本仓库只维护锁定版本的目录与静态检查结果，不托管或执行插件代码。
 
-发布产物：`index.json` 使用 DSH 格式 1，`dsh-go.json` 使用 DSH Go sidecar schema 1，`audit.json` 保留本次结构化扫描证据。Worker 对外提供 `https://go.dshtui.com/market/`，分享页为 `https://go.dshtui.com/p/<encodeURIComponent(包名)>`。
+发布产物：`index.json` 使用 DSH 格式 1，`dsh-go.json` 使用 DSH Pro sidecar schema 1，`audit.json` 保留本次结构化扫描证据。Worker 对外提供 `https://go.dshtui.com/market/`，分享页为 `https://go.dshtui.com/p/<encodeURIComponent(包名)>`。
 
 ## 提交插件
 
@@ -53,7 +53,7 @@ npm run watch                 # 查 dist-tags.latest 并检查新版，输出 re
 
 ## 原生适配声明
 
-复用 DSH Go 已有 `package.json.dshGo` 协议 v1，不引入另一套清单：
+复用 DSH Pro 已有 `package.json.dshGo` 协议 v1，不引入另一套清单：
 
 ```json
 {"dshGo":{"v":1,"minApp":"1.0.3","contributes":{}}}

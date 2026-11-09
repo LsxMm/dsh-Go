@@ -8,7 +8,7 @@
   const { safeUrl } = window.DSH_GO_UTILS;
   function configuredImage(value, field) {
     const url = safeUrl(value, true);
-    if (value && !url) console.warn(`[DSH Go 配置] ${field} 无效：本地图片路径应以 assets/ 开头，不要加 dist/、../ 或 ?v=；也可填写完整 HTTP(S) 图片地址。图片更新建议换文件名。`);
+    if (value && !url) console.warn(`[DSH Pro 配置] ${field} 无效：本地图片路径应以 assets/ 开头，不要加 dist/、../ 或 ?v=；也可填写完整 HTTP(S) 图片地址。图片更新建议换文件名。`);
     return url;
   }
   const authorImage = configuredImage(author.avatar, 'author.avatar');
@@ -26,7 +26,7 @@
     }
     return Boolean(url);
   }
-  document.querySelector('#download-label').textContent = text(download.label, '下载 DSH Go');
+  document.querySelector('#download-label').textContent = text(download.label, '下载 DSH Pro');
   document.querySelector('#platform-label').textContent = text(download.platform, 'Android · arm64');
   document.querySelector('#repository-label').textContent = text(repository.label, 'github / 仓库即将公布');
   setLink(document.querySelector('.repo-line'), repository.url);
@@ -39,11 +39,11 @@
   const downloadLink = document.querySelector('#download-link');
   const altLink = document.querySelector('#download-alt-link');
   avatar.addEventListener('error', () => {
-    console.warn('[DSH Go 配置] author.avatar 加载失败。请检查文件名大小写、图片是否随 dist 上传，运行 npm run check:content 检查本地文件。已尝试回退品牌图标。');
+    console.warn('[DSH Pro 配置] author.avatar 加载失败。请检查文件名大小写、图片是否随 dist 上传，运行 npm run check:content 检查本地文件。已尝试回退品牌图标。');
     if (avatar.getAttribute('src') !== 'assets/dsh-go.svg') avatar.src = 'assets/dsh-go.svg';
   });
   qr.addEventListener('error', () => {
-    console.warn('[DSH Go 配置] download.qrImage 加载失败。请检查图片路径和文件是否已上传；二维码不会自动生成。');
+    console.warn('[DSH Pro 配置] download.qrImage 加载失败。请检查图片路径和文件是否已上传；二维码不会自动生成。');
     qr.hidden = true;
     qrNote.hidden = false;
     qrNote.textContent = '二维码暂时无法显示，请稍后再试。';
@@ -52,16 +52,16 @@
     button.addEventListener('click', () => {
       const about = button.dataset.dialog === 'about';
       avatar.src = about ? authorImage || 'assets/dsh-go.svg' : 'assets/dsh-go.svg';
-      avatar.alt = about ? text(author.id, 'DSH Go 作者') + '的头像' : '';
-      dialog.querySelector('.dialog-eyebrow').textContent = about ? 'DSH Go · DEVELOPER' : 'DSH Go · DOWNLOAD';
-      document.querySelector('#dialog-title').textContent = about ? text(author.id, 'DSH Go 作者') : text(download.title, '获取 DSH Go');
+      avatar.alt = about ? text(author.id, 'DSH Pro 作者') + '的头像' : '';
+      dialog.querySelector('.dialog-eyebrow').textContent = about ? 'DSH Pro · DEVELOPER' : 'DSH Pro · DOWNLOAD';
+      document.querySelector('#dialog-title').textContent = about ? text(author.id, 'DSH Pro 作者') : text(download.title, '获取 DSH Pro');
       document.querySelector('#dialog-description').textContent = about ? text(author.message) : text(download.description, '下载信息即将公布。');
       document.querySelector('#download-details').hidden = about;
       if (!about) {
         const image = downloadImage;
         qr.hidden = !image;
         qrNote.hidden = !image;
-        qrNote.textContent = text(download.qrNote, '扫码获取 DSH Go');
+        qrNote.textContent = text(download.qrNote, '扫码获取 DSH Pro');
         if (image) qr.src = image;
         else qr.removeAttribute('src');
         downloadLink.hidden = !setLink(downloadLink, download.url);

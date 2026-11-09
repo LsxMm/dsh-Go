@@ -78,7 +78,7 @@ def main():
              (datetime.datetime.now(datetime.timezone.utc) + datetime.timedelta(hours=8)).date().isoformat())
     window = [shift(today, -i) for i in range(days - 1, -1, -1)]
     inside = set(window)
-    print(f"DSH Go 统计 · {window[0]} – {window[-1]}（UTC+8）")
+    print(f"DSH Pro 统计 · {window[0]} – {window[-1]}（UTC+8）")
 
     # ── Downloads ──
     clicks = defaultdict(float)

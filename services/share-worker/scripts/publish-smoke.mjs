@@ -51,7 +51,7 @@ function makeDist(version) {
   const patch = file(patchName(version), 70_000);
   writeFileSync(join(dir, 'SHA256SUMS'), sums.join('\n') + '\n');
   writeFileSync(join(dir, 'update.json'), JSON.stringify({
-    schema: 1, version: `${version}+10291200`, tag: `v${version}`, title: `DSH Go ${version}`, publishedAt: '2026-10-29T04:00:00Z',
+    schema: 1, version: `${version}+10291200`, tag: `v${version}`, title: `DSH Pro ${version}`, publishedAt: '2026-10-29T04:00:00Z',
     notes: '', page: `https://github.com/ccch1mneyyy/dsh-go/releases/tag/v${version}`, assets,
     patches: { arm64: [{ from: 'ab'.repeat(32), fromVersion: '0.9.0+10200000', ...patch }] },
   }, null, 2));
@@ -247,7 +247,7 @@ async function realRun(mode, provider) {
     check(readFileSync(join(served, 'dl', 'download', VERSION, 'update.json'), 'utf8') === readFileSync(join(served, 'dl', 'update.json'), 'utf8'), `${mode}: dl keeps the version's copy`);
     const gh = JSON.parse(readFileSync(join(served, 'gh', tag, 'update.json'), 'utf8'));
     const release = JSON.parse(readFileSync(join(served, 'gh', tag, '.release.json'), 'utf8'));
-    check(!existsSync(join(served, 'gh', '_drafts', tag)) && release.title === `DSH Go ${VERSION}` && /### 中文\n[\s\S]+\n### English\n/.test(release.notes), `${mode}: GitHub release published, notes from the changelog`);
+    check(!existsSync(join(served, 'gh', '_drafts', tag)) && release.title === `DSH Pro ${VERSION}` && /### 中文\n[\s\S]+\n### English\n/.test(release.notes), `${mode}: GitHub release published, notes from the changelog`);
     check(!('url' in gh.assets.arm64) && !('routes' in gh) && gh.notesByLocale.en, `${mode}: GitHub's update.json lets the app use GitHub URLs`);
     check(existsSync(join(served, 'gh', tag, patchName(VERSION))) && gh.patches.arm64[0].sha256 === dl.patches.arm64[0].sha256 && release.notes.includes('`*.dshdelta`'), `${mode}: GitHub has the patch too, and says what it is`);
     check(!existsSync(join(served, 'gh', tag, `dsh-go-${VERSION}-x64.apk`)) && existsSync(join(served, 'gh', tag, `dsh-go-${VERSION}-arm64.apk`))

@@ -11,7 +11,7 @@ const dist = resolve(projectRoot, 'dist');
 /** The handoff template's placeholders (the live config is filled in). */
 function template() {
   const config = structuredClone(original);
-  config.author = { ...config.author, avatar: 'assets/dsh-go.svg', id: 'DSH Go 作者' };
+  config.author = { ...config.author, avatar: 'assets/dsh-go.svg', id: 'DSH Pro 作者' };
   config.download = { ...config.download, description: '公测已经开始，下载信息即将公布。', qrImage: '', url: '', altUrl: '' };
   config.repository = { label: 'github / 仓库即将公布', url: '' };
   config.metadata = { ...config.metadata, siteUrl: '', shareImage: '' };

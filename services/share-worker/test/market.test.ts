@@ -18,7 +18,7 @@ const entry = {
 const docs = () => ({
   index: {
     format: 1,
-    title: { en: 'DSH Go' },
+    title: { en: 'DSH Pro' },
     plugins: [{ name: '@scope/plugin', versions: [{ version: '1.2.3', source: { type: 'npm' } }] }],
   },
   sidecar: { schema: 1, generatedAt: '2026-10-30T00:00:00Z', plugins: { '@scope/plugin': structuredClone(entry) } },
