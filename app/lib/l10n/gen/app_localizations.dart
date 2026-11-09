@@ -113,13 +113,13 @@ abstract class L10n {
   /// No description provided for @a11yRestoreNotice.
   ///
   /// In zh, this message translates to:
-  /// **'开启后，在系统设置里关掉无障碍会被自动打开；要关闭手机操控，请在 DSH Go 里关。'**
+  /// **'开启后，在系统设置里关掉无障碍会被自动打开；要关闭手机操控，请在 DSH Pro 里关。'**
   String get a11yRestoreNotice;
 
   /// No description provided for @a11yRestoreForceStop.
   ///
   /// In zh, this message translates to:
-  /// **'被强制停止后，重新打开 DSH Go 才能恢复。'**
+  /// **'被强制停止后，重新打开 DSH Pro 才能恢复。'**
   String get a11yRestoreForceStop;
 
   /// No description provided for @a11yRestoreGrant.
@@ -191,7 +191,7 @@ abstract class L10n {
   /// No description provided for @accessPickTitle.
   ///
   /// In zh, this message translates to:
-  /// **'想让 DSH Go 帮你做哪些事'**
+  /// **'想让 DSH Pro 帮你做哪些事'**
   String get accessPickTitle;
 
   /// No description provided for @accessPickMessage.
@@ -449,7 +449,7 @@ abstract class L10n {
   /// No description provided for @accessPopupWhy.
   ///
   /// In zh, this message translates to:
-  /// **'手机操控做完能回到 DSH Go'**
+  /// **'手机操控做完能回到 DSH Pro'**
   String get accessPopupWhy;
 
   /// No description provided for @accessVivoPopupPath.
@@ -4841,7 +4841,7 @@ abstract class L10n {
   /// No description provided for @botsProjectHome.
   ///
   /// In zh, this message translates to:
-  /// **'DSH Go 项目主页'**
+  /// **'DSH Pro 项目主页'**
   String get botsProjectHome;
 
   /// No description provided for @botsOpenSource.
@@ -10817,7 +10817,7 @@ abstract class L10n {
   /// No description provided for @engineAccountReturnToDsh.
   ///
   /// In zh, this message translates to:
-  /// **'登录完成后回到 DSH Go'**
+  /// **'登录完成后回到 DSH Pro'**
   String get engineAccountReturnToDsh;
 
   /// No description provided for @engineAccountFinishingSignIn.
@@ -15203,7 +15203,7 @@ abstract class L10n {
   /// No description provided for @hubSettingsStorageDenied.
   ///
   /// In zh, this message translates to:
-  /// **'没有拿到存储权限。到系统设置里给 DSH Go 开启「所有文件访问」后再试'**
+  /// **'没有拿到存储权限。到系统设置里给 DSH Pro 开启「所有文件访问」后再试'**
   String get hubSettingsStorageDenied;
 
   /// No description provided for @hubSettingsRestartRequired.
@@ -15845,13 +15845,13 @@ abstract class L10n {
   /// No description provided for @hubAbout.
   ///
   /// In zh, this message translates to:
-  /// **'关于 DSH Go'**
+  /// **'关于 DSH Pro'**
   String get hubAbout;
 
   /// No description provided for @hubAboutAuthor.
   ///
   /// In zh, this message translates to:
-  /// **'DSH Go 原作者'**
+  /// **'DSH Pro 原作者'**
   String get hubAboutAuthor;
 
   /// No description provided for @hubAboutBilibili.
@@ -16169,7 +16169,7 @@ abstract class L10n {
   /// No description provided for @iconShortcutNote.
   ///
   /// In zh, this message translates to:
-  /// **'系统不允许把桌面图标换成任意图片，这里会另放一个打开 DSH Go 的快捷方式；部分桌面会在它的角上加一个小标'**
+  /// **'系统不允许把桌面图标换成任意图片，这里会另放一个打开 DSH Pro 的快捷方式；部分桌面会在它的角上加一个小标'**
   String get iconShortcutNote;
 
   /// No description provided for @iconShortcutAdded.
@@ -16187,7 +16187,7 @@ abstract class L10n {
   /// No description provided for @iconShortcutNoDialog.
   ///
   /// In zh, this message translates to:
-  /// **'没有弹窗？在系统设置里允许 DSH Go 创建桌面快捷方式'**
+  /// **'没有弹窗？在系统设置里允许 DSH Pro 创建桌面快捷方式'**
   String get iconShortcutNoDialog;
 
   /// No description provided for @iconShortcutSettings.
@@ -16361,7 +16361,7 @@ abstract class L10n {
   /// No description provided for @liveBlockedText.
   ///
   /// In zh, this message translates to:
-  /// **'在系统设置里为 DSH Go 打开「实时活动」（有的手机叫「在流体云中显示」）'**
+  /// **'在系统设置里为 DSH Pro 打开「实时活动」（有的手机叫「在流体云中显示」）'**
   String get liveBlockedText;
 
   /// No description provided for @localeTitle.
@@ -16529,7 +16529,7 @@ abstract class L10n {
   /// No description provided for @marketSectionAdapted.
   ///
   /// In zh, this message translates to:
-  /// **'适配 DSH Go'**
+  /// **'适配 DSH Pro'**
   String get marketSectionAdapted;
 
   /// No description provided for @marketSectionAll.
@@ -16565,7 +16565,7 @@ abstract class L10n {
   /// No description provided for @marketTierAdapted.
   ///
   /// In zh, this message translates to:
-  /// **'适配 DSH Go'**
+  /// **'适配 DSH Pro'**
   String get marketTierAdapted;
 
   /// No description provided for @marketRiskMedium.
@@ -16655,13 +16655,13 @@ abstract class L10n {
   /// No description provided for @marketFlagNotAdapted.
   ///
   /// In zh, this message translates to:
-  /// **'未适配 DSH Go'**
+  /// **'未适配 DSH Pro'**
   String get marketFlagNotAdapted;
 
   /// No description provided for @marketFlagNotAdaptedBody.
   ///
   /// In zh, this message translates to:
-  /// **'没有声明 DSH Go 原生协议，在 App 里没有原生界面'**
+  /// **'没有声明 DSH Pro 原生协议，在 App 里没有原生界面'**
   String get marketFlagNotAdaptedBody;
 
   /// No description provided for @marketFlagOtherBody.
@@ -16721,13 +16721,13 @@ abstract class L10n {
   /// No description provided for @marketRequiresApp.
   ///
   /// In zh, this message translates to:
-  /// **'需要 DSH Go'**
+  /// **'需要 DSH Pro'**
   String get marketRequiresApp;
 
   /// No description provided for @marketNeedsApp.
   ///
   /// In zh, this message translates to:
-  /// **'需要 DSH Go {version} 或更高版本'**
+  /// **'需要 DSH Pro {version} 或更高版本'**
   String marketNeedsApp(String version);
 
   /// No description provided for @marketUpdateAvailable.
@@ -18773,7 +18773,7 @@ abstract class L10n {
   /// No description provided for @phoneDndShizukuPermissionFailed.
   ///
   /// In zh, this message translates to:
-  /// **'没有拿到授权。可以在 Shizuku 的「应用管理」里给 DSH Go 授权'**
+  /// **'没有拿到授权。可以在 Shizuku 的「应用管理」里给 DSH Pro 授权'**
   String get phoneDndShizukuPermissionFailed;
 
   /// No description provided for @phoneDndPairedConnect.
@@ -18977,13 +18977,13 @@ abstract class L10n {
   /// No description provided for @phoneDndRootConnected.
   ///
   /// In zh, this message translates to:
-  /// **'root 已连接。断开后要回到这里再选一次；打开上面的「保持 root 通道」，DSH Go 才会自己再去申请。'**
+  /// **'root 已连接。断开后要回到这里再选一次；打开上面的「保持 root 通道」，DSH Pro 才会自己再去申请。'**
   String get phoneDndRootConnected;
 
   /// No description provided for @phoneDndRootConnectedKept.
   ///
   /// In zh, this message translates to:
-  /// **'root 已连接。断开后 DSH Go 会自己向 root 管理器再次申请。'**
+  /// **'root 已连接。断开后 DSH Pro 会自己向 root 管理器再次申请。'**
   String get phoneDndRootConnectedKept;
 
   /// No description provided for @phoneDndRootRetry.
@@ -19013,13 +19013,13 @@ abstract class L10n {
   /// No description provided for @phoneDndGrantShizukuHint.
   ///
   /// In zh, this message translates to:
-  /// **'Shizuku 已在运行，还要给 DSH Go 授权。'**
+  /// **'Shizuku 已在运行，还要给 DSH Pro 授权。'**
   String get phoneDndGrantShizukuHint;
 
   /// No description provided for @phoneDndGrantShizuku.
   ///
   /// In zh, this message translates to:
-  /// **'授权给 DSH Go'**
+  /// **'授权给 DSH Pro'**
   String get phoneDndGrantShizuku;
 
   /// No description provided for @phoneDndShizukuAllSet.
@@ -19043,7 +19043,7 @@ abstract class L10n {
   /// No description provided for @phoneDndShizukuGranted.
   ///
   /// In zh, this message translates to:
-  /// **'已授权给 DSH Go'**
+  /// **'已授权给 DSH Pro'**
   String get phoneDndShizukuGranted;
 
   /// No description provided for @phoneDndShizukuCompatibility.
@@ -19259,7 +19259,7 @@ abstract class L10n {
   /// No description provided for @phoneOpenAppInfoFailed.
   ///
   /// In zh, this message translates to:
-  /// **'打不开应用信息，请到「设置 → 应用」里找到 DSH Go'**
+  /// **'打不开应用信息，请到「设置 → 应用」里找到 DSH Pro'**
   String get phoneOpenAppInfoFailed;
 
   /// No description provided for @phoneStopFailed.
@@ -19727,19 +19727,19 @@ abstract class L10n {
   /// No description provided for @phoneRestrictedTryOverlay.
   ///
   /// In zh, this message translates to:
-  /// **'先去「悬浮窗」设置里点一次 DSH Go 的开关，看到「受限制的设置」提示后点「确定」。做过这一步，下面的选项才会出现。'**
+  /// **'先去「悬浮窗」设置里点一次 DSH Pro 的开关，看到「受限制的设置」提示后点「确定」。做过这一步，下面的选项才会出现。'**
   String get phoneRestrictedTryOverlay;
 
   /// No description provided for @phoneRestrictedBackOverlay.
   ///
   /// In zh, this message translates to:
-  /// **'回到「悬浮窗」设置，打开 DSH Go。'**
+  /// **'回到「悬浮窗」设置，打开 DSH Pro。'**
   String get phoneRestrictedBackOverlay;
 
   /// No description provided for @phoneRestrictedHuaweiOverlay.
   ///
   /// In zh, this message translates to:
-  /// **'华为 HarmonyOS 4 及更早的系统大多没有这一步，直接去「悬浮窗」设置打开 DSH Go。'**
+  /// **'华为 HarmonyOS 4 及更早的系统大多没有这一步，直接去「悬浮窗」设置打开 DSH Pro。'**
   String get phoneRestrictedHuaweiOverlay;
 
   /// No description provided for @phoneRestrictedHuaweiAccessibility.
@@ -20555,7 +20555,7 @@ abstract class L10n {
   /// No description provided for @phoneReturnAfterDone.
   ///
   /// In zh, this message translates to:
-  /// **'完成后返回 DSH Go'**
+  /// **'完成后返回 DSH Pro'**
   String get phoneReturnAfterDone;
 
   /// No description provided for @phoneReturnAfterDoneHint.
@@ -21263,19 +21263,19 @@ abstract class L10n {
   /// No description provided for @phoneBackgroundGuideBody.
   ///
   /// In zh, this message translates to:
-  /// **'需要你确认时，会显示 DSH Go 卡片。卡片不可用时会尝试通知或回到 App。请在系统设置中允许手机操控通知和弹出提醒。'**
+  /// **'需要你确认时，会显示 DSH Pro 卡片。卡片不可用时会尝试通知或回到 App。请在系统设置中允许手机操控通知和弹出提醒。'**
   String get phoneBackgroundGuideBody;
 
   /// No description provided for @phoneBackgroundOemHint.
   ///
   /// In zh, this message translates to:
-  /// **'在 DSH Go 的系统权限页检查「后台弹出界面」（若提供）。允许后可改善自动返回；菜单名称随系统版本变化。'**
+  /// **'在 DSH Pro 的系统权限页检查「后台弹出界面」（若提供）。允许后可改善自动返回；菜单名称随系统版本变化。'**
   String get phoneBackgroundOemHint;
 
   /// No description provided for @phoneBackgroundReturnHint.
   ///
   /// In zh, this message translates to:
-  /// **'如果任务完成后没有自动返回，可点通知「任务完成 · 查看结果」。系统关闭通知或限制后台弹出时，可能需要手动打开 DSH Go。'**
+  /// **'如果任务完成后没有自动返回，可点通知「任务完成 · 查看结果」。系统关闭通知或限制后台弹出时，可能需要手动打开 DSH Pro。'**
   String get phoneBackgroundReturnHint;
 
   /// No description provided for @phoneBackgroundGotIt.
@@ -21299,7 +21299,7 @@ abstract class L10n {
   /// No description provided for @phonePrivilegedUpgrade.
   ///
   /// In zh, this message translates to:
-  /// **'此版本尚不支持该特权通道，请更新 DSH Go 后使用。'**
+  /// **'此版本尚不支持该特权通道，请更新 DSH Pro 后使用。'**
   String get phonePrivilegedUpgrade;
 
   /// No description provided for @phonePrivilegedSui.
@@ -21365,13 +21365,13 @@ abstract class L10n {
   /// No description provided for @phonePrivilegedRootRiskTitle.
   ///
   /// In zh, this message translates to:
-  /// **'给 DSH Go root 权限？'**
+  /// **'给 DSH Pro root 权限？'**
   String get phonePrivilegedRootRiskTitle;
 
   /// No description provided for @phonePrivilegedRootRiskBody.
   ///
   /// In zh, this message translates to:
-  /// **'root 管理器（Magisk、KernelSU 或 APatch）会弹窗问你。允许后，DSH Go 以 root 运行自己的后台服务；只有打开「保持 root 通道」，断开或重启后才会自己再去申请。'**
+  /// **'root 管理器（Magisk、KernelSU 或 APatch）会弹窗问你。允许后，DSH Pro 以 root 运行自己的后台服务；只有打开「保持 root 通道」，断开或重启后才会自己再去申请。'**
   String get phonePrivilegedRootRiskBody;
 
   /// No description provided for @phoneGateCleanupTitle.
@@ -21419,19 +21419,19 @@ abstract class L10n {
   /// No description provided for @phoneKeepRootDescription.
   ///
   /// In zh, this message translates to:
-  /// **'断开、重开 App 或重启手机后，DSH Go 会自己再向 root 管理器申请；给不给仍由管理器决定。'**
+  /// **'断开、重开 App 或重启手机后，DSH Pro 会自己再向 root 管理器申请；给不给仍由管理器决定。'**
   String get phoneKeepRootDescription;
 
   /// No description provided for @phoneKeepSharedDescription.
   ///
   /// In zh, this message translates to:
-  /// **'断开、重开 App 或重启手机后，DSH Go 用已有的授权自己连回去，不会替你申请授权。'**
+  /// **'断开、重开 App 或重启手机后，DSH Pro 用已有的授权自己连回去，不会替你申请授权。'**
   String get phoneKeepSharedDescription;
 
   /// No description provided for @phoneKeepAdbDescription.
   ///
   /// In zh, this message translates to:
-  /// **'断开、重开 App 或重启手机后，DSH Go 用已有的配对在 Wi‑Fi 下自己连回去；有「自动恢复无障碍」的权限时，还会试着打开一次无线调试。'**
+  /// **'断开、重开 App 或重启手机后，DSH Pro 用已有的配对在 Wi‑Fi 下自己连回去；有「自动恢复无障碍」的权限时，还会试着打开一次无线调试。'**
   String get phoneKeepAdbDescription;
 
   /// No description provided for @phoneKeepRestoring.
@@ -21731,7 +21731,7 @@ abstract class L10n {
   /// No description provided for @phoneModeAutoNote.
   ///
   /// In zh, this message translates to:
-  /// **'系统设置和权限页面、密码和验证码、DSH Go 自身仍由你来操作；银行、支付类 App 默认不碰，可在设置里调整。'**
+  /// **'系统设置和权限页面、密码和验证码、DSH Pro 自身仍由你来操作；银行、支付类 App 默认不碰，可在设置里调整。'**
   String get phoneModeAutoNote;
 
   /// No description provided for @phoneModeAutoUnlockNote.
@@ -21767,7 +21767,7 @@ abstract class L10n {
   /// No description provided for @phoneYoursOwnApp.
   ///
   /// In zh, this message translates to:
-  /// **'DSH Go 自身'**
+  /// **'DSH Pro 自身'**
   String get phoneYoursOwnApp;
 
   /// No description provided for @phoneYoursRootShell.
@@ -21821,13 +21821,13 @@ abstract class L10n {
   /// No description provided for @phoneUnlockOwnApp.
   ///
   /// In zh, this message translates to:
-  /// **'DSH Go 自身'**
+  /// **'DSH Pro 自身'**
   String get phoneUnlockOwnApp;
 
   /// No description provided for @phoneUnlockOwnAppHint.
   ///
   /// In zh, this message translates to:
-  /// **'在 DSH Go 里点按和输入'**
+  /// **'在 DSH Pro 里点按和输入'**
   String get phoneUnlockOwnAppHint;
 
   /// No description provided for @phoneUnlockRootShell.
@@ -21899,7 +21899,7 @@ abstract class L10n {
   /// No description provided for @phoneUnlockConfirmOwnAppTitle.
   ///
   /// In zh, this message translates to:
-  /// **'允许 AI 操作 DSH Go 自身？'**
+  /// **'允许 AI 操作 DSH Pro 自身？'**
   String get phoneUnlockConfirmOwnAppTitle;
 
   /// No description provided for @phoneUnlockConfirmRootShellTitle.
@@ -21989,13 +21989,13 @@ abstract class L10n {
   /// No description provided for @phoneUnlockOwnAppCan1.
   ///
   /// In zh, this message translates to:
-  /// **'在 DSH Go 里点按和输入，包括修改设置'**
+  /// **'在 DSH Pro 里点按和输入，包括修改设置'**
   String get phoneUnlockOwnAppCan1;
 
   /// No description provided for @phoneUnlockOwnAppCan2.
   ///
   /// In zh, this message translates to:
-  /// **'读取 DSH Go 界面上的对话和设置'**
+  /// **'读取 DSH Pro 界面上的对话和设置'**
   String get phoneUnlockOwnAppCan2;
 
   /// No description provided for @phoneUnlockOwnAppRisk1.
@@ -22055,7 +22055,7 @@ abstract class L10n {
   /// No description provided for @phoneUnlockDisclaimer3.
   ///
   /// In zh, this message translates to:
-  /// **'由此造成的账号、资金、数据或设备损失由你自行承担，DSH Go 及其开发者不承担责任。'**
+  /// **'由此造成的账号、资金、数据或设备损失由你自行承担，DSH Pro 及其开发者不承担责任。'**
   String get phoneUnlockDisclaimer3;
 
   /// No description provided for @phoneUnlockDisclaimer4.
@@ -22961,7 +22961,7 @@ abstract class L10n {
   /// No description provided for @pluginsProfileTitle.
   ///
   /// In zh, this message translates to:
-  /// **'DSH Go 配置'**
+  /// **'DSH Pro 配置'**
   String get pluginsProfileTitle;
 
   /// No description provided for @pluginsGistTokenInvalid.
@@ -23981,7 +23981,7 @@ abstract class L10n {
   /// No description provided for @pluginsNotificationSettingsFailed.
   ///
   /// In zh, this message translates to:
-  /// **'没能打开系统设置。到「设置 → 应用 → DSH Go → 通知」里开启'**
+  /// **'没能打开系统设置。到「设置 → 应用 → DSH Pro → 通知」里开启'**
   String get pluginsNotificationSettingsFailed;
 
   /// No description provided for @pluginsSystemNotificationsOff.
@@ -24449,7 +24449,7 @@ abstract class L10n {
   /// No description provided for @pluginsPluginShareTitle.
   ///
   /// In zh, this message translates to:
-  /// **'DSH Go 插件'**
+  /// **'DSH Pro 插件'**
   String get pluginsPluginShareTitle;
 
   /// No description provided for @pluginsShareSheetOpenFailed.
@@ -24869,7 +24869,7 @@ abstract class L10n {
   /// No description provided for @plugslotsIssueNeedsApp.
   ///
   /// In zh, this message translates to:
-  /// **'需要 DSH Go {version} 或更新版本'**
+  /// **'需要 DSH Pro {version} 或更新版本'**
   String plugslotsIssueNeedsApp(String version);
 
   /// No description provided for @plugslotsIssueNewerProtocol.
@@ -25619,7 +25619,7 @@ abstract class L10n {
   /// No description provided for @remoteErrUpdateNeeded.
   ///
   /// In zh, this message translates to:
-  /// **'版本不匹配，请更新 DSH Go 和主机上的远程插件'**
+  /// **'版本不匹配，请更新 DSH Pro 和主机上的远程插件'**
   String get remoteErrUpdateNeeded;
 
   /// No description provided for @remoteErrVersionIncompatible.
@@ -28115,7 +28115,7 @@ abstract class L10n {
   /// No description provided for @remotePairNeedsDeepSeekBody.
   ///
   /// In zh, this message translates to:
-  /// **'扫码配对要先在 DSH Go 里登录 DeepSeek 账号。配对时只附带账号 ID 用来标记这台手机，不传密码、Cookie 或 Token。'**
+  /// **'扫码配对要先在 DSH Pro 里登录 DeepSeek 账号。配对时只附带账号 ID 用来标记这台手机，不传密码、Cookie 或 Token。'**
   String get remotePairNeedsDeepSeekBody;
 
   /// No description provided for @remotePairScanHint.
@@ -28277,7 +28277,7 @@ abstract class L10n {
   /// No description provided for @remotePairOtherServerBody.
   ///
   /// In zh, this message translates to:
-  /// **'这个二维码来自 {server}，和 DSH Go 现在用的 Remote 服务器不同。切换过去继续吗？两个服务器的登录各自保留。'**
+  /// **'这个二维码来自 {server}，和 DSH Pro 现在用的 Remote 服务器不同。切换过去继续吗？两个服务器的登录各自保留。'**
   String remotePairOtherServerBody(String server);
 
   /// No description provided for @remotePairSwitchServer.
@@ -28295,7 +28295,7 @@ abstract class L10n {
   /// No description provided for @remotePairErrInvalidCode.
   ///
   /// In zh, this message translates to:
-  /// **'这不是 DSH Go 的配对二维码'**
+  /// **'这不是 DSH Pro 的配对二维码'**
   String get remotePairErrInvalidCode;
 
   /// No description provided for @remotePairErrOtherServer.
@@ -28481,7 +28481,7 @@ abstract class L10n {
   /// No description provided for @riskPetOverlayBody.
   ///
   /// In zh, this message translates to:
-  /// **'要在系统设置里为 DSH Go 打开「显示在其他应用上层」，宠物才能出现在别的 App 上。'**
+  /// **'要在系统设置里为 DSH Pro 打开「显示在其他应用上层」，宠物才能出现在别的 App 上。'**
   String get riskPetOverlayBody;
 
   /// No description provided for @riskPetOverlayAction.
@@ -28511,25 +28511,25 @@ abstract class L10n {
   /// No description provided for @askAiAboutApp.
   ///
   /// In zh, this message translates to:
-  /// **'关于 DSH Go App：{question}'**
+  /// **'关于 DSH Pro App：{question}'**
   String askAiAboutApp(String question);
 
   /// No description provided for @askAiWithGuide.
   ///
   /// In zh, this message translates to:
-  /// **'关于 DSH Go App：{question}\n请按附件里的使用说明回答。'**
+  /// **'关于 DSH Pro App：{question}\n请按附件里的使用说明回答。'**
   String askAiWithGuide(String question);
 
   /// No description provided for @askAiNoGuide.
   ///
   /// In zh, this message translates to:
-  /// **'这台主机没有 DSH Go 使用说明，回答可能不准确'**
+  /// **'这台主机没有 DSH Pro 使用说明，回答可能不准确'**
   String get askAiNoGuide;
 
   /// No description provided for @askAiQuestionOverview.
   ///
   /// In zh, this message translates to:
-  /// **'DSH Go 能做什么？我该从哪里开始？'**
+  /// **'DSH Pro 能做什么？我该从哪里开始？'**
   String get askAiQuestionOverview;
 
   /// No description provided for @askAiQuestionPhoneControl.
@@ -30917,7 +30917,7 @@ abstract class L10n {
   /// No description provided for @shellSkillInstallPrompt.
   ///
   /// In zh, this message translates to:
-  /// **'请在这台主机上安装 DSH Go 的界面技能 {skill}：'**
+  /// **'请在这台主机上安装 DSH Pro 的界面技能 {skill}：'**
   String shellSkillInstallPrompt(String skill);
 
   /// No description provided for @shellSkillInstallDirectory.
@@ -31121,7 +31121,7 @@ abstract class L10n {
   /// The star prompt's first line. hours is the whole hours of use so far, rounded down; 0 is half an hour (the first ask comes after 30 minutes). The word joiner keeps the ~ on the line of the word before it.
   ///
   /// In zh, this message translates to:
-  /// **'{hours, plural, =0{本鱼已经在 DSH Go 里陪你半个小时啦⁠~} =1{本鱼已经在 DSH Go 里陪你一个小时啦⁠~} other{本鱼已经在 DSH Go 里陪你 {hours} 个小时啦⁠~}}'**
+  /// **'{hours, plural, =0{本鱼已经在 DSH Pro 里陪你半个小时啦⁠~} =1{本鱼已经在 DSH Pro 里陪你一个小时啦⁠~} other{本鱼已经在 DSH Pro 里陪你 {hours} 个小时啦⁠~}}'**
   String starPromptTitle(int hours);
 
   /// No description provided for @starPromptBody.
@@ -31157,7 +31157,7 @@ abstract class L10n {
   /// No description provided for @starSettingsTitle.
   ///
   /// In zh, this message translates to:
-  /// **'给 DSH Go 点个 star'**
+  /// **'给 DSH Pro 点个 star'**
   String get starSettingsTitle;
 
   /// No description provided for @phoneStartupFailureStopping.
@@ -31187,7 +31187,7 @@ abstract class L10n {
   /// No description provided for @stateDiagnosticsSubject.
   ///
   /// In zh, this message translates to:
-  /// **'DSH Go 诊断包'**
+  /// **'DSH Pro 诊断包'**
   String get stateDiagnosticsSubject;
 
   /// No description provided for @stateStoragePermission.
@@ -33599,7 +33599,7 @@ abstract class L10n {
   /// No description provided for @updateSettingsOpenFailedMessage.
   ///
   /// In zh, this message translates to:
-  /// **'到「设置 → 应用 → DSH Go」里允许「安装未知应用」，再回来安装。'**
+  /// **'到「设置 → 应用 → DSH Pro」里允许「安装未知应用」，再回来安装。'**
   String get updateSettingsOpenFailedMessage;
 
   /// No description provided for @updateInstallCancelled.
@@ -33635,7 +33635,7 @@ abstract class L10n {
   /// No description provided for @updateSignatureMismatchMessage.
   ///
   /// In zh, this message translates to:
-  /// **'手机上的 DSH Go 签名不同（多半是测试包），需要先卸载旧版再装新版。卸载会清空对话、Linux 环境和设置。'**
+  /// **'手机上的 DSH Pro 签名不同（多半是测试包），需要先卸载旧版再装新版。卸载会清空对话、Linux 环境和设置。'**
   String get updateSignatureMismatchMessage;
 
   /// No description provided for @updateWrongPackage.
@@ -33749,7 +33749,7 @@ abstract class L10n {
   /// No description provided for @updateInstallKeepsData.
   ///
   /// In zh, this message translates to:
-  /// **'安装时 DSH Go 会退出，对话和设置都会保留'**
+  /// **'安装时 DSH Pro 会退出，对话和设置都会保留'**
   String get updateInstallKeepsData;
 
   /// No description provided for @updateNoCompatiblePackage.
@@ -33815,7 +33815,7 @@ abstract class L10n {
   /// No description provided for @updateAllowInstall.
   ///
   /// In zh, this message translates to:
-  /// **'允许 DSH Go 安装应用'**
+  /// **'允许 DSH Pro 安装应用'**
   String get updateAllowInstall;
 
   /// No description provided for @updateAllowInstallMessage.
@@ -33917,7 +33917,7 @@ abstract class L10n {
   /// No description provided for @usageStatsSection.
   ///
   /// In zh, this message translates to:
-  /// **'改进 DSH Go'**
+  /// **'改进 DSH Pro'**
   String get usageStatsSection;
 
   /// No description provided for @usageStatsFooter.
@@ -33935,7 +33935,7 @@ abstract class L10n {
   /// No description provided for @usageUpgradeNotice.
   ///
   /// In zh, this message translates to:
-  /// **'新增匿名使用统计，帮助改进 DSH Go。\n不含对话和个人信息'**
+  /// **'新增匿名使用统计，帮助改进 DSH Pro。\n不含对话和个人信息'**
   String get usageUpgradeNotice;
 
   /// No description provided for @usageUpgradeLearn.
@@ -35027,7 +35027,7 @@ abstract class L10n {
   /// No description provided for @viewTipShareIn.
   ///
   /// In zh, this message translates to:
-  /// **'在别的 App 里分享文字或图片给 DSH Go，会填进新对话'**
+  /// **'在别的 App 里分享文字或图片给 DSH Pro，会填进新对话'**
   String get viewTipShareIn;
 
   /// No description provided for @viewTipShareSelect.
@@ -35447,7 +35447,7 @@ abstract class L10n {
   /// No description provided for @viewContinueHeader.
   ///
   /// In zh, this message translates to:
-  /// **'> 分享的 DSH Go 对话 · {value}\n'**
+  /// **'> 分享的 DSH Pro 对话 · {value}\n'**
   String viewContinueHeader(String value);
 
   /// No description provided for @viewContinueUser.
@@ -35543,7 +35543,7 @@ abstract class L10n {
   /// No description provided for @viewShareLinkText.
   ///
   /// In zh, this message translates to:
-  /// **'「{first}」· DSH Go 对话\n{second}'**
+  /// **'「{first}」· DSH Pro 对话\n{second}'**
   String viewShareLinkText(String first, String second);
 
   /// No description provided for @viewShareEmpty.
@@ -35567,7 +35567,7 @@ abstract class L10n {
   /// No description provided for @viewShareFileHint.
   ///
   /// In zh, this message translates to:
-  /// **'在 DSH Go 里回放、接着聊'**
+  /// **'在 DSH Pro 里回放、接着聊'**
   String get viewShareFileHint;
 
   /// No description provided for @viewShareWebHint.

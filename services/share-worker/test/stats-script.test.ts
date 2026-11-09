@@ -105,7 +105,7 @@ describe('stats.sh', () => {
     expect(seen.every((s) => s.path === `/client/v4/accounts/${ACCOUNT}/analytics_engine/sql` && s.auth === `Bearer ${TOKEN}`)).toBe(true);
     expect(out).not.toContain(TOKEN);
     const text = squash(out);
-    expect(text).toContain('DSH Go 统计 · 2026-10-24 – 2026-11-06（UTC+8）');
+    expect(text).toContain('DSH Pro 统计 · 2026-10-24 – 2026-11-06（UTC+8）');
     // Downloads: clicks, people (distinct codes), per route, before the window left out.
     expect(text).toContain('2026-11-05 5 4 3 1 1 0.9.8×5');
     expect(text).toContain('2026-11-06 2 1 1 1 0 0.9.8×2');

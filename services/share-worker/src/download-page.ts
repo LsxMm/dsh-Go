@@ -1,4 +1,4 @@
-// The download page: DSH Go, the latest build and the routes it can be
+// The download page: DSH Pro, the latest build and the routes it can be
 // fetched from (docs/design/share-links.md §14).
 //
 //  - key mode, /beta: an access key in; /beta/api/unlock answers with the
@@ -52,7 +52,7 @@ interface Text {
 const TEXT: Record<Lang, Text> = {
   zh: {
     htmlLang: 'zh-CN',
-    title: { key: 'DSH Go 内测', public: '下载 DSH Go' },
+    title: { key: 'DSH Pro 内测', public: '下载 DSH Pro' },
     tag: { key: '内测', public: '公测' },
     slogan: '随时随刻，想go就Go！',
     pitch: ['手机上直接跑 DeepSeek Harness，', '也能遥控电脑上的那一个。'],
@@ -85,7 +85,7 @@ const TEXT: Record<Lang, Text> = {
   },
   en: {
     htmlLang: 'en',
-    title: { key: 'DSH Go beta', public: 'Download DSH Go' },
+    title: { key: 'DSH Pro beta', public: 'Download DSH Pro' },
     tag: { key: 'Beta', public: 'Public beta' },
     slogan: 'Anytime, anywhere. Just Go!',
     pitch: ['Run DeepSeek Harness on your phone,', 'or drive the one on your computer.'],
@@ -150,7 +150,7 @@ function hero(t: Text, mode: Mode): string {
   return `
   <header class="hero">
     ${ICON}
-    <h1>DSH Go<span class="tag">${t.tag[mode]}</span></h1>
+    <h1>DSH Pro<span class="tag">${t.tag[mode]}</span></h1>
     <p class="slogan">${t.slogan}</p>
     <p class="pitch">${t.pitch.map((p) => `<span>${p}</span>`).join(t.htmlLang === 'en' ? ' ' : '')}</p>
   </header>`;

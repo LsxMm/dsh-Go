@@ -205,7 +205,7 @@ ROUTES=(global)
 [[ $DL_ON == 1 ]] && ROUTES+=(dl)
 [[ $CN_ON == 1 ]] && ROUTES+=(cn)
 [[ $GITHUB == 1 ]] && ROUTES+=(github)
-echo "DSH Go $VERSION ($FULL): ${FILES[*]}"
+echo "DSH Pro $VERSION ($FULL): ${FILES[*]}"
 echo "routes: ${ROUTES[*]}$([[ $DL_ON == 1 ]] && echo " (dl: $DL_BUCKET, $DL_BASE_URL)")$([[ $CN_ON == 1 ]] && echo " (China: $CN_PROVIDER $CN_BUCKET, $CN_BASE_URL)")"
 [[ $DRY == 1 ]] && echo "dry run: nothing is uploaded, downloaded or changed"
 
@@ -436,7 +436,7 @@ if [[ $GITHUB == 1 ]]; then
   if [[ -z "$info" ]]; then
     pre=()
     [[ "$VERSION" == *-* ]] && pre=(--prerelease)
-    run_gh release create "$TAG" "${GH_PATHS[@]}" --repo "$REPO" --title "DSH Go $VERSION" --notes-file "$TMP/gh-notes.md" --draft "${pre[@]}" \
+    run_gh release create "$TAG" "${GH_PATHS[@]}" --repo "$REPO" --title "DSH Pro $VERSION" --notes-file "$TMP/gh-notes.md" --draft "${pre[@]}" \
       || die "gh release create failed"
   else
     GH_DRAFT=$(jq -r 'if .isDraft then 1 else 0 end' <<<"$info")

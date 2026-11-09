@@ -230,14 +230,14 @@ void main() {
     MethodCall? captured;
     TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger.setMockMethodCallHandler(channel, (call) async {
       captured = call;
-      return 'Movies/DSH Go/movie.mp4';
+      return 'Movies/DSH Pro/movie.mp4';
     });
     addTearDown(
       () => TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger.setMockMethodCallHandler(channel, null),
     );
     expect(
       await const MediaChannel(channel).saveVideoFile('/phone/movie.mp4', name: 'movie.mp4'),
-      'Movies/DSH Go/movie.mp4',
+      'Movies/DSH Pro/movie.mp4',
     );
     expect(captured!.method, 'saveVideoFile');
     expect(captured!.arguments, {'path': '/phone/movie.mp4', 'name': 'movie.mp4'});

@@ -5,7 +5,7 @@
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="docs/assets/hero-zh-dark.webp">
-    <img src="docs/assets/hero-zh-light.webp" alt="DSH Go：把 DeepSeek Harness 装进口袋" width="100%">
+    <img src="docs/assets/hero-zh-light.webp" alt="DSH Pro：把 DeepSeek Harness 装进口袋" width="100%">
   </picture>
 </p>
 
@@ -21,7 +21,7 @@
 </p>
 
 <p align="center">
-  <a href="https://trendshift.io/repositories/319451"><img src="https://trendshift.io/api/badge/trendshift/repositories/319451/daily" alt="DSH Go：Trendshift 全语言日榜第一（2026-10-30）" width="250" height="55"></a><br>
+  <a href="https://trendshift.io/repositories/319451"><img src="https://trendshift.io/api/badge/trendshift/repositories/319451/daily" alt="DSH Pro：Trendshift 全语言日榜第一（2026-10-30）" width="250" height="55"></a><br>
   <sub>Trendshift 全语言日榜 #1 · 2026-10-30</sub>
 </p>
 
@@ -42,7 +42,7 @@
 <br>
 
 <a id="download"></a>
-<h3 align="center">下载 DSH Go</h3>
+<h3 align="center">下载 DSH Pro</h3>
 
 <p align="center">从 GitHub Releases 或官网下载页获取最新版 APK，常见手机选 arm64 包。</p>
 
@@ -51,7 +51,7 @@
 </p>
 
 <p align="center">
-  <b>感谢大家对 DSH Go 的支持和喜爱，我将尽快适配 iOS 和鸿蒙！大家 Star 点得越多，我适配得越快哦 hhh</b>
+  <b>感谢大家对 DSH Pro 的支持和喜爱，我将尽快适配 iOS 和鸿蒙！大家 Star 点得越多，我适配得越快哦 hhh</b>
 </p>
 
 <p align="center">
@@ -171,12 +171,12 @@
 
 ## 可以做什么
 
-DSH Go 提供聊天界面、本机运行环境和远程连接，是基于 [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) 的第三方项目。运行在手机上的是 DSH 引擎；模型请求仍由你配置的模型提供方处理。
+DSH Pro 提供聊天界面、本机运行环境和远程连接，是基于 [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) 的第三方项目。运行在手机上的是 DSH 引擎；模型请求仍由你配置的模型提供方处理。
 
 - **本机运行**：在 App 内安装 Ubuntu、Node.js 与 DSH 运行环境，无需 Root 或另装 Termux。
 - **远程连接**：通过 SSH 或李国宝老师开发的 [DSHarness Remote](https://github.com/liguobao/ds-harness-remote) 使用电脑、服务器上的 DSH。
 - **聊天与工具**：切换模型，发送图片、使用语音输入，处理工具审批和提问；支持聊天界面与网页模式。
-- **插件界面**：使用适配 DSH Go 的原生工具卡、表单和面板；仓库提供 SDK、教程和示例。
+- **插件界面**：使用适配 DSH Pro 的原生工具卡、表单和面板；仓库提供 SDK、教程和示例。
 - **手机操控**：在你开启权限后，让本机引擎读取屏幕、点按和输入，并可随时停止。
 - **分享与外观**：分享、导出和回放对话，调整主题、图标和桌宠。
 
@@ -202,7 +202,7 @@ DSH Go 提供聊天界面、本机运行环境和远程连接，是基于 [DeepS
 
 ## 风险提示与免责声明
 
-DSH Go 是社区开发的非官方项目，与 DeepSeek 无关联，也不代表 DeepSeek。使用前请了解：
+DSH Pro 是社区开发的非官方项目，与 DeepSeek 无关联，也不代表 DeepSeek。使用前请了解：
 
 - **AI 并非万无一失**：回答、代码和操作可能出错，也可能被网页、消息或文件中的恶意指令误导。请核验重要结果；医疗、法律、投资等高风险决策不应仅依赖 AI 输出。
 - **工具会产生真实影响**：本机或远程主机上的命令、文件修改及手机操控可能导致数据丢失、隐私泄露、账号、资金或设备损失。免确认、放宽应用规则或解除限制会减少保护；确认与拦截机制不能保证消除所有风险。建议保留默认保护，只授予必要权限，不在存有支付或银行信息的设备上解除限制。详见[手机操控指南](docs/guide/zh/04-phone-control.md)。
@@ -216,7 +216,7 @@ DSH Go 是社区开发的非官方项目，与 DeepSeek 无关联，也不代表
 <summary><b>和 DeepSeek 官方是什么关系？</b></summary>
 <br>
 
-没有关系。DSH Go 是社区开发的非官方客户端，基于开源的 [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) 构建。手机上运行的是 DSH 本身；模型请求发给你配置的模型提供方，需要联网，按你在提供方的账户计费。
+没有关系。DSH Pro 是社区开发的非官方客户端，基于开源的 [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) 构建。手机上运行的是 DSH 本身；模型请求发给你配置的模型提供方，需要联网，按你在提供方的账户计费。
 
 </details>
 
@@ -232,7 +232,7 @@ DSH Go 是社区开发的非官方项目，与 DeepSeek 无关联，也不代表
 <summary><b>切到后台会被杀吗？</b></summary>
 <br>
 
-部分系统的省电策略会拦住后台。DSH Go 发现后会提醒你，并直达对应的放行设置，vivo、小米、华为、荣耀、OPPO 都有。
+部分系统的省电策略会拦住后台。DSH Pro 发现后会提醒你，并直达对应的放行设置，vivo、小米、华为、荣耀、OPPO 都有。
 
 </details>
 
@@ -248,7 +248,7 @@ Android 8 及以上。手机直接下载 Release 页面上的安装包即可，�
 <summary><b>开源吗？</b></summary>
 <br>
 
-开源，代码就在这个仓库，以 [AGPL-3.0](LICENSE) 发布，`sdk/` 和 `examples/` 为 MIT。DSH Go 的名称和标识，以及 Deepy、鲸娘两位吉祥物，不在开源授权范围内，见 [ASSETS.md](ASSETS.md)。再发布和 fork 时的署名要求见[授权范围与再发布](#授权范围与再发布)。
+开源，代码就在这个仓库，以 [AGPL-3.0](LICENSE) 发布，`sdk/` 和 `examples/` 为 MIT。DSH Pro 的名称和标识，以及 Deepy、鲸娘两位吉祥物，不在开源授权范围内，见 [ASSETS.md](ASSETS.md)。再发布和 fork 时的署名要求见[授权范围与再发布](#授权范围与再发布)。
 
 </details>
 
@@ -330,7 +330,7 @@ DSH_BETA_TOKEN_FILE= bash tooling/build-apk.sh --dry-run -f all
 
 ## 友情链接
 
-- **[DSH-TUI](https://dshtui.com/)**：同一作者的作品，面向 DeepSeek Harness 的交互式终端界面。手机上用 DSH Go，电脑上就用它——像素鲸鱼、实时状态、时间回溯，装上即开工（[GitHub](https://github.com/ccch1mneyyy/dsh-TUI)）。
+- **[DSH-TUI](https://dshtui.com/)**：同一作者的作品，面向 DeepSeek Harness 的交互式终端界面。手机上用 DSH Pro，电脑上就用它——像素鲸鱼、实时状态、时间回溯，装上即开工（[GitHub](https://github.com/ccch1mneyyy/dsh-TUI)）。
 
 ## 授权范围与再发布
 
@@ -339,7 +339,7 @@ DSH_BETA_TOKEN_FILE= bash tooling/build-apk.sh --dry-run -f all
 - **改造前请提前联系作者**：如需基于本项目进行改造、二次开发或衍生产品发布，请先通过 [Issues](https://github.com/ccch1mneyyy/dsh-go/issues) 或[社区](#community)联系原作者 ccch1mneyyy，说明用途与计划。
 - **fork 请标注主仓库与作者**：基于本仓库改造并发布时，请在仓库说明、应用「关于」页和发布页面清楚标注主仓库 <https://github.com/ccch1mneyyy/dsh-go> 与原作者 [ccch1mneyyy](https://github.com/ccch1mneyyy)，并按适用许可证保留版权、许可及修改声明。
 - **禁止未授权商业化套皮**：不得未经授权将本项目的品牌标识、Deepy、鲸娘等受保护素材用于套皮售卖、收费分发或其他商业产品；不得违反适用许可证，删除应保留的版权与许可声明、闭源分发衍生代码，或冒充原作者、官方版本。
-- **名称与素材另有限制**：DSH Go 的名称、标识，以及 Deepy、鲸娘形象不在 AGPL 授权范围内，以修改版身份发布时请换成自己的名称和素材，见 [ASSETS.md](ASSETS.md)。
+- **名称与素材另有限制**：DSH Pro 的名称、标识，以及 Deepy、鲸娘形象不在 AGPL 授权范围内，以修改版身份发布时请换成自己的名称和素材，见 [ASSETS.md](ASSETS.md)。
 
 **许可说明**：AGPL-3.0 允许符合其条款的修改、再发布和商业使用；上述提前联系及署名位置是作者的协作请求，不是对代码许可证追加的限制。品牌与素材须遵守各自的授权条件；本说明不改变 `sdk/`、`examples/` 及第三方内容的许可。
 
@@ -347,15 +347,15 @@ DSH_BETA_TOKEN_FILE= bash tooling/build-apk.sh --dry-run -f all
 
 本项目采用 [AGPL-3.0](LICENSE)；`sdk/` 和 `examples/` 保持 **MIT**。第三方代码和素材以各自声明为准。
 
-- [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness)：DSH Go 运行和连接的就是它。
+- [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness)：DSH Pro 运行和连接的就是它。
 - [DSH-TUI](https://github.com/ccch1mneyyy/dsh-TUI)：吉祥物 Deepy 小鲸鱼和鲸娘来自这里。
 
 Phase 相关代码经作者许可使用。DeepSeek Harness、PiPilot、DS Bot、DSH Remote 及其他第三方组件、素材保留各自的许可证和署名。具体来源和条款见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。
 
-DSH Go 的名称、标识、Deepy 小鲸鱼和鲸娘等形象不在 AGPL 授权范围内，使用条款见 [ASSETS.md](ASSETS.md)。
+DSH Pro 的名称、标识、Deepy 小鲸鱼和鲸娘等形象不在 AGPL 授权范围内，使用条款见 [ASSETS.md](ASSETS.md)。
 
 <sub>远程连接参考了 [ds-harness-remote](https://github.com/liguobao/ds-harness-remote) 的项目和服务器，感谢作者李国宝。</sub>
 
 <br>
 
-<p align="center"><sub>DSH Go 是社区开发的非官方客户端，与 DeepSeek 没有关联，也不代表 DeepSeek。DeepSeek 名称与标识归其所有者所有。</sub></p>
+<p align="center"><sub>DSH Pro 是社区开发的非官方客户端，与 DeepSeek 没有关联，也不代表 DeepSeek。DeepSeek 名称与标识归其所有者所有。</sub></p>

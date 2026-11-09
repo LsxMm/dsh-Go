@@ -1,6 +1,6 @@
 # @ccch1mneyyy/dsh-media
 
-DSH Go 的主机侧媒体插件，版本 `0.3.0`。提供生成图片、用一句话编辑图片、后台生成视频；服务密钥留在 Host credentials，原件保存到当前工作区。设置命名空间保持 `dsh-media`，媒体结果使用冻结的 `meta["dsh-go/media"]` v1。
+DSH Pro 的主机侧媒体插件，版本 `0.3.0`。提供生成图片、用一句话编辑图片、后台生成视频；服务密钥留在 Host credentials，原件保存到当前工作区。设置命名空间保持 `dsh-media`，媒体结果使用冻结的 `meta["dsh-go/media"]` v1。
 
 0.3.0 声明兼容 DSH `0.2.1-rc.4` 与 `0.2.2-rc.1`，验证使用各版已有 runtime 锁，不重新解析生产依赖。实际验证范围与未验证项见 `VERIFICATION.md`。模型可用性、审核、配额和最终费用由供应商决定。App 内置的是设置与媒体展示入口，主机插件仍单独安装；本次不发布 npm、不预装或自动启用插件，也不调用真实付费服务。
 
@@ -82,7 +82,7 @@ Host 重启后，原会话可调用 `resume_media(rid)` 继续查询已保存的
 
 ## English
 
-`@ccch1mneyyy/dsh-media` is a Host-side DeepSeek Harness plugin. It keeps credentials on the Host, saves original media in the current workspace and emits DSH Go media metadata v1. The settings namespace remains `dsh-media`. Node `^22.19.0 || >=24.0.0` and DSH `0.2.1-rc.4` or `0.2.2-rc.1` peers are required; the DSH Go manifest declares app `1.0.2` or later.
+`@ccch1mneyyy/dsh-media` is a Host-side DeepSeek Harness plugin. It keeps credentials on the Host, saves original media in the current workspace and emits DSH Pro media metadata v1. The settings namespace remains `dsh-media`. Node `^22.19.0 || >=24.0.0` and DSH `0.2.1-rc.4` or `0.2.2-rc.1` peers are required; the DSH Pro manifest declares app `1.0.2` or later.
 
 It supports OpenAI / Gemini-compatible images, Ark Seedream / Seedance, Alibaba Wan and SiliconFlow Qwen / Wan. Editing uses one workspace image. Video generation runs as a real background job; `get_media_result` retrieves its media result after the completion notice. `resume_media(rid)` explicitly resumes a saved provider task in its original session without submitting again. Provider cancellation is confirmed only when the API reports it; SiliconFlow cancellation is unavailable.
 

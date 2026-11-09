@@ -113,7 +113,7 @@ export async function run(base, { adminKey = null, log = console.log } = {}) {
   assert.match(homeCsp, /default-src 'none'/);
   assert.match(homeCsp, /frame-ancestors 'none'/);
   assert.doesNotMatch(homeCsp, /unsafe-eval/);
-  assert.match(await home.text(), /<title>DSH Go/);
+  assert.match(await home.text(), /<title>DSH Pro/);
   const shot = await fetch(`${base}/assets/features/01-local-engine.webp`);
   assert.equal(shot.status, 200);
   assert.equal(shot.headers.get('content-type'), 'image/webp');

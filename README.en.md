@@ -5,7 +5,7 @@
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="docs/assets/hero-en-dark.webp">
-    <img src="docs/assets/hero-en-light.webp" alt="DSH Go: DeepSeek Harness, in your pocket" width="100%">
+    <img src="docs/assets/hero-en-light.webp" alt="DSH Pro: DeepSeek Harness, in your pocket" width="100%">
   </picture>
 </p>
 
@@ -21,7 +21,7 @@
 </p>
 
 <p align="center">
-  <a href="https://trendshift.io/repositories/319451"><img src="https://trendshift.io/api/badge/trendshift/repositories/319451/daily" alt="DSH Go: #1 on Trendshift's all-language daily ranking (2026-10-30)" width="250" height="55"></a><br>
+  <a href="https://trendshift.io/repositories/319451"><img src="https://trendshift.io/api/badge/trendshift/repositories/319451/daily" alt="DSH Pro: #1 on Trendshift's all-language daily ranking (2026-10-30)" width="250" height="55"></a><br>
   <sub>#1 on Trendshift's all-language daily ranking · 2026-10-30</sub>
 </p>
 
@@ -42,7 +42,7 @@
 <br>
 
 <a id="download"></a>
-<h3 align="center">Download DSH Go</h3>
+<h3 align="center">Download DSH Pro</h3>
 
 <p align="center">Get the latest APK from GitHub Releases or the download page at go.dshtui.com. Most phones need the arm64 package.</p>
 
@@ -51,7 +51,7 @@
 </p>
 
 <p align="center">
-  <b>Thank you all for supporting and loving DSH Go! iOS and HarmonyOS versions are coming as soon as I can make them. The more stars, the faster they come, hehe</b>
+  <b>Thank you all for supporting and loving DSH Pro! iOS and HarmonyOS versions are coming as soon as I can make them. The more stars, the faster they come, hehe</b>
 </p>
 
 <p align="center">
@@ -171,12 +171,12 @@
 
 ## Features
 
-DSH Go combines a chat interface, an on-device runtime and remote connections. It is a third-party project built on [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness). The DSH engine runs on your phone; model requests are still handled by the model provider you configure.
+DSH Pro combines a chat interface, an on-device runtime and remote connections. It is a third-party project built on [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness). The DSH engine runs on your phone; model requests are still handled by the model provider you configure.
 
 - **On-device runtime:** install Ubuntu, Node.js and DSH from the app without Root or a separate Termux installation.
 - **Remote connections:** use DSH on a computer or server through SSH or [DSHarness Remote](https://github.com/liguobao/ds-harness-remote), developed by Li Guobao (liguobao).
 - **Chat and tools:** switch models, send images, use voice input, and respond to tool approvals and questions. Chat and web interfaces are available.
-- **Plugin interfaces:** use native tool cards, forms and panels from plugins adapted for DSH Go. This repository includes an SDK, guides and examples.
+- **Plugin interfaces:** use native tool cards, forms and panels from plugins adapted for DSH Pro. This repository includes an SDK, guides and examples.
 - **Phone control:** after you enable the required permissions, let the local engine read the screen, tap and type. You can stop it at any time.
 - **Sharing and appearance:** share, export and replay conversations, and customize themes, icons and pets.
 
@@ -202,7 +202,7 @@ Model requests go to the provider you configure. During phone-control tasks, rel
 
 ## Risks and disclaimer
 
-DSH Go is an unofficial community project. It is not affiliated with, endorsed by, or a representative of DeepSeek. Before using it, please understand:
+DSH Pro is an unofficial community project. It is not affiliated with, endorsed by, or a representative of DeepSeek. Before using it, please understand:
 
 - **AI is fallible:** answers, code and actions may be wrong, and malicious instructions in web pages, messages or files may mislead it. Verify important results; do not rely solely on AI output for high-stakes medical, legal or investment decisions.
 - **Tools have real effects:** commands and file changes on local or remote hosts, as well as phone control, may cause data loss, privacy breaches, or harm to accounts, funds or devices. Skipping confirmations, relaxing app rules or lifting limits reduces safeguards; confirmation and blocking mechanisms cannot eliminate all risks. Keep default protections, grant only necessary permissions, and avoid lifting limits on devices holding payment or banking details. See the [phone-control guide](docs/guide/en/04-phone-control.md).
@@ -216,7 +216,7 @@ DSH Go is an unofficial community project. It is not affiliated with, endorsed b
 <summary><b>Is this an official DeepSeek app?</b></summary>
 <br>
 
-No. DSH Go is an unofficial client made by the community, built on the open-source [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness). DSH itself runs on your phone; model requests go to the provider you configure, so it needs a connection and bills your account with that provider.
+No. DSH Pro is an unofficial client made by the community, built on the open-source [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness). DSH itself runs on your phone; model requests go to the provider you configure, so it needs a connection and bills your account with that provider.
 
 </details>
 
@@ -232,7 +232,7 @@ The local web interface only answers to the app itself. Shared links are end-to-
 <summary><b>Will the system kill it in the background?</b></summary>
 <br>
 
-Some battery savers hold apps back. When that happens, DSH Go tells you and opens the right setting, on vivo, Xiaomi, Huawei, Honor and OPPO.
+Some battery savers hold apps back. When that happens, DSH Pro tells you and opens the right setting, on vivo, Xiaomi, Huawei, Honor and OPPO.
 
 </details>
 
@@ -248,7 +248,7 @@ Android 8 or later. On a phone, download the package on the Releases page; the x
 <summary><b>Is it open source?</b></summary>
 <br>
 
-Yes. The code is in this repository under [AGPL-3.0](LICENSE); `sdk/` and `examples/` are MIT. The DSH Go name and logo, and the mascots Deepy and Whale girl, are not covered by the open-source license; see [ASSETS.md](ASSETS.md). Credit requirements for forks and redistributed builds are in [License scope and redistribution](#license-scope-and-redistribution).
+Yes. The code is in this repository under [AGPL-3.0](LICENSE); `sdk/` and `examples/` are MIT. The DSH Pro name and logo, and the mascots Deepy and Whale girl, are not covered by the open-source license; see [ASSETS.md](ASSETS.md). Credit requirements for forks and redistributed builds are in [License scope and redistribution](#license-scope-and-redistribution).
 
 </details>
 
@@ -330,7 +330,7 @@ Report security issues through [SECURITY.en.md](SECURITY.en.md). Keep vulnerabil
 
 ## Friends' Links
 
-- **[DSH-TUI](https://dshtui.com/)**: the interactive terminal UI for DeepSeek Harness by the same author — the desktop counterpart to DSH Go, with a pixel whale, live status and time travel ([GitHub](https://github.com/ccch1mneyyy/dsh-TUI)).
+- **[DSH-TUI](https://dshtui.com/)**: the interactive terminal UI for DeepSeek Harness by the same author — the desktop counterpart to DSH Pro, with a pixel whale, live status and time travel ([GitHub](https://github.com/ccch1mneyyy/dsh-TUI)).
 
 ## License scope and redistribution
 
@@ -339,7 +339,7 @@ The code is open source under [AGPL-3.0](LICENSE), and forking it to study, self
 - **Please contact the author before making modifications.** If you plan to modify this project, develop it further or publish a derivative product, please contact the original author, ccch1mneyyy, through [Issues](https://github.com/ccch1mneyyy/dsh-go/issues) or the [community](#community) in advance and describe your intended use and plans.
 - **Please credit the upstream repository and author in forks.** When publishing a modified version, please clearly credit <https://github.com/ccch1mneyyy/dsh-go> and the original author, [ccch1mneyyy](https://github.com/ccch1mneyyy), in the repository README, in-app About screen and release page. Retain copyright, license and modification notices as required by the applicable license.
 - **No unauthorized commercial reskins.** Do not use this project's brand graphics or protected assets, including Deepy and Whale girl, in reskinned products for sale, paid distribution or other commercial products without permission. Do not violate the applicable license by removing required copyright and license notices or distributing derivative code without the required source, or impersonate the original author or an official release.
-- **The name and assets are separate.** The DSH Go name and logo, and the Deepy and Whale girl mascots, are not covered by AGPL-3.0. Ship a modified build under your own name and assets; see [ASSETS.md](ASSETS.md).
+- **The name and assets are separate.** The DSH Pro name and logo, and the Deepy and Whale girl mascots, are not covered by AGPL-3.0. Ship a modified build under your own name and assets; see [ASSETS.md](ASSETS.md).
 
 **License clarification:** AGPL-3.0 permits modification, redistribution and commercial use subject to its terms. Advance contact and the requested credit locations above are collaboration requests from the author, not additional restrictions on the code license. Brand and asset use remains subject to their own terms; this notice does not change the licenses of `sdk/`, `examples/` or third-party content.
 
@@ -347,15 +347,15 @@ The code is open source under [AGPL-3.0](LICENSE), and forking it to study, self
 
 This project is licensed under [AGPL-3.0](LICENSE). `sdk/` and `examples/` remain **MIT**. Third-party code and assets retain the terms stated in their own notices.
 
-- [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness): the agent DSH Go runs and connects to.
+- [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness): the agent DSH Pro runs and connects to.
 - [DSH-TUI](https://github.com/ccch1mneyyy/dsh-TUI): home of the mascots, Deepy and Whale girl.
 
 Code derived from Phase is used with the author's permission. DeepSeek Harness, PiPilot, DS Bot, DSH Remote and other third-party components and assets retain their own licenses and attribution. See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) for sources and terms.
 
-The DSH Go name, logo and mascots (Deepy and Whale girl) are not covered by the AGPL; see [ASSETS.md](ASSETS.md) for their terms.
+The DSH Pro name, logo and mascots (Deepy and Whale girl) are not covered by the AGPL; see [ASSETS.md](ASSETS.md) for their terms.
 
 <sub>Remote connections draw on the [ds-harness-remote](https://github.com/liguobao/ds-harness-remote) project and its server. Thanks to its author, liguobao.</sub>
 
 <br>
 
-<p align="center"><sub>DSH Go is an unofficial client made by the community. It is not affiliated with or endorsed by DeepSeek. DeepSeek names and marks belong to their owners.</sub></p>
+<p align="center"><sub>DSH Pro is an unofficial client made by the community. It is not affiliated with or endorsed by DeepSeek. DeepSeek names and marks belong to their owners.</sub></p>

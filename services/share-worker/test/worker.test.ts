@@ -419,7 +419,7 @@ describe('home page', () => {
       expect(res.headers.has('X-Robots-Tag')).toBe(false);
     }
     const body = await (await serve(get('/?from=qr'), ctx.env)).text();
-    expect(body).toContain('<title>DSH Go · 万物皆插件，随身而行</title>');
+    expect(body).toContain('<title>DSH Pro · 万物皆插件，随身而行</title>');
     expect(body).toContain('<link rel="canonical" href="https://go.dshtui.com/">');
     expect(body).toContain('<script src="app.js" defer></script>');
   });

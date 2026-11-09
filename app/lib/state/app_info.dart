@@ -16,7 +16,7 @@ abstract final class AppInfo {
 
   /// The app's name as the phone shows it: launcher, Recents, notifications, system
   /// settings, the licence page. Matches `android:label` in AndroidManifest.xml.
-  static const name = 'DSH Go';
+  static const name = 'DSH Pro';
 
   /// The in-app wordmark: the drawer's lockup, the welcome page and the brand mark's
   /// spoken label.
@@ -29,7 +29,7 @@ abstract final class AppInfo {
   /// The line under the brand mark (welcome page, 关于 dsh-go).
   static String get slogan => appL10n.appSlogan;
 
-  /// The original DSH Go author and their personal profiles, not project pages.
+  /// The original DSH Pro author and their personal profiles, not project pages.
   static const author = 'ccch1mneyyy';
   static const authorBilibiliName = 'ccchimneyyy';
   static const authorBilibiliUrl = 'https://b23.tv/9WBns6Y';

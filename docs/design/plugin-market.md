@@ -1,4 +1,4 @@
-# DSH Go 插件市场
+# DSH Pro 插件市场
 
 > 2026-10-30。研究在 [../research/plugin-market.md](../research/plugin-market.md)，App 现有市场在 `app/lib/state/plugins_state.dart`（读 dshfind 的格式 1 索引）和 `app/lib/ui/plugins/market_tab.dart`。生图生视频插件见 [media-generation.md](media-generation.md)。
 
@@ -16,8 +16,8 @@
 
 | 分区 | 收录 | 来源 | 卡片标记 |
 |---|---|---|---|
-| 官方 | 补全 DSH Go 功能的插件（首个：`@ccch1mneyyy/dsh-media`） | 官方索引，`tier: official` | 「官方」 |
-| 适配 DSH Go | 声明并通过 DSH Go 原生协议检查的社区插件 | 官方索引，`tier: community` | 「适配 DSH Go」 |
+| 官方 | 补全 DSH Pro 功能的插件（首个：`@ccch1mneyyy/dsh-media`） | 官方索引，`tier: official` | 「官方」 |
+| 适配 DSH Pro | 声明并通过 DSH Pro 原生协议检查的社区插件 | 官方索引，`tier: community` | 「适配 DSH Pro」 |
 | 全部 | dshfind 全量 | dshfind 格式 1 索引，照旧 | 无 |
 
 同一个包同时出现在官方索引和 dshfind 里时，以官方索引的条目为准（锁定的版本、风险标记）。
@@ -56,7 +56,7 @@ GitHub Pages
       "summary": { "zh": "…", "en": "…" },
       "screenshots": ["https://…"],     // https，最多 4 张
       "dshGo": {
-        "adapted": true,               // 用了 DSH Go 原生协议（卡片、表单、设置页）
+        "adapted": true,               // 用了 DSH Pro 原生协议（卡片、表单、设置页）
         "minApp": "1.0.3",             // 低于这个版本的 App 只显示，不让装
         "features": ["native-cards", "settings-page", "media"]
       },
@@ -116,13 +116,13 @@ scripts/build.mjs                         生成 index.json + dsh-go.json
 | `network` | 源码里有网络请求（fetch、http、ws） | low |
 | `filesystem` | 写工作区以外的路径 | medium |
 | `obfuscated` | 压缩混淆的大文件，难以审阅 | medium |
-| `not-adapted` | 没有 DSH Go 原生协议声明 | low（进「全部」逻辑，不进「适配」分区） |
+| `not-adapted` | 没有 DSH Pro 原生协议声明 | low（进「全部」逻辑，不进「适配」分区） |
 
 `risk.level` 取所有 flag 里最高的那个。判断是启发式的，文档和 App 里都这么说明：「自动检查发现的特征，不代表插件有恶意」。
 
 ## 6. App 侧
 
-- 市场页三个分区：官方 / 适配 DSH Go / 全部。前两个来自官方索引，第三个是 dshfind。
+- 市场页三个分区：官方 / 适配 DSH Pro / 全部。前两个来自官方索引，第三个是 dshfind。
 - 读官方索引（1.0.9 起，`app/lib/state/plugins_state.dart` `fetchOfficialMarket`）：先 `https://dl.dshtui.com/market/`，不行再 `https://go.dshtui.com/market/`。最近一份读得通、且每个插件都有锁定版本的 listing 的目录，连同两个文件的 ETag 存在手机上（SharedPreferences `market.official`）：6 小时内直接用，不发请求；过了 6 小时带 `If-None-Match` 重新验证（304 就续期）；下拉刷新和「重试」总是重新验证；两个地址都连不上时用手机上那份（不论多旧）。手机上没有时照旧：哪儿都没发布（404）是空市场，其余是错误。
 - 卡片：分区标记 + 风险标签（low 不显示，medium 黄色，high 红色）。
 - 详情页：截图、中文介绍、风险逐条解释、版本、来源链接。

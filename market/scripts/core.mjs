@@ -240,7 +240,7 @@ export function makeIndex(rows) {
   for (const { entry } of rows) categories[entry.category] = { title: { en: entry.category } };
   const index = {
     format: 1,
-    title: { zh: 'DSH Go 插件市场', en: 'DSH Go plugins' },
+    title: { zh: 'DSH Pro 插件市场', en: 'DSH Pro plugins' },
     metadata: { categories },
     plugins: rows.map(({ entry, report }) => ({
       name: entry.name,
