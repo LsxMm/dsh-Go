@@ -166,7 +166,7 @@ class MainActivity : FlutterActivity() {
                 "getTimeZoneId" -> result.success(TimeZone.getDefault().id)
                 "initializePairingScanner" -> {
                     try {
-                        io.github.ccch1mneyyy.dsh_app.mlkit.MlKitRuntime.initialize(applicationContext)
+                        io.github.social.dsh_app.mlkit.MlKitRuntime.initialize(applicationContext)
                         result.success(null)
                     } catch (_: Exception) {
                         result.error("scanner_initialization_failed", "The barcode scanner could not be initialized", null)

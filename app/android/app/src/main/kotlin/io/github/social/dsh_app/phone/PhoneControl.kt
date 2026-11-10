@@ -323,7 +323,7 @@ class PhoneControl private constructor(private val app: Context) : PhoneEnv, Con
     private var screenReceiver: BroadcastReceiver? = null
     private val sinks = CopyOnWriteArraySet<(Map<String, Any?>) -> Unit>()
     val background: BackgroundControl = BackgroundControl.get(app)
-    val shell = io.github.ccch1mneyyy.dsh_app.phone.shell.AndroidShellController(app) {
+    val shell = io.github.social.dsh_app.phone.shell.AndroidShellController(app) {
         ticker.execute { emitStatus() }
     }
     val preview = BackgroundPreview(app, background::previewTarget, { taskId ->

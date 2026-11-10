@@ -8,7 +8,7 @@ import com.google.mlkit.vision.text.Text
 import com.google.mlkit.vision.text.TextRecognition
 import com.google.mlkit.vision.text.TextRecognizer
 import com.google.mlkit.vision.text.chinese.ChineseTextRecognizerOptions
-import io.github.ccch1mneyyy.dsh_app.mlkit.MlKitRuntime
+import io.github.social.dsh_app.mlkit.MlKitRuntime
 import java.util.concurrent.Executor
 
 /** The OCR SDK entry; host construction and settings do not instantiate this class. */

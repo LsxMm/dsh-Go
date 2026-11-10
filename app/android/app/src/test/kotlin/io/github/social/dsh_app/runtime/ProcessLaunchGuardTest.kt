@@ -255,7 +255,7 @@ class ProcessLaunchGuardTest {
     }
 
     @Test fun shellOwnerOnlyLaunchesItsReviewedHelperAndAndroidSh() {
-        val path = "app/android/app/src/main/kotlin/io/github/ccch1mneyyy/dsh_app/phone/shell/AndroidShellProcess.kt"
+        val path = "app/android/app/src/main/kotlin/io/github/social/dsh_app/phone/shell/AndroidShellProcess.kt"
         val source = File(repository(), path).readText()
         val calls = nativeCalls(source, "kt")
         val constructors = calls.filter { Code(source.substring(it.offset), "kt").read().getOrNull(1)?.text == "(" }
