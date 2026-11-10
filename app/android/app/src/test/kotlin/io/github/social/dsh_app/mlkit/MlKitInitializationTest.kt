@@ -1,4 +1,4 @@
-package io.github.ccch1mneyyy.dsh_app.mlkit
+package io.github.social.dsh_app.mlkit
 
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse

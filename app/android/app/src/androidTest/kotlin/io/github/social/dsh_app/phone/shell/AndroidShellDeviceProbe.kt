@@ -1,4 +1,4 @@
-package io.github.ccch1mneyyy.dsh_app.phone.shell
+package io.github.social.dsh_app.phone.shell
 
 import android.os.Process
 

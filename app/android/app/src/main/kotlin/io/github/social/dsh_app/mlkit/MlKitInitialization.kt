@@ -1,4 +1,4 @@
-package io.github.ccch1mneyyy.dsh_app.mlkit
+package io.github.social.dsh_app.mlkit
 
 /** Shared by barcode scanning and OCR; construction does not initialize the SDK. */
 internal class MlKitInitialization {

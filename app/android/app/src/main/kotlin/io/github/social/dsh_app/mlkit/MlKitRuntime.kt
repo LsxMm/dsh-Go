@@ -1,4 +1,4 @@
-package io.github.ccch1mneyyy.dsh_app.mlkit
+package io.github.social.dsh_app.mlkit
 
 import android.content.Context
 import com.google.mlkit.common.MlKit
