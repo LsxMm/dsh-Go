@@ -987,7 +987,7 @@ enum PhoneUnlock {
   /// Password, verification-code and payment-code inputs.
   secretFields,
 
-  /// DSH Go's own screens.
+  /// DSH Pro's own screens.
   ownApp,
 
   /// 完整 root: the `shell` tool runs arbitrary commands as uid 0 through `su`.

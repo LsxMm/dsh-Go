@@ -8,7 +8,7 @@ This change implements the native App UX, not another Host media protocol or a p
 - Changing target origin or manually reusing a key across origins requires explicit confirmation. Default credential reuse is limited to the same provider and origin.
 - Images show loading and actionable file-read failures. Reload evicts the image/read cache, keeps the original Host and session, and never submits generation.
 - Videos have local first-frame previews, in-App texture playback with play/pause/seek, and external-app fallback. Remote files are materialized only for an explicit action, never for scrolling previews. Poster requests serialize; frame dimensions are bounded to 512 pixels. On API 26, automatic full-frame extraction skips videos over four megapixels.
-- Videos save via local-file streaming into Android MediaStore Movies/DSH Go. Image writes retain their existing permission flow. No complete video is sent as a platform-channel byte array.
+- Videos save via local-file streaming into Android MediaStore Movies/DSH Pro. Image writes retain their existing permission flow. No complete video is sent as a platform-channel byte array.
 - Player preparation, late completion, background pause, audio focus and surface disposal have explicit cleanup paths.
 
 ## Verification environment

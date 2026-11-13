@@ -95,7 +95,7 @@ PairingScan parsePairingScan(String text, {DateTime? now}) {
       uri.hasQuery ||
       match == null ||
       !_isKey32(match.group(1)!)) {
-    throw const PairingException('PAIRING_SCAN_INVALID', 'This is not a DSH Go pairing code.');
+    throw const PairingException('PAIRING_SCAN_INVALID', 'This is not a DSH Pro pairing code.');
   }
   return PairingTicketScan(_origin(uri.origin), match.group(1)!);
 }
@@ -110,7 +110,7 @@ PairingLegacyScan _parseLegacyScan(String text, DateTime now) {
   final map = asMap(decoded);
   final server = asString(map?['serverUrl']);
   if (map == null || map['type'] != 'dsh.remote.pairing' || server == null) {
-    throw const PairingException('PAIRING_SCAN_INVALID', 'This is not a DSH Go pairing code.');
+    throw const PairingException('PAIRING_SCAN_INVALID', 'This is not a DSH Pro pairing code.');
   }
   final origin = _origin(server);
   if (origin.toString() != server) {

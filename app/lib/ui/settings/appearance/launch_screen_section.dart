@@ -3,7 +3,7 @@
 //
 //          ╭──────╮    ╭──────╮
 //          │  ◖●  │    │ ▒▒▒▒ │      two phones the screen's shape, centred as a pair 12
-//          │DSH Go│    │ ▒▒▒▒ │      apart, each a third of the card's inner width; the one
+//          │DSH Pro│    │ ▒▒▒▒ │      apart, each a third of the card's inner width; the one
 //          ╰──────╯    ╰──────╯      in use ringed in the accent
 //            默认         自定义
 //   适配方式                    ( 填满 | 居中 )     ┐

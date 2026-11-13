@@ -7,7 +7,7 @@ import { PassThrough } from 'node:stream';
 import { runInNewContext } from 'node:vm';
 
 const require = createRequire(import.meta.url);
-const source = readFileSync(new URL('../../app/android/app/src/main/kotlin/io/github/ccch1mneyyy/dsh_app/runtime/SafeMode.kt', import.meta.url), 'utf8');
+const source = readFileSync(new URL('../../app/android/app/src/main/kotlin/io/github/social/dsh_app/runtime/SafeMode.kt', import.meta.url), 'utf8');
 const script = source.match(/const val PLUGINS_SCRIPT = """([\s\S]*?)"""/)[1];
 
 // Run the shipped helper against real Node streams. Only the child and clock

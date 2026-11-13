@@ -6,7 +6,7 @@ import { tmpdir } from 'node:os';
 import { spawnSync } from 'node:child_process';
 
 // Execute the shipped helper verbatim; no JVM or replacement implementation.
-const source = readFileSync(new URL('../../app/android/app/src/main/kotlin/io/github/ccch1mneyyy/dsh_app/runtime/SafeMode.kt', import.meta.url), 'utf8');
+const source = readFileSync(new URL('../../app/android/app/src/main/kotlin/io/github/social/dsh_app/runtime/SafeMode.kt', import.meta.url), 'utf8');
 const script = source.match(/const val PLUGINS_SCRIPT = """([\s\S]*?)"""/)[1];
 function fixture(t) {
   const dir = mkdtempSync(join(tmpdir(), 'safe-home-helper-'));

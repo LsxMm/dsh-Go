@@ -1,6 +1,6 @@
-// The DSH Go sidecar of the official plugin index, `dsh-go.json`
+// The DSH Pro sidecar of the official plugin index, `dsh-go.json`
 // (docs/design/plugin-market.md §3): what format 1 has no room for — the
-// tier, the zh/en title and summary, screenshots, the DSH Go protocol
+// tier, the zh/en title and summary, screenshots, the DSH Pro protocol
 // declaration, the risk the market's checks found, the npm integrity and the
 // withdrawn versions. Read leniently like the index: an entry that breaks a
 // rule is skipped, the rest of the file still counts.
@@ -62,7 +62,7 @@ class DshGoListing {
   /// https only.
   final List<Uri> screenshots;
 
-  /// Uses the DSH Go native protocol (cards, forms, settings pages).
+  /// Uses the DSH Pro native protocol (cards, forms, settings pages).
   final bool adapted;
 
   /// Older apps show the plugin but can't install it.
@@ -81,7 +81,7 @@ class DshGoListing {
   /// Withdrawn versions: people who have one installed are warned.
   final Set<String> blockedVersions;
 
-  /// Goes under 「适配 DSH Go」 (a community entry): declares the protocol and
+  /// Goes under 「适配 DSH Pro」 (a community entry): declares the protocol and
   /// the checks didn't flag it as not adapted.
   bool get isAdapted => adapted && !flags.contains('not-adapted');
 

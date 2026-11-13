@@ -12,6 +12,6 @@
     <string name="background_setup_history_full">后台服务已达任务记录上限，请关闭通道后重新连接。</string>
     <string name="background_setup_bind_timeout">连接 Shizuku 服务超时，请确认它正在运行后重连。</string>
     <string name="background_setup_unbind_wait">旧连接尚未释放，请稍后重连。</string>
-    <string name="background_setup_unbind_failed">无法释放旧连接，请在 Shizuku 中重启 DSH Go 服务。</string>
+    <string name="background_setup_unbind_failed">无法释放旧连接，请在 Shizuku 中重启 DSH Pro 服务。</string>
     <string name="background_setup_bind_failed">无法连接 Shizuku 的后台服务，请重连。</string>
 </resources>

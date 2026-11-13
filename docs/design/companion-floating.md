@@ -99,7 +99,7 @@
 ## 测试覆盖
 
 - `app/test/companion/companion_float.test.cjs`（`node --test`）：纯帧门、alpha 边界、状态映射，并在隔离 VM 中执行真实 `stage.js` 的控制流，包括 float / room 两种模式、首次冻结、动态 `reduceMotion`、取消、晚到的 bitmap / motion、release 异常与 context loss。Core、WebGL、fetch 和窗口边界用替身；通过不证明实际渲染。
-- `app/android/app/src/test/kotlin/io/github/ccch1mneyyy/dsh_app/pet/CompanionFloatPolicyTest.kt`：端点解析、每个选择一次重试和一次回退、各隐藏 / 省电门、变暗启动、几何与吸边、包围盒变化时视口原点不漂移。
+- `app/android/app/src/test/kotlin/io/github/social/dsh_app/pet/CompanionFloatPolicyTest.kt`：端点解析、每个选择一次重试和一次回退、各隐藏 / 省电门、变暗启动、几何与吸边、包围盒变化时视口原点不漂移。
 - `companion_float_session_test.dart`、`companion_server_test.dart`、`companion_workshop_test.dart`：会话的选择代与迟到结果、重试、清理所有权、本地服务只读与回环、换包时 `close` 等待晚到 handler、store 的换包门与 revision。
 - `companion_stage_guard_test.dart`、`companion_room_guard_test.dart`：小屋的 attach 顺序、renderer 退出收拾、换包等待、失败页与「重试」。
 - `pet_overlay_renderer_prefs_test.dart`、`overlay_settings_tile_test.dart`（含 `overlay_settings_light.png` / `overlay_settings_dark.png` 两张 golden）、`overlay_channel_test.dart`：偏好、设置入口与原生通道。

@@ -191,7 +191,7 @@ Future<void> showTavernActions(BuildContext context, List<(IconData, String, Voi
       ),
     );
 
-/// Our own sample card (assets/tavern), written for DSH Go: two greetings,
+/// Our own sample card (assets/tavern), written for DSH Pro: two greetings,
 /// example lines and a small lorebook to try the tavern with.
 const tavernSampleCardAsset = 'assets/tavern/sample_innkeeper.json';
 

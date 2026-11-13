@@ -1,7 +1,7 @@
 // 发送匿名使用统计: anonymous, per-day counts kept on the phone and sent once
 // each, the day after (contract v1, usage_ledger.dart). On by default, but
 // nothing is counted until the person has seen the switch (first run's
-// 「想让 DSH Go 帮你做哪些事」, or 设置 › 隐私与分享). Off means nothing is
+// 「想让 DSH Pro 帮你做哪些事」, or 设置 › 隐私与分享). Off means nothing is
 // counted, nothing is kept and no request is made.
 
 import 'dart:async';

@@ -131,7 +131,7 @@ class TavernBookWords {
   /// 第 n 章.
   final String Function(int n) chapter;
 
-  /// 用 DSH Go 酒馆写成.
+  /// 用 DSH Pro 酒馆写成.
   final String madeWith;
 }
 

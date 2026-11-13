@@ -64,7 +64,7 @@
 - 手机操控 · 多任务：每个对话的手机任务各自批准、暂停、停止。后台任务最多可以同时跑 3 个，在「不打扰模式」页的「后台任务上限」里设置，默认 1 个。悬浮条和通知上的停止、暂停、插话只作用于显示时的那个任务。
 - 手机操控 · 看和点：「不打扰模式」页可以打开「实时查看后台屏」（默认关），App 内和悬浮小窗都能看，只读，最多每秒 5 帧，画面不存盘。找不到控件时可以按截图坐标点击、长按和滑动：截图 30 秒内有效，窗口一切换就作废；同一任务里第一次这样操作某个应用要你许可，发送、支付、删除仍然每次确认。输入文字后会回读核对，对不上时如实报告。
 - 手机操控 · 技能和自检：任务成功后可以「存成技能」，起草时去掉联系人、号码、消息正文等个人信息，先预览、可修改，再装成 DSH 技能。手机操控页加了本机自检。
-- 伙伴小屋 · 鲸鱼娘：她现在随 App 一起装好，第一次进小屋时自动安置，不用再自己导入素材包。模型作者是 B 站「Mao绒绒家园」，经作者授权随 DSH Go 分发。
+- 伙伴小屋 · 鲸鱼娘：她现在随 App 一起装好，第一次进小屋时自动安置，不用再自己导入素材包。模型作者是 B 站「Mao绒绒家园」，经作者授权随 DSH Pro 分发。
 - 伙伴小屋：菜单里的「主动邀请」换成「她多主动」，分安静、偶尔（默认）、常常、话多四档；别的对话跑完或出错时她提不提，在「她会提起什么」里分项开关。批准卡、提问卡和聊天记录在小屋里就能处理和翻看。日期、名字这些上下文不再写进你发出的消息里。完整模式可以打开自动想起记忆。
 - 伙伴小屋 · 导入模型：模型文件夹直接打成 zip 也能导入。模型自带的表情和动作能用了，可以在菜单「动作和表情」里试、起名、标成 AI 可以用。蒙版多的精细模型也能画对，旧手机上更流畅；导不了的旧模型会说清原因。缺适配的模型可以让你配好的 AI 帮她适配：只发参数名单，不发模型文件，可以撤销，也可以关掉自动适配。
 - 宠物：宠物选择里可以导入自己的像素宠物包，也能导入 Codex 宠物，转换后和原来不一样的地方会说明；长按自己导入的宠物可以删掉。
@@ -81,7 +81,7 @@
 - Phone control, multiple tasks: each chat's phone task is approved, paused and stopped on its own. Up to 3 background tasks can run at once; set it under Background task limit on the Non-disruptive mode page (default 1). Stop, pause and interject on the floating bar and the notification act only on the task they were showing.
 - Phone control, seeing and tapping: on the Non-disruptive mode page you can turn on Live background preview (off by default) to watch the background screen in the app or in a small floating window. It's view-only, at most 5 frames a second, and frames aren't saved. When no control can be found, the agent can tap, long-press and swipe by screenshot coordinates: a screenshot is valid for 30 seconds and is dropped as soon as the window changes. The first such action on an app within a task asks you; sending, paying and deleting still ask every time. Typed text is read back, and a mismatch is reported as it is.
 - Phone control, skills and self-check: after a task succeeds you can Save as a skill. The draft leaves out contacts, numbers, message text and other personal details, and you can preview and edit it before it's installed as a DSH skill. The phone control page has a local self-check.
-- Companion room, the whale girl: she now comes with the app and settles in the first time you open the room, so there's no pack to import. The model is by Mao绒绒家园 on Bilibili and is distributed with DSH Go with the author's permission.
+- Companion room, the whale girl: she now comes with the app and settles in the first time you open the room, so there's no pack to import. The model is by Mao绒绒家园 on Bilibili and is distributed with DSH Pro with the author's permission.
 - Companion room: the menu's invitation switch is now How often she speaks up, with four levels: Quiet, Now and then (default), Often and Chatty. Whether she mentions another chat finishing or failing is set item by item under What she brings up. Approval cards, question cards and the chat history can be handled and read right in the room. Context such as the date and your name is no longer written into the messages you send. Full mode can turn on automatic memory recall.
 - Companion room, importing models: a zipped model folder can be imported as is. A model's own expressions and motions now work; try them, name them and mark them as usable by the AI under Moves and faces in the menu. Detailed models with many masks draw correctly, older phones run smoother, and an old model that can't be imported says why. A model that needs fitting can be adapted by the AI you configured: only the parameter list is sent, never the model files, and you can undo it or turn automatic fitting off.
 - Pets: the pet picker can import your own pixel pet pack, and Codex pets too, with a note on anything that came out different from the original. Long-press a pet you imported to delete it.
@@ -244,7 +244,7 @@
 
 - Android 17：不打扰模式能点了。系统删掉了后台屏下发输入要用的隐藏接口，root、Sui、Shizuku、自连 ADB 四条通道都只能读屏、点不了，现在改用还在的接口。我们手上没有 Android 17 真机，遇到问题请开 issue 反馈。
 - Android 17：自连 ADB 用的 TLS 库（Conscrypt）升到 2.8.0，在 16 KB 内存页的设备上也能加载。
-- 不打扰模式：新增「保持 X 通道」开关，默认关。打开后，通道断开、App 被杀或手机重启，都会自己连回去。root 打开后 DSH Go 会自己再向 root 管理器申请，给不给仍由管理器决定；没打开就绝不会自动执行 `su`。这个开关还没在真机上验证过，遇到问题请开 issue 反馈。
+- 不打扰模式：新增「保持 X 通道」开关，默认关。打开后，通道断开、App 被杀或手机重启，都会自己连回去。root 打开后 DSH Pro 会自己再向 root 管理器申请，给不给仍由管理器决定；没打开就绝不会自动执行 `su`。这个开关还没在真机上验证过，遇到问题请开 issue 反馈。
 - 不打扰模式：读后台屏时按包名取目标 App 的窗口，不再只看第一个窗口；每次点按、滑动、按键只发一次，系统没确认时不再说「系统拒绝」，也不再让你去开 USB 调试；对后台屏按 HOME 这类系统键会直接失败，不再把物理屏送回桌面；root 的一键授权复用已连接的 root，不再多跑一次 `su`。
 - 自连 ADB：在通知里输入配对码现在真的能配对了（以前每次都失败，结果还被丢掉，看起来没有任何反应），通知会显示配对结果。
 - 手机操控悬浮条：胶囊 3 秒不碰就按「闲置时不透明度」变淡，碰一下恢复；卡片和等你处理的时候不变淡。开了「闲置时自动收起」的，还是先收成小球再变淡。
@@ -269,7 +269,7 @@
 
 - Android 17: Do Not Disturb can tap again. The system removed the hidden interface the background screen used to send input, so root, Sui, Shizuku and self-paired ADB could all read the screen but not touch it; it now uses the one that remains. We don't have an Android 17 device, so please open an issue if it misbehaves.
 - Android 17: the TLS library self-paired ADB uses (Conscrypt) is now 2.8.0, which loads on 16 KB-page devices.
-- Do Not Disturb: a new "Keep this channel" switch, off by default. With it on, the channel reconnects by itself after a drop, the app being killed or a reboot. For root, DSH Go asks your root manager again by itself and the manager still decides; with it off, `su` never runs on its own. This switch hasn't been tried on a real device yet, so please open an issue if it misbehaves.
+- Do Not Disturb: a new "Keep this channel" switch, off by default. With it on, the channel reconnects by itself after a drop, the app being killed or a reboot. For root, DSH Pro asks your root manager again by itself and the manager still decides; with it off, `su` never runs on its own. This switch hasn't been tried on a real device yet, so please open an issue if it misbehaves.
 - Do Not Disturb: reading the background screen picks the target app's window by package instead of only looking at the first; each tap, swipe and key is sent once, and when the system doesn't confirm one it no longer says "rejected" or sends you to USB debugging settings; HOME and similar system keys on the background screen fail outright instead of sending the physical screen home; the one-tap root grant reuses the connected root instead of running `su` again.
 - Self-paired ADB: typing the pairing code into the notification now really pairs (it used to fail every time and drop the result, so nothing seemed to happen), and the notification shows the outcome.
 - Phone control overlay: the capsule fades to Idle opacity after 3 seconds untouched and comes back at a touch; the card and anything waiting for you stay solid. With Collapse when idle on, it still shrinks to a ball first and the ball fades.
@@ -425,21 +425,21 @@
 
 ### English
 
-- DSH Remote uses less data: the session list is no longer downloaded in full every time a chat changes state; 30 seconds after DSH Go goes to the background, a running chat stops streaming word by word and catches up in one go when you return (it shows syncing briefly); and the connection no longer sends extra health checks while data is flowing, so a slow network is less likely to look like a drop and reconnect over and over.
+- DSH Remote uses less data: the session list is no longer downloaded in full every time a chat changes state; 30 seconds after DSH Pro goes to the background, a running chat stops streaming word by word and catches up in one go when you return (it shows syncing briefly); and the connection no longer sends extra health checks while data is flowing, so a slow network is less likely to look like a drop and reconnect over and over.
 - DSH Remote follows the latest ds-harness-remote protocol: once the Host plugin is on 0.6.0, remote traffic moves to a separate Relay node assigned by the server, taking load off the main server; protocol checks match upstream too. Thanks to liguobao, the author of DSH Remote.
 
 ## 1.0.1 · 2026-10-30
 
 ### 中文
 
-- 高刷新率：在支持 90Hz、120Hz 的手机上，DSH Go 会用屏幕最高的刷新率运行。之前部分系统（例如 OriginOS、HyperOS、ColorOS）会把它限制在 60Hz 或 90Hz。系统设置里选的刷新率和省电模式仍然优先。
+- 高刷新率：在支持 90Hz、120Hz 的手机上，DSH Pro 会用屏幕最高的刷新率运行。之前部分系统（例如 OriginOS、HyperOS、ColorOS）会把它限制在 60Hz 或 90Hz。系统设置里选的刷新率和省电模式仍然优先。
 - 安装包同时带 v1、v2、v3 三种签名，只认旧式签名的安装器和安全检测也能正常安装。签名证书没有变，可以直接覆盖 1.0.0 升级，对话和设置都会保留。
 - 应用内更新的弹窗里多了一个「去 Star」按钮，可以顺手去 GitHub 给项目点个 Star。
 - GitHub 发布页只放常见手机用的 arm64 安装包；模拟器和 x86 设备用的版本在发布说明末尾的「其他版本下载」里。
 
 ### English
 
-- High refresh rate: on 90 Hz and 120 Hz phones, DSH Go now runs at the screen's highest refresh rate. Some systems (OriginOS, HyperOS and ColorOS, for example) used to hold it at 60 or 90 Hz. The refresh rate you choose in system settings and power saving still come first.
+- High refresh rate: on 90 Hz and 120 Hz phones, DSH Pro now runs at the screen's highest refresh rate. Some systems (OriginOS, HyperOS and ColorOS, for example) used to hold it at 60 or 90 Hz. The refresh rate you choose in system settings and power saving still come first.
 - The APK now carries v1, v2 and v3 signatures, so installers and security checks that only read the older signature accept it too. The signing certificate hasn't changed: it installs over 1.0.0 and keeps your chats and settings.
 - The in-app update sheet has a Star it button for a quick star on GitHub.
 - The GitHub release page offers the arm64 APK for most phones; the build for emulators and x86 devices is under "Other builds" at the end of the release notes.
@@ -448,18 +448,18 @@
 
 ### 中文
 
-DSH Go 1.0.0 来了，这是第一个公开版本。它让你在 Android 手机上运行 DeepSeek Harness（DSH），也能连上电脑或服务器上的 DSH，走到哪儿都能接着聊、接着干活。DSH Go 以 AGPL-3.0 开源，欢迎来 GitHub 看看。感谢测试期间每一位反馈问题、提出建议的朋友；已经在用 0.9.10 的，这一版功能不变，只是正式换上 1.0.0 的版本号。
+DSH Pro 1.0.0 来了，这是第一个公开版本。它让你在 Android 手机上运行 DeepSeek Harness（DSH），也能连上电脑或服务器上的 DSH，走到哪儿都能接着聊、接着干活。DSH Pro 以 AGPL-3.0 开源，欢迎来 GitHub 看看。感谢测试期间每一位反馈问题、提出建议的朋友；已经在用 0.9.10 的，这一版功能不变，只是正式换上 1.0.0 的版本号。
 
-现在的 DSH Go 可以：
+现在的 DSH Pro 可以：
 
 - **本机运行**：在 App 里装好 Ubuntu、Node.js 和 DSH 运行环境，不用 Root，也不用另装 Termux。
 - **远程主机**：通过 SSH 或 DSH Remote 使用电脑、服务器上的 DSH；只连远程时，手机上不必安装运行环境。
 - **对话**：切换模型、发图片，回复中途也能插话；工具审批和提问在对话里直接处理，原生界面和网页版一键切换。
-- **插件**：从插件市场安装；适配 DSH Go 的插件以原生的工具卡、表单和面板呈现，设置页也是原生的。仓库附带 SDK、教程和示例。
+- **插件**：从插件市场安装；适配 DSH Pro 的插件以原生的工具卡、表单和面板呈现，设置页也是原生的。仓库附带 SDK、教程和示例。
 - **手机操控**：开启权限后，让本机引擎看屏幕、点按和输入，随时可以暂停或停止。确认方式可选「关键步骤先问我」或「全程自动」；可选的「解除限制」默认全部关闭，开启前会先说明风险。Android 14 及以上还能用不打扰模式，在看不见的屏幕上操作，不耽误你用手机。
 - **离线语音输入**：语音模型（约 241 MB）下载到手机上，在本地识别。
 - **宠物**：Deepy 小鲸鱼和鲸娘陪你干活，打开「App 外显示」还能跟你到桌面。
-- **分享**：把一条回复、选中的消息或整段对话分享成链接、图片、文件或文字；链接端到端加密，对方可以在浏览器里回放，或在 DSH Go 里接着聊。
+- **分享**：把一条回复、选中的消息或整段对话分享成链接、图片、文件或文字；链接端到端加密，对方可以在浏览器里回放，或在 DSH Pro 里接着聊。
 - **外观**：六套配色，也可以跟随壁纸或自选颜色；换桌面图标，用自己的壁纸和启动画面；界面支持中文和英文。
 - **匿名使用统计**：只发送每天的使用次数和 App、系统版本等基本信息，不含对话、文件和账号；默认开启，在 设置 › 隐私与分享 随时关闭。
 - **图像与视频生成即将上线**：App 这边已经就绪，生成插件发布后即可在对话里使用。
@@ -468,18 +468,18 @@ DSH Go 1.0.0 来了，这是第一个公开版本。它让你在 Android 手机�
 
 ### English
 
-DSH Go 1.0.0 is here, our first public release. It runs DeepSeek Harness (DSH) on your Android phone or connects to DSH on your computer or server, so you can pick up a chat or a task wherever you are. DSH Go is open source under AGPL-3.0; come take a look on GitHub. Thank you to everyone who reported problems and shared ideas during testing. If you're already on 0.9.10, nothing changes but the version number: it's the same app, now 1.0.0.
+DSH Pro 1.0.0 is here, our first public release. It runs DeepSeek Harness (DSH) on your Android phone or connects to DSH on your computer or server, so you can pick up a chat or a task wherever you are. DSH Pro is open source under AGPL-3.0; come take a look on GitHub. Thank you to everyone who reported problems and shared ideas during testing. If you're already on 0.9.10, nothing changes but the version number: it's the same app, now 1.0.0.
 
-What DSH Go does today:
+What DSH Pro does today:
 
 - **On your phone:** install the Ubuntu, Node.js and DSH runtime from the app, without Root or a separate Termux.
 - **Remote hosts:** use DSH on a computer or server over SSH or DSH Remote; if you only connect remotely, the phone doesn't need the runtime.
 - **Chat:** switch models, send images and step in while a reply is still coming; handle tool approvals and questions right in the chat, and switch between the native and web interfaces in one tap.
-- **Plugins:** install from the plugin market; plugins adapted for DSH Go show up as native tool cards, forms and panels, with native settings pages too. The repository includes an SDK, guides and examples.
+- **Plugins:** install from the plugin market; plugins adapted for DSH Pro show up as native tool cards, forms and panels, with native settings pages too. The repository includes an SDK, guides and examples.
 - **Phone control:** once you grant the permissions, the local engine can read the screen, tap and type, and you can pause or stop it at any time. Choose "Ask me at key steps" or "Fully automatic"; the optional Lift limits switches are all off by default and explain the risks before they turn on. On Android 14 and later, non-disruptive mode works on a hidden screen while you keep using your phone.
 - **Offline voice input:** the voice model (about 241 MB) downloads to the phone and recognises speech on the device.
 - **Pets:** Deepy and Whale girl keep you company while DSH works, and with "Show outside the app" they come along to the home screen.
-- **Sharing:** share one reply, selected messages or a whole chat as a link, an image, a file or text. Links are end-to-end encrypted, and the recipient can replay the chat in a browser or continue it in DSH Go.
+- **Sharing:** share one reply, selected messages or a whole chat as a link, an image, a file or text. Links are end-to-end encrypted, and the recipient can replay the chat in a browser or continue it in DSH Pro.
 - **Appearance:** six colour palettes, or follow your wallpaper or pick your own colour; change the app icon and use your own wallpaper and launch screen. The app is available in Chinese and English.
 - **Anonymous usage stats:** only daily usage counts and basics like the app and Android version, never chats, files or accounts. On by default; turn it off any time in Settings › Privacy and sharing.
 - **Image and video generation is on its way:** the app side is ready, and it opens up in chats once the generation plugin is released.
@@ -519,7 +519,7 @@ For the detailed history of the 0.9.x releases, see the [changelog](https://gith
 ### 中文
 
 - 手机操控可以全程自动：首次启动选「手机操控」时，可以选「关键步骤先问我」或「全程自动」，之后在 设置 › 手机操控 › 确认方式 随时改，那里也列出了哪些事仍由你来操作。
-- 解除限制（可选）：设置 › 手机操控 › 解除限制 有三个开关——系统设置、密码和验证码、DSH Go 自身，默认全部关闭。打开前会说明 AI 能做什么、可能出什么问题以及免责声明，需要按住「我了解风险，开启」约 1.5 秒，后果由你自行承担；任务进行中不能打开，关闭只要点一下。开着时悬浮条和手机操控页显示「已解除限制」。AI 输入的密码和验证码在操作记录、悬浮条和确认卡里只显示为 ••••，也不会出现在返回给模型的结果里。
+- 解除限制（可选）：设置 › 手机操控 › 解除限制 有三个开关——系统设置、密码和验证码、DSH Pro 自身，默认全部关闭。打开前会说明 AI 能做什么、可能出什么问题以及免责声明，需要按住「我了解风险，开启」约 1.5 秒，后果由你自行承担；任务进行中不能打开，关闭只要点一下。开着时悬浮条和手机操控页显示「已解除限制」。AI 输入的密码和验证码在操作记录、悬浮条和确认卡里只显示为 ••••，也不会出现在返回给模型的结果里。
 - 自定义壁纸：设置 › 主题 › 壁纸 可以把自己的图片铺在首页、对话和抽屉后面，可以调模糊，浅色模式下提亮、深色模式下压暗；文字和背景的对比度始终保持在 4.5:1 以上。
 - 启动画面：自己的启动画面不再限制 3 秒，图片和动图 8 MB 以内、视频 30 MB 以内，冷启动时完整播放，点一下就能跳过。换了桌面图标后，启动时只会出现你选的那个图标，不会先闪一下默认的蓝色图标。
 - 直接启动本机引擎（设置 › 诊断 › 开发者选项）仍是实验功能，默认关闭。打开后，从旧版本升级的会先把插件文件整理一次，手机空间不够时先用兼容启动；某台手机上直接启动起不来（例如 Android 16 会拦截）时，会自动改用兼容启动，不进安全模式，也不会反复重试。
@@ -527,7 +527,7 @@ For the detailed history of the 0.9.x releases, see the [changelog](https://gith
 - 匿名使用统计：每天的使用次数（发消息、语音输入、手机操控、生成、分享各几次，装了几个插件），连同 App 和系统版本、CPU 架构、手机品牌（不含型号）、界面语言和本机引擎的启动方式，当天过后匿名发送一次；设备之间只用一个每 90 天更换的随机编号区分，不含对话、文件和账号。首次启动的欢迎页上就有开关，之后在 设置 › 隐私与分享 一键关闭，关闭后本机记下的次数和编号立即删除。从旧版本升级的会在首页提示一次。
 - App 外的桌宠：拿起来、开心、醒来和打字时不再被裁掉；气泡放在桌宠画面的上方，不挡住动画，换动作时平滑跟着移动。
 - 归档对话和卸载插件先等 4 秒，期间点「撤销」就原样保留，归档时进行中的一轮也不会停；切出 App 或接着归档、卸载别的时会立即执行。
-- 陪你满半小时后，鲸娘会请你去 GitHub 给 DSH Go 点个 Star：一键打开仓库，点「已经点过啦」就不再出现；选「下次再说」的，累计再用 5 小时会再问一次，最多两次。只在首页或对话里、没有其他弹窗、当前对话也没有进行中的任务时出现。
+- 陪你满半小时后，鲸娘会请你去 GitHub 给 DSH Pro 点个 Star：一键打开仓库，点「已经点过啦」就不再出现；选「下次再说」的，累计再用 5 小时会再问一次，最多两次。只在首页或对话里、没有其他弹窗、当前对话也没有进行中的任务时出现。
 - 远程主机登录 DSH Remote：服务器提供的每种登录方式都有自己的按钮，GitHub 排在最前（感谢 @HuanLinOTO）。
 - 以前把新对话的默认权限设成「Auto」的，升级后本机引擎会清掉这个已失效的设置并重启一次，「本对话」和设置里的权限选项恢复正常。
 - 其他：对话里 DSH 自己写进收件箱的提示不再显示成你发的消息；插件市场连不上时显示网络错误和重试，不再说「目录格式有误」；首次启动选了「桌宠与悬浮窗」而还没选桌宠时，会顺带选好默认桌宠；换了主机后，删除文件夹的「撤销」和批量置顶不会落到另一台主机上；语音「重新下载」时旧模型保留到新模型下载完；首次启动总结页的「继续」失败后可以再试；远程主机页的服务说明改为「服务由 liguobao/ds-harness-remote 提供」，点项目名可以打开它。
@@ -535,7 +535,7 @@ For the detailed history of the 0.9.x releases, see the [changelog](https://gith
 ### English
 
 - Phone control can run fully automatic: when you pick Phone control on first run, choose "Ask me at key steps" or "Fully automatic"; change it any time in Settings › Phone control › Confirmation, which also lists what still stays with you.
-- Lift limits (optional): Settings › Phone control › Lift limits has three switches — system settings, passwords and codes, and DSH Go itself — all off by default. Turning one on first shows what AI can then do, what can go wrong and the disclaimer, and takes holding "I understand the risks, turn on" for about 1.5 s; you bear the risk. It can't be turned on while a task runs, and one tap turns it off. While any is on, the floating bar and the Phone control page say "Limits lifted". Passwords and codes AI types show only as •••• in the action log, the floating bar and confirmation cards, and never come back in the results sent to the model.
+- Lift limits (optional): Settings › Phone control › Lift limits has three switches — system settings, passwords and codes, and DSH Pro itself — all off by default. Turning one on first shows what AI can then do, what can go wrong and the disclaimer, and takes holding "I understand the risks, turn on" for about 1.5 s; you bear the risk. It can't be turned on while a task runs, and one tap turns it off. While any is on, the floating bar and the Phone control page say "Limits lifted". Passwords and codes AI types show only as •••• in the action log, the floating bar and confirmation cards, and never come back in the results sent to the model.
 - Your own wallpaper: Settings › Theme › Wallpaper puts a picture of yours behind home, chats and the drawer, with Blur, plus Lighten in light mode and Dim in dark mode; text always keeps a contrast of 4.5:1 or more.
 - Launch screen: your own launch screen is no longer capped at 3 s. Pictures and animations up to 8 MB and videos up to 30 MB play in full on a cold start, and a tap skips. After you change the app icon, launch only ever shows the icon you chose, never a flash of the default blue one first.
 - Direct local engine launch (Settings › Diagnostics › Developer options) stays experimental and off by default. Turned on, an install upgraded from an earlier version first tidies its plugin files once, using compatible launch while the phone is short of space; on a phone where a direct start fails (Android 16 blocks it, for one), the app goes back to compatible launch on its own, without Safe mode or repeated retries.
@@ -543,7 +543,7 @@ For the detailed history of the 0.9.x releases, see the [changelog](https://gith
 - Anonymous usage stats: each day's counts (messages, voice inputs, phone control tasks, generations and shares, and installed plugins), with the app and Android version, CPU architecture, phone maker (not the model), app language and how the local engine started, go out anonymously once after the day ends. Devices are told apart only by a random ID that changes every 90 days; never chats, files or accounts. The switch is on the welcome screen on first run, and one tap in Settings › Privacy and sharing turns it off and deletes the counts and the ID on the phone at once. Installs updated from an earlier version are told once on the home screen.
 - Pet outside the app: picked up, happy, waking or typing, it's no longer cut off; its bubble sits above the pet's picture instead of over it and glides along when the pose changes.
 - Archiving a chat or uninstalling a plugin waits 4 s first: Undo keeps it as it was, a running turn included. Leaving the app, or archiving or uninstalling something else, carries it out at once.
-- After half an hour together, the whale asks you to give DSH Go a Star on GitHub: one tap opens the repository, "Already starred" ends it for good, and "Maybe later" asks once more after another 5 hours of use — twice at most. It only appears on the home screen or in a chat, with no other dialog open and no task running in the current chat.
+- After half an hour together, the whale asks you to give DSH Pro a Star on GitHub: one tap opens the repository, "Already starred" ends it for good, and "Maybe later" asks once more after another 5 hours of use — twice at most. It only appears on the home screen or in a chat, with no other dialog open and no task running in the current chat.
 - Signing in to DSH Remote on the remote host page: each sign-in method the server offers gets its own button, GitHub first (thanks @HuanLinOTO).
 - If the default permission for new chats was once set to Auto, the local engine clears that no-longer-valid setting after the update and restarts once, so the permission options in This chat and Settings load again.
 - Other fixes: notes DSH writes into the inbox itself no longer look like your messages; when the plugin market can't connect it shows a network error with Retry instead of "Invalid directory format"; picking Pet over other apps on first run also picks the default pet if none was chosen; after switching hosts, a deleted folder's Undo and bulk pinning never land on the other host; Re-download in Voice input keeps the old model until the new one is in; a failed Continue on the first-run summary can be tried again; the remote host page now credits liguobao/ds-harness-remote, and tapping the project name opens it.
@@ -552,10 +552,10 @@ For the detailed history of the 0.9.x releases, see the [changelog](https://gith
 
 ### 中文
 
-- 改名 DSH Go：桌面图标、最近任务、通知和系统设置里都叫 DSH Go。保存的图片在相册「DSH Go」，下载的文件在「下载/DSH-Go」；之前存的文件留在原处，旧对话里的文件卡片照常打开。
-- 启动动画：系统启动画面无缝交接到 App 的第一帧，图标轻轻上移，DSH Go 字样随之浮现；冷启动完整播一遍，热启动可用即进。
-- 自己的启动画面和桌面入口：设置 › 主题 › 启动画面 可以换成自己的图片、动图或 3 秒内的视频，选适配方式和背景色，预览一遍再用。桌面图标下新增「图片快捷方式」，用自己的图片在桌面另放一个打开 DSH Go 的入口。换桌面图标后会提示几秒后生效。
-- 首次启动按功能开权限：新增一步「想让 DSH Go 帮你做哪些事」，在读写手机文件、桌宠与悬浮窗、手机操控、后台持续运行、语音输入里挑选，再逐项带你到对应的系统页面或品牌设置页，回到 App 自动确认是否已开启。无障碍遇到「受限制的设置」时有分步指引。之后在 设置 › 通用 › 系统权限 随时查看、补开。
+- 改名 DSH Pro：桌面图标、最近任务、通知和系统设置里都叫 DSH Pro。保存的图片在相册「DSH Pro」，下载的文件在「下载/DSH-Go」；之前存的文件留在原处，旧对话里的文件卡片照常打开。
+- 启动动画：系统启动画面无缝交接到 App 的第一帧，图标轻轻上移，DSH Pro 字样随之浮现；冷启动完整播一遍，热启动可用即进。
+- 自己的启动画面和桌面入口：设置 › 主题 › 启动画面 可以换成自己的图片、动图或 3 秒内的视频，选适配方式和背景色，预览一遍再用。桌面图标下新增「图片快捷方式」，用自己的图片在桌面另放一个打开 DSH Pro 的入口。换桌面图标后会提示几秒后生效。
+- 首次启动按功能开权限：新增一步「想让 DSH Pro 帮你做哪些事」，在读写手机文件、桌宠与悬浮窗、手机操控、后台持续运行、语音输入里挑选，再逐项带你到对应的系统页面或品牌设置页，回到 App 自动确认是否已开启。无障碍遇到「受限制的设置」时有分步指引。之后在 设置 › 通用 › 系统权限 随时查看、补开。
 - 离线语音输入：语音模型（约 241 MB）下载到手机上本地识别，不再依赖系统语音服务。设置 › 语音输入 可以下载、取消、重试和删除；国内网络直接可下，中断后接着下，用移动数据时先确认。首次启动选了语音输入的，引擎就绪后自动下载。
 - 插件设置页：每个有设置项的插件都打开原生设置页，字段多时可以搜索，常用项在前，其余收进「高级」，离开前有未保存的改动会先确认。设置 › 引擎参数 › 插件 只列你装的插件，引擎自身的核心配置不在其中。
 - 插件界面更丰富：对话里的 genui 卡片直接画成原生卡片，不再显示原始 JSON 和「让它重发」；插件视图新增空状态、图片墙、环形进度和指标趋势，可以跟随你选的配色，图标扩充到 162 个。输入框上方新增「插件」胶囊，打开本对话的插件面板；对话详情 › 插件 能打开插件提供的对话视图，打开前核对是不是你点的那一个；插件详情列出 App 里还没有位置的网页界面，一点直达网页版。
@@ -571,10 +571,10 @@ For the detailed history of the 0.9.x releases, see the [changelog](https://gith
 
 ### English
 
-- Now called DSH Go: the launcher, Recents, notifications and system settings all say DSH Go. Saved pictures go to the DSH Go album and downloads to Download/DSH-Go; files saved earlier stay where they are, and older chats still open their file cards.
-- Launch animation: the system splash hands over seamlessly to the app’s first frame, where the icon rises and DSH Go fades in beneath it. A cold start plays it through; a warm start goes the moment the app is ready.
-- Your own launch screen and home-screen picture: Settings › Theme › Launch screen takes a picture, an animation or a clip up to 3 s, with a fit and background colour and a preview first. Under App icon, Picture shortcut puts a separate shortcut to DSH Go on the home screen with a picture of your own. After switching the app icon, the app says the home screen takes a few seconds.
-- Permissions by feature on first run: a new step, "What should DSH Go help with?", lets you pick from phone files, pet and floating window, phone control, running in the background and voice input. The app then takes you to each system or phone-maker page in turn and checks whether it's on when you come back. Accessibility gets step-by-step help when Android shows Restricted settings. Review or finish any of it later in Settings › General › System permissions.
+- Now called DSH Pro: the launcher, Recents, notifications and system settings all say DSH Pro. Saved pictures go to the DSH Pro album and downloads to Download/DSH-Go; files saved earlier stay where they are, and older chats still open their file cards.
+- Launch animation: the system splash hands over seamlessly to the app’s first frame, where the icon rises and DSH Pro fades in beneath it. A cold start plays it through; a warm start goes the moment the app is ready.
+- Your own launch screen and home-screen picture: Settings › Theme › Launch screen takes a picture, an animation or a clip up to 3 s, with a fit and background colour and a preview first. Under App icon, Picture shortcut puts a separate shortcut to DSH Pro on the home screen with a picture of your own. After switching the app icon, the app says the home screen takes a few seconds.
+- Permissions by feature on first run: a new step, "What should DSH Pro help with?", lets you pick from phone files, pet and floating window, phone control, running in the background and voice input. The app then takes you to each system or phone-maker page in turn and checks whether it's on when you come back. Accessibility gets step-by-step help when Android shows Restricted settings. Review or finish any of it later in Settings › General › System permissions.
 - Offline voice input: the voice model (about 241 MB) downloads to the phone and recognises speech on the device, without relying on the system's speech service. Settings › Voice input downloads, cancels, retries and deletes it; it downloads from mainland China, resumes after an interruption and asks before using mobile data. If you picked voice input on first run, it downloads once the engine is ready.
 - Plugin settings: every plugin with settings opens a native page. Long forms can be searched, the common fields come first and the rest fold under Advanced, and leaving with unsaved changes asks first. Settings › Engine parameters › Plugins lists only the plugins you installed, never the engine's own core settings.
 - Richer plugin UI: genui cards in a chat draw as native cards instead of raw JSON and "Ask to resend". Plugin views gain empty states, galleries, ring progress and metric trends, can follow your colour palette, and have 162 icons to choose from. A Plugins capsule above the composer opens the chat's plugin sheet; Chat details › Plugins opens a plugin's view of the chat, checking it is the one you tapped; and plugin details list the web parts the app has no place for yet, each one tap from DSH Web.

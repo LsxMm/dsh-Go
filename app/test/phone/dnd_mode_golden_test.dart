@@ -117,7 +117,7 @@ Map<String, Object?> withKeeper(Map<String, Object?> status) => {
   'a11yKeeper': {
     'granted': false,
     'path': 'setup',
-    'command': 'adb shell pm grant io.github.ccch1mneyyy.dsh_app android.permission.WRITE_SECURE_SETTINGS',
+    'command': 'adb shell pm grant io.github.social.dsh_app android.permission.WRITE_SECURE_SETTINGS',
   },
 };
 
@@ -133,7 +133,7 @@ void main() {
   dndGolden('dnd_sui_in_use', suiInUse, narrow: true);
   dndGolden('dnd_sui_in_use', suiInUse, narrow: true, english: true);
 
-  // Sui runs, DSH Go isn't let in yet: suggested, unfolded by a tap.
+  // Sui runs, DSH Pro isn't let in yet: suggested, unfolded by a tap.
   dndGolden('dnd_sui_grant', suiToGrant, before: tapText('Sui'));
   dndGolden('dnd_sui_grant', suiToGrant, narrow: true, before: tapText('Sui'));
 

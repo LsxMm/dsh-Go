@@ -12,6 +12,6 @@
     <string name="background_setup_history_full">The service task history is full. Turn the channel off, then reconnect.</string>
     <string name="background_setup_bind_timeout">Shizuku connection timed out. Check that it is running and reconnect.</string>
     <string name="background_setup_unbind_wait">The old connection is still closing. Reconnect shortly.</string>
-    <string name="background_setup_unbind_failed">The old connection could not be released. Restart the DSH Go service in Shizuku.</string>
+    <string name="background_setup_unbind_failed">The old connection could not be released. Restart the DSH Pro service in Shizuku.</string>
     <string name="background_setup_bind_failed">Could not connect to the Shizuku background service. Reconnect.</string>
 </resources>
