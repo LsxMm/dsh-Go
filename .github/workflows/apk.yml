@@ -87,9 +87,16 @@ jobs:
       - name: Android NDK for libtawcroot.so
         run: |
           # runtime/tawcroot/source.json pins this NDK; build-apk.sh refuses a release
-          # build without libtawcroot.so, so the runner has to carry it.
-          yes | "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" --install "ndk;28.2.13676358" >/dev/null
-          ls -d "$ANDROID_HOME/ndk/28.2.13676358"
+          # build without libtawcroot.so, so the runner has to carry it. The image also
+          # exports ANDROID_NDK_HOME for its own, older NDK, which build.py prefers, so
+          # point it at the pinned one and check the revision it will read back.
+          ndk="$ANDROID_HOME/ndk/28.2.13676358"
+          if [[ ! -d "$ndk" ]]; then
+            yes | "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" --install "ndk;28.2.13676358" >/dev/null
+          fi
+          echo "ANDROID_NDK_HOME=$ndk" >> "$GITHUB_ENV"
+          echo "ANDROID_NDK_ROOT=$ndk" >> "$GITHUB_ENV"
+          grep Pkg.Revision "$ndk/source.properties"
       - name: Unit tests
         working-directory: app/android
         env:
