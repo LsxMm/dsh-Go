@@ -103,7 +103,7 @@ versionCode = (年 - 2026) × 10^8 + MMDDhhmm      时钟固定按 UTC+8
 
    > **不要只跑 `gh release create`。** 它只更新 GitHub；内测通道的 `beta/update.json` 会停在旧版本。带着内测令牌装的旧版本会先问内测通道，于是报「已是最新」（1.0.4 卡住就是这个原因）。公测发版一律走下面这个脚本：它同时写 R2、GitHub（`--github`）并回下载核对。
 5. **上传并上线**：`services/share-worker/scripts/publish-release.sh`，`SHA256SUMS` 里的每个文件（APK、补丁）一次传到所有线路（R2、公开下载桶 dl、香港桶、GitHub Release），分别下载回来核对，全部一致才上线。见下面「发版到三条线路」。
-   - 公测起加 `--github`：GitHub Release 由脚本建（标题 `DSH Go <版本>`，正文取 `docs/changelog.md` 对应一节）。`release_assets.py` 最后打印的 `gh release create …` 不用再手动跑。
+   - 公测起加 `--github`：GitHub Release 由脚本建（标题 `DSH Pro <版本>`，正文取 `docs/changelog.md` 对应一节）。`release_assets.py` 最后打印的 `gh release create …` 不用再手动跑。
    - 测试版（版本名带 `-`）脚本自动加 `--prerelease`：`releases/latest` 和 `releases/latest/download/…` 都跳过预发布，公开下载桶根目录的 `update.json` 也不换，只有正式版会推给用户。
 6. **内测期间**（`DOWNLOAD_ACCESS=key`）不加 `--github`，见下面「内测通道」。
 7. **验证**：在装着上一版的手机上 设置 → 关于 → 检查更新，走完下载和安装。

@@ -1,5 +1,5 @@
 // First run, step 3 of 4 on this phone, while the runtime unpacks
-// (docs/design/onboarding-parallel-setup.md): what DSH Go should do, then
+// (docs/design/onboarding-parallel-setup.md): what DSH Pro should do, then
 // each permission it needs, one at a time, then where they all ended up.
 
 import 'dart:async';
@@ -14,7 +14,7 @@ import '../access/access_summary_page.dart';
 import '../access/access_walk.dart';
 import 'onboarding_scaffold.dart';
 
-/// 想让 DSH Go 帮你做哪些事 → 逐项开启 → 汇总. 跳过 on the first page goes on
+/// 想让 DSH Pro 帮你做哪些事 → 逐项开启 → 汇总. 跳过 on the first page goes on
 /// with nothing changed. The picks are kept until the step is over, so a
 /// launch after the app was killed in system settings comes back to the walk.
 class AccessStepPage extends ConsumerStatefulWidget {

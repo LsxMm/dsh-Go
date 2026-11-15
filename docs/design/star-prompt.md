@@ -2,7 +2,7 @@
 
 > 2026-10-29 · 基于 main `e120b7ca`。范围：公测后邀请用户去 GitHub 给 dsh-go 点 star。入口有两个：一次性的对话框（最多问两次），以及「设置 › 关于」里的一行。替换 10-28 的底部弹层方案（3 天 + 10 次回复）。
 
-**结论**：App 在前台累计用满 **30 分钟**后，等你在首页或对话里闲下来，弹出一个对话框：鲸娘捧着星星的贴纸、一句「本鱼已经在 DSH Go 里陪你半个小时啦~」、一段请求，和三个键「去 GitHub 点 Star」「已经点过啦」「下次再说」。点前两个永不再问；点「下次再说」（或返回、点外面）的，再累计用 **5 小时**后问第二次，第一句写实际时长（「陪你 5 个小时啦~」），之后不再问。整个提示由编译参数 `DSH_STAR_PROMPT` 控制，默认关闭；公测发版时加 `--dart-define=DSH_STAR_PROMPT=true`。「设置 › 关于 › 给 dsh-go 点个 star」不受开关影响。
+**结论**：App 在前台累计用满 **30 分钟**后，等你在首页或对话里闲下来，弹出一个对话框：鲸娘捧着星星的贴纸、一句「本鱼已经在 DSH Pro 里陪你半个小时啦~」、一段请求，和三个键「去 GitHub 点 Star」「已经点过啦」「下次再说」。点前两个永不再问；点「下次再说」（或返回、点外面）的，再累计用 **5 小时**后问第二次，第一句写实际时长（「陪你 5 个小时啦~」），之后不再问。整个提示由编译参数 `DSH_STAR_PROMPT` 控制，默认关闭；公测发版时加 `--dart-define=DSH_STAR_PROMPT=true`。「设置 › 关于 › 给 dsh-go 点个 star」不受开关影响。
 
 ## 1. 出现时机
 
@@ -43,7 +43,7 @@
 ```
 ╭──────────────────────────────────╮
 │            ( 鲸娘 )              │  贴纸 ≤192，背后一圈很淡的主题色光晕
-│      本鱼已经在 DSH Go           │  titleLarge · 居中 · 两行等宽（不让「啦~」单独一行）
+│      本鱼已经在 DSH Pro           │  titleLarge · 居中 · 两行等宽（不让「啦~」单独一行）
 │      里陪你半个小时啦~            │
 │   这是一个免费开源的项目，如果它……   │  bodyMedium · onSurfaceVariant · 居中
 │      拜托你啦~ 这真的很重要！！      │  bodyMedium w600 · 主色
@@ -66,8 +66,8 @@
 
 | 位置 | 中文 | English |
 |---|---|---|
-| 第一句 | 本鱼已经在 DSH Go 里陪你半个小时啦~ / 一个小时 / N 个小时 | I’ve kept you company in DSH Go for half an hour now~ / an hour / N hours |
-| 正文 | 这是一个免费开源的项目，如果它让你的移动端体验更好了一点，拜托点个 Star 支持一下，这对本鱼是很大的鼓励！ | DSH Go is free and open source. If it’s made your phone a little nicer to use, please give it a Star — it means so much to this little whale! |
+| 第一句 | 本鱼已经在 DSH Pro 里陪你半个小时啦~ / 一个小时 / N 个小时 | I’ve kept you company in DSH Pro for half an hour now~ / an hour / N hours |
+| 正文 | 这是一个免费开源的项目，如果它让你的移动端体验更好了一点，拜托点个 Star 支持一下，这对本鱼是很大的鼓励！ | DSH Pro is free and open source. If it’s made your phone a little nicer to use, please give it a Star — it means so much to this little whale! |
 | 请求 | 拜托你啦~ 这真的很重要！！ | Pretty please~ It really matters!! |
 | 主键 | 去 GitHub 点 Star | Star it on GitHub |
 | 次键 | 已经点过啦 | Already starred |

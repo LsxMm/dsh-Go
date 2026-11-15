@@ -6,7 +6,7 @@
 // ```
 // ╭──────────────────────────────────╮
 // │            ( 鲸娘 )              │  192 at most, a soft glow of the palette behind
-// │  本鱼已经在 DSH Go 里陪你半个小时啦~ │  titleLarge · centred
+// │  本鱼已经在 DSH Pro 里陪你半个小时啦~ │  titleLarge · centred
 // │   这是一个免费开源的项目，如果它……   │  bodyMedium · onSurfaceVariant
 // │      拜托你啦~ 这真的很重要！！      │  bodyMedium w600 · primary
 // │ ┌──────────────────────────────┐ │

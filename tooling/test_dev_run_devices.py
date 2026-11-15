@@ -22,7 +22,7 @@ if args == ['devices']:
     sys.stdout.buffer.write((root / 'devices.txt').read_bytes())
     raise SystemExit(int(os.environ['DEV_RUN_TEST_ADB_STATUS']))
 if len(args) == 6 and args[0] == '-s' and args[2:] == [
-    'shell', 'dumpsys', 'package', 'io.github.ccch1mneyyy.dsh_app'
+    'shell', 'dumpsys', 'package', 'io.github.social.dsh_app'
 ]:
     # Stop at the existing debug-build gate, before restart or Flutter attach.
     print('flags=[]')
@@ -62,7 +62,7 @@ class DevRunDevicesTest(unittest.TestCase):
         self.assertEqual(result.returncode, 1)
         self.assertIn("isn't a debug build", result.stderr)
         self.assertEqual(calls, [["devices"], ["-s", expected, "shell", "dumpsys", "package",
-                                              "io.github.ccch1mneyyy.dsh_app"]])
+                                              "io.github.social.dsh_app"]])
 
     def test_lf_device_reaches_existing_debug_gate(self):
         self.assert_selected(["fixture-1\tdevice"], b"\n", "fixture-1")
@@ -103,7 +103,7 @@ class DevRunDevicesTest(unittest.TestCase):
         self.assertEqual(result.returncode, 1)
         self.assertIn("isn't a debug build", result.stderr)
         self.assertEqual(calls, [["-s", "fixture-explicit", "shell", "dumpsys", "package",
-                                 "io.github.ccch1mneyyy.dsh_app"]])
+                                 "io.github.social.dsh_app"]])
 
 
 if __name__ == "__main__":

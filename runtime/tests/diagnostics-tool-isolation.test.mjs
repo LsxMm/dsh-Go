@@ -8,7 +8,7 @@ import { join } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { createFixture, requestSystemText } from './fixtures/companion-recall-engine.mjs';
 
-const source = await readFile(new URL('../../app/android/app/src/main/kotlin/io/github/ccch1mneyyy/dsh_app/phone/PhoneGuest.kt', import.meta.url), 'utf8');
+const source = await readFile(new URL('../../app/android/app/src/main/kotlin/io/github/social/dsh_app/phone/PhoneGuest.kt', import.meta.url), 'utf8');
 function constant(name) {
   const marker = 'const val ' + name + ' = """';
   const start = source.indexOf(marker);

@@ -8,7 +8,7 @@ import { runInNewContext } from 'node:vm';
 import { spawnSync } from 'node:child_process';
 
 const require = createRequire(import.meta.url);
-const source = fs.readFileSync(new URL('../../app/android/app/src/main/kotlin/io/github/ccch1mneyyy/dsh_app/runtime/SafeMode.kt', import.meta.url), 'utf8');
+const source = fs.readFileSync(new URL('../../app/android/app/src/main/kotlin/io/github/social/dsh_app/runtime/SafeMode.kt', import.meta.url), 'utf8');
 const script = source.match(/const val PLUGINS_SCRIPT = """([\s\S]*?)"""/)[1];
 
 function run(t, { uninstall = false, names = ['local-plugin'] } = {}) {

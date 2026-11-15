@@ -1,6 +1,6 @@
 # 插件界面 v3：兼容网页插件，给原生插件更多位置和组件
 
-> 2026-10-28。基于 main `2e37d13`（DSH Go，内置 DSH 0.2.1-rc.4）。在 [plugin-seams.md](plugin-seams.md)（接缝规格：「原生适配器优先，网页岛兜底」）和 [native-plugins.md](native-plugins.md) / [-protocol.md](native-plugins-protocol.md) / [-views.md](native-plugins-views.md)（原生协议 NA v1.3、视图 v2）上扩展，不另起炉灶。审美规则沿用 [polish-guide.md](polish-guide.md)、[page-design.md](page-design.md) 和作者侧的 [design-rules.md](../plugins/design-rules.md)。
+> 2026-10-28。基于 main `2e37d13`（DSH Pro，内置 DSH 0.2.1-rc.4）。在 [plugin-seams.md](plugin-seams.md)（接缝规格：「原生适配器优先，网页岛兜底」）和 [native-plugins.md](native-plugins.md) / [-protocol.md](native-plugins-protocol.md) / [-views.md](native-plugins-views.md)（原生协议 NA v1.3、视图 v2）上扩展，不另起炉灶。审美规则沿用 [polish-guide.md](polish-guide.md)、[page-design.md](page-design.md) 和作者侧的 [design-rules.md](../plugins/design-rules.md)。
 >
 > 调研数据没有入库（复现方法见附录 A）。下载的包逐个放进新建的空目录，只在内存里读 tarball 做文本匹配，不解压、不执行。
 >
@@ -282,7 +282,7 @@ SDK 配套一个检查：`dsh-go-plugin-check --from-web <插件目录>` 读出�
 | 改进 | 期 | 内容 |
 |---|---|---|
 | rc.4 配方复核 | P1 | rc.4 改了会话头部（View 标签行、「更多」）。`recipes.json` 的配方在 rc.4 运行时上逐个跑一遍（模拟器），`island_logic_test.dart` 补 rc.4 的用例 |
-| 给网页作者的环境标记 | P1（只写文档） | 岛里 `<html>` 已有 `data-dsh-go-island` 和 `data-dsh-go-island-form`（page / panel），以及 `--dsh-go-island-top` 等 CSS 变量；写进 `web-panels.md`，配一节「让网页插件在 DSH Go 里好看」：用 `--dsw-*` token、不写死宽度、360 宽下自测 |
+| 给网页作者的环境标记 | P1（只写文档） | 岛里 `<html>` 已有 `data-dsh-go-island` 和 `data-dsh-go-island-form`（page / panel），以及 `--dsh-go-island-top` 等 CSS 变量；写进 `web-panels.md`，配一节「让网页插件在 DSH Pro 里好看」：用 `--dsw-*` token、不写死宽度、360 宽下自测 |
 | 岛内浮层 | P2 | 插件自己页面弹出的对话框、提示挂在 `shell.overlay` 里，在岛里被一并隐藏。做法同现有 body 弹层（`island.js` `markLayers`）：岛内点按后 3 秒内出现在 `[data-slot="shell.overlay"]` 下的新节点放出来；本机由桥接遮掉官方占用者 |
 | 只读环境信息 | P2 | `window.__dshGoIsland.info()` → `{app, form, theme, textScale}`，只读，不加任何能力 |
 | 预热 | 不做 | 一个岛约 200 MB，提前建不划算；首开骨架 1–3 秒维持现状 |
@@ -572,7 +572,7 @@ owner 举的例子里，**已经有的**：列表 `list`、网格 `grid`、标�
 | `docs/plugins/slots.md` | `chat.panel` 落地、聊天页弹层的样子 | 新 surface 逐个一节 |
 | `docs/plugins/components.md` | 4 个新组件 + 深浅色 golden 截图 | P2 组件 |
 | `docs/plugins/styles.md` / `design-rules.md` | `accent: "app"`、新图标名单、§5 的「谁定什么」 | 表格列类型 |
-| `docs/plugins/web-panels.md` | 对话视图、聊天页面板岛、网页版界面一节、岛里的环境标记与「在 DSH Go 里好看」 | 浮层、`info()`、`open web:` |
+| `docs/plugins/web-panels.md` | 对话视图、聊天页面板岛、网页版界面一节、岛里的环境标记与「在 DSH Pro 里好看」 | 浮层、`info()`、`open web:` |
 | `docs/plugins/from-web.md`（新） | §3.6 对照表 + 每行一个最小例子 | `check --from-web` |
 | `docs/plugins/native-for-free.md` | `dsh-ui` 围栏和 genui 的关系；工具卡「已经在写 `presentationMeta` 就再加一个键」 | — |
 | `docs/plugins/versions.md` | 新组件的降级、`caps.components` | 新 surface 与桥接版本 |

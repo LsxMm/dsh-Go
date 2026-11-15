@@ -187,7 +187,7 @@ final marketCatalogProvider = FutureProvider<MarketCatalog>((ref) async {
 // ── Official index ───────────────────────────────────────────────────────────
 
 /// The official market (docs/design/plugin-market.md): a format-1 index with
-/// one pinned version per plugin, and the DSH Go sidecar (`dsh-go.json`)
+/// one pinned version per plugin, and the DSH Pro sidecar (`dsh-go.json`)
 /// beside it, read from [officialMarketBases]. Wherever it was read, the
 /// index is the Worker's (this URL resolves its links).
 const officialIndexUrl = 'https://go.dshtui.com/market/index.json';

@@ -158,7 +158,7 @@ List<MethodCall> mockGallery() {
   final messenger = TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger;
   messenger.setMockMethodCallHandler(channel, (call) async {
     calls.add(call);
-    return 'Pictures/DSH Go/${(call.arguments as Map)['name']}';
+    return 'Pictures/DSH Pro/${(call.arguments as Map)['name']}';
   });
   addTearDown(() => messenger.setMockMethodCallHandler(channel, null));
   return calls;

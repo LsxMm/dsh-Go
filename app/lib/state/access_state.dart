@@ -1,4 +1,4 @@
-// System permissions by what they are for: first run's 「想让 DSH Go 帮你做哪些
+// System permissions by what they are for: first run's 「想让 DSH Pro 帮你做哪些
 // 事」 (lib/ui/onboarding/access_step.dart) and 设置 › 系统权限
 // (lib/ui/settings/system_access_page.dart) read and open the same items here.
 //
@@ -45,7 +45,7 @@ final voiceModelApproxMb = (voiceModelDefaultBytes / 1000000).round();
 /// the page was confirmed without it, absent when the page was skipped.
 const onboardingWantsVoiceKey = VoiceModelController.onboardingKey;
 
-/// What a person picks on first run: things DSH Go does, not permission names.
+/// What a person picks on first run: things DSH Pro does, not permission names.
 enum AccessFeature { files, pet, phone, background, voice }
 
 /// One system permission or maker's switch, in the order first run walks

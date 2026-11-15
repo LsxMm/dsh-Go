@@ -964,7 +964,7 @@ class _Plugin extends StatelessWidget {
   }
 }
 
-/// The brand line: the 「DSH Go」 lockup with one short line under its word,
+/// The brand line: the 「DSH Pro」 lockup with one short line under its word,
 /// the QR code at the right edge, the two centred on each other. A link too
 /// long to scan at the card's size ([ShareCard.qrFor]) leaves the lockup alone.
 class _Footer extends StatelessWidget {

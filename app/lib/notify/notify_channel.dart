@@ -217,13 +217,13 @@ class LiveSystemStatus {
   /// Android 16 promotion exists here (QPR1+), or HyperOS takes the focus template.
   final bool supported;
 
-  /// And it is allowed for DSH Go: the live activity will be posted.
+  /// And it is allowed for DSH Pro: the live activity will be posted.
   final bool allowed;
 
   /// The system page with the per-app switch opens.
   final bool settings;
 
-  /// HyperOS shows DSH Go's focus notifications.
+  /// HyperOS shows DSH Pro's focus notifications.
   final bool xiaomiFocus;
 
   @override
@@ -315,7 +315,7 @@ class NotifyChannel {
     }
   }
 
-  /// Opens DSH Go's 「实时活动」 switch where the system has one, else its notification settings.
+  /// Opens DSH Pro's 「实时活动」 switch where the system has one, else its notification settings.
   Future<bool> openLiveSettings() async {
     try {
       return await _methods.invokeMethod<bool>('openLiveSettings') ?? false;

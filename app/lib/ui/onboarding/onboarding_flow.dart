@@ -12,7 +12,7 @@ import 'welcome_page.dart';
 ///
 /// On this phone, first run sets up while the runtime unpacks
 /// (docs/design/onboarding-parallel-setup.md): [runtime] asks where DSH runs,
-/// [appearance], [access] (what DSH Go should do, and the permissions for it)
+/// [appearance], [access] (what DSH Pro should do, and the permissions for it)
 /// and [apiKey] follow while it unpacks, and [finishing] waits for whatever
 /// is left of it. Upgrades, resets and a phone that only needs a key go
 /// [runtime] (the unpack itself) → [apiKey].
@@ -58,7 +58,7 @@ class OnboardingFlow extends StatefulWidget {
 
   final VoidCallback? onAppearanceDone;
 
-  /// Past 想让 DSH Go 帮你做哪些事 (picked and walked, or skipped).
+  /// Past 想让 DSH Pro 帮你做哪些事 (picked and walked, or skipped).
   final VoidCallback? onAccessDone;
 
   /// The unpack [OnboardingStep.finishing] waited for is done.
@@ -101,7 +101,7 @@ class _OnboardingFlowState extends State<OnboardingFlow> {
       ),
     };
     // The step bar counts the questions: where DSH runs, then (on this
-    // phone, first run) the look and what DSH Go should do, then the
+    // phone, first run) the look and what DSH Pro should do, then the
     // connection.
     final steps = widget.chooseRuntime || widget.beside
         ? const [OnboardingStep.runtime, OnboardingStep.appearance, OnboardingStep.access, OnboardingStep.apiKey]
