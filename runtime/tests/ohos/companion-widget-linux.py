@@ -40,7 +40,7 @@ def main():
         'companion-widget-linux.py', 'companion-widget-child.mjs')]
     sources += [product / 'app/ohos/entry/src/main/ets/entryability/EntryAbility.ets',
         product / 'runtime/tests/ohos/entry-ability-fixture.mjs',
-        repo / 'app/android/app/src/main/kotlin/io/github/ccch1mneyyy/dsh_app/companion/CompanionWidget.kt',
+        repo / 'app/android/app/src/main/kotlin/io/github/social/dsh_app/companion/CompanionWidget.kt',
         repo / 'app/lib/companion/companion_widget.dart',
         repo / 'app/lib/ui/companion/companion_page.dart',
         repo / 'app/ohos/entry/src/main/module.json5']

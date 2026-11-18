@@ -1,7 +1,7 @@
 {
   "format": 1,
-  "title": { "en": "DSH Go plugin market", "zh": "DSH Go 插件市场" },
-  "description": { "en": "Plugins checked for DSH Go", "zh": "为 DSH Go 检查过的插件" },
+  "title": { "en": "DSH Pro plugin market", "zh": "DSH Pro 插件市场" },
+  "description": { "en": "Plugins checked for DSH Pro", "zh": "为 DSH Pro 检查过的插件" },
   "metadata": {
     "categories": {
       "media": { "title": { "en": "Media", "zh": "媒体" } },
@@ -13,7 +13,7 @@
       "name": "@dsh-go/media",
       "title": { "en": "Images & video", "zh": "生图生视频" },
       "description": { "en": "Generate images and video in chat", "zh": "在对话里生成图片和视频" },
-      "author": "DSH Go",
+      "author": "DSH Pro",
       "homepage": "https://go.dshtui.com/p/%40dsh-go%2Fmedia",
       "repository": { "url": "https://github.com/ccch1mneyyy/dsh-media" },
       "metadata": { "category": "media", "keywords": ["生图", "视频", "image", "video"] },
@@ -25,7 +25,7 @@
       "name": "@dsh-go/translate",
       "title": { "en": "Live translate", "zh": "同声翻译" },
       "description": { "en": "Translate replies as they stream", "zh": "回复一边生成一边翻译" },
-      "author": "DSH Go",
+      "author": "DSH Pro",
       "metadata": { "category": "tools" },
       "versions": [
         { "version": "1.0.0", "publishTimestamp": 1793350000, "source": { "type": "npm" } }

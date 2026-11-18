@@ -251,7 +251,7 @@ void main() {
     final saved = <MethodCall>[];
     tester.binding.defaultBinaryMessenger.setMockMethodCallHandler(const MethodChannel('dsh/media'), (call) async {
       saved.add(call);
-      return 'Pictures/DSH Go/截图.png';
+      return 'Pictures/DSH Pro/截图.png';
     });
     addTearDown(
       () => tester.binding.defaultBinaryMessenger.setMockMethodCallHandler(const MethodChannel('dsh/media'), null),

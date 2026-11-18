@@ -39,7 +39,7 @@ def main():
         'picture-shortcut-linux.py')]
     sources += [product / 'app/ohos/entry/src/main/ets/entryability/EntryAbility.ets',
         product / 'runtime/tests/ohos/entry-ability-fixture.mjs',
-        repo / 'app/android/app/src/main/kotlin/io/github/ccch1mneyyy/dsh_app/icons/PictureShortcutPlugin.kt',
+        repo / 'app/android/app/src/main/kotlin/io/github/social/dsh_app/icons/PictureShortcutPlugin.kt',
         repo / 'app/lib/state/icon_shortcut_state.dart',
         repo / 'app/lib/ui/settings/appearance/icon_shortcut_sheet.dart',
         repo / 'app/lib/ui/settings/appearance/appearance_page.dart',

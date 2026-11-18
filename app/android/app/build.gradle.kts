@@ -35,7 +35,7 @@ fun buildMinuteVersionCode(): Int {
 }
 
 android {
-    namespace = "io.github.ccch1mneyyy.dsh_app"
+    namespace = "io.github.social.dsh_app"
     compileSdk = flutter.compileSdkVersion
     // The device tests under src/androidTest are AndroidTestCase tests; these platform libraries
     // carry that API (no longer in android.jar). Device-test classpath only.
@@ -49,7 +49,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "io.github.ccch1mneyyy.dsh_app"
+        applicationId = "io.github.social.dsh_app"
         // java.nio.file (symlinks while unpacking the rootfs) needs API 26.
         minSdk = 26
         // Target 28 like Termux, so the API 29+ exec restriction on app-private

@@ -1,5 +1,5 @@
 // The goal bar's actions: a sheet with the whole goal and 编辑 / 暂停 / 恢复 /
-// 清除 (DSH GoalBar's icon actions), the multi-line editor, and the 清除
+// 清除 (DSH ProalBar's icon actions), the multi-line editor, and the 清除
 // confirmation.
 
 import 'package:flutter/material.dart';

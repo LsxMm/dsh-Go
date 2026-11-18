@@ -53,7 +53,7 @@ Flutter OH StandardMessageCodec 将 INT32、可安全表示的 INT64 和 FLOAT64
 node --test --test-isolation=none tooling/ohos/tests/managed-skill.test.mjs
 ```
 
-参考 Kotlin 不是手译替身：使用固定 Kotlin 2.4.0 编译器直接编译未修改的 `app/android/app/src/main/kotlin/io/github/ccch1mneyyy/dsh_app/runtime/ManagedSkillInstaller.kt`，在真实 JVM/Linux 文件系统运行 16 组场景。源 SHA256 为 `08262d4928cca8116c9b8f8c460e2766c6f5bbf12bdaf91c5ca949bd09dc439f`；探针、命令、原始结果和官方 Maven 文件校验随交接材料保存。这不等于 Android App 构建或设备测量。
+参考 Kotlin 不是手译替身：使用固定 Kotlin 2.4.0 编译器直接编译未修改的 `app/android/app/src/main/kotlin/io/github/social/dsh_app/runtime/ManagedSkillInstaller.kt`，在真实 JVM/Linux 文件系统运行 16 组场景。源 SHA256 为 `08262d4928cca8116c9b8f8c460e2766c6f5bbf12bdaf91c5ca949bd09dc439f`；探针、命令、原始结果和官方 Maven 文件校验随交接材料保存。这不等于 Android App 构建或设备测量。
 
 公开 API 来自固定 OpenHarmony 6.1 声明：
 

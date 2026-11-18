@@ -32,7 +32,7 @@ set -euo pipefail
 
 ROOT=$(CDPATH= cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)
 APP="$ROOT/app"
-PKG=io.github.ccch1mneyyy.dsh_app
+PKG=io.github.social.dsh_app
 APK="$APP/build/app/outputs/flutter-apk/app-arm64-debug.apk"
 
 usage() { sed -n '2,15p' "${BASH_SOURCE[0]}" | sed 's/^# \{0,1\}//'; }

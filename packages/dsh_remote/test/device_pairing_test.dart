@@ -38,7 +38,7 @@ Map<String, Object?> sessionJson({String secret = ticket, Map<String, Object?>? 
 
 const phone = PairingDevice(
   deviceId: '019a0000-0000-7000-8000-0000000000bb',
-  name: 'DSH Go',
+  name: 'DSH Pro',
   role: 'client',
   platform: 'dsh-app-android',
   identityKey: phoneKey,
@@ -173,7 +173,7 @@ void main() {
     test('the claim body is serialized once, in a fixed order', () {
       expect(
         pairingClaimBody(scanSecret: ticket, device: phone, deepseekUserId: 'u-1'),
-        '{"scanSecret":"$ticket","device":{"deviceId":"${phone.deviceId}","name":"DSH Go","role":"client",'
+        '{"scanSecret":"$ticket","device":{"deviceId":"${phone.deviceId}","name":"DSH Pro","role":"client",'
         '"platform":"dsh-app-android","identityKey":"$phoneKey"},"deepseekUserId":"u-1"}',
       );
       expect(pairingClaimBody(scanSecret: ticket, device: phone), isNot(contains('deepseekUserId')));
