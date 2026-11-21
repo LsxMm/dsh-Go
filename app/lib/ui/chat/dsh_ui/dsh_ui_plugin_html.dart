@@ -23,6 +23,8 @@ import '../../theme/theme.dart';
 import '../../web/web_view_guard.dart';
 import 'dsh_ui_blocks.dart';
 import 'dsh_ui_model.dart';
+import 'dsh_ui_plugin.dart';
+import 'dsh_ui_style.dart';
 
 /// One `html` block: the plugin's document in a WebView of [DshUiHtml.height].
 ///
@@ -223,7 +225,20 @@ class DshUiHtmlBlockState extends State<DshUiHtmlBlock> {
         if (scope == null || !scope.interactive) return;
         final mapped = args is Map ? args.map((k, v) => MapEntry(k.toString(), v)) : const <String, Object?>{};
         // The same path a button in the native tree takes: one plugin action.
-        unawaited(Future<void>.sync(() => scope.onAction!(DshUiAction(action, mapped))));
+        final at = DateTime.now();
+        unawaited(
+          Future<void>.sync(
+            () => scope.onAction!(
+              PluginAction(
+                id: action,
+                args: mapped,
+                source: PluginActionSource.button,
+                path: widget.node.path,
+                gestureAt: at,
+              ),
+            ),
+          ),
+        );
         return;
       case 'resize':
         final height = message['height'];
