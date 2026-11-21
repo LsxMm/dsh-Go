@@ -52,6 +52,10 @@ class DshUiHtmlBlockState extends State<DshUiHtmlBlock> {
   /// the profile allows.
   double? _grown;
 
+  /// The encoded panel data the document already holds, so a rebuild that
+  /// changed nothing else does not push it again.
+  String? _pushed;
+
   double get _height => (_grown ?? widget.node.height).clamp(
     DshUiProfile.htmlHeightMin,
     DshUiProfile.htmlHeightMax,
@@ -60,7 +64,13 @@ class DshUiHtmlBlockState extends State<DshUiHtmlBlock> {
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
-    if (_controller == null) _open();
+    if (_controller == null) {
+      _open();
+    } else {
+      // The panel's data changed under us (a `patch` came back): hand the new
+      // object to the document without reloading it.
+      unawaited(_pushData());
+    }
   }
 
   @override
@@ -94,7 +104,11 @@ class DshUiHtmlBlockState extends State<DshUiHtmlBlock> {
                 : NavigationDecision.prevent,
             onPageFinished: (_) {
               if (!mounted || _controller != controller) return;
-              unawaited(_injectBridge(controller).catchError((Object _) {}));
+              unawaited(
+                _injectBridge(controller)
+                    .then((_) => _pushData(force: true))
+                    .catchError((Object _) {}),
+              );
             },
             onWebResourceError: (error) {
               if (!mounted || _controller != controller) return;
@@ -171,10 +185,20 @@ class DshUiHtmlBlockState extends State<DshUiHtmlBlock> {
   function send(payload){
     try { DshGoPluginHtml.postMessage(JSON.stringify(payload)); } catch (e) {}
   }
+  var current = {};
   window.dshGo = {
     invoke: function(action, args){ send({kind:'invoke', action: String(action), args: args || {}}); },
     resize: function(height){ var h = Number(height); if (isFinite(h) && h > 0) send({kind:'resize', height: h}); },
-    ready: function(){ send({kind:'ready'}); }
+    ready: function(){ send({kind:'ready'}); },
+    data: function(){ return current; },
+    // The app calls this after every change; not for the document to call.
+    __receive: function(payload){
+      current = payload || {};
+      try { if (typeof window.dshGoSet === 'function') window.dshGoSet(current); } catch (e) {}
+      try {
+        document.dispatchEvent(new CustomEvent('dshgodata', { detail: current }));
+      } catch (e) {}
+    }
   };
   document.addEventListener('click', function(e){
     var a = e.target && e.target.closest ? e.target.closest('[data-action]') : null;
@@ -204,6 +228,23 @@ class DshUiHtmlBlockState extends State<DshUiHtmlBlock> {
   r.setProperty('--dsh-on-accent','${hex(scheme.onPrimary)}');
 })();
 ''');
+  }
+
+  /// Hands the panel's current data to the document: `dshGo.data()` returns it,
+  /// a `dshgodata` event fires with it, and a `window.dshGoSet` hook (what a
+  /// plain demo reaches for) is called with it.
+  Future<void> _pushData({bool force = false}) async {
+    final controller = _controller;
+    if (controller == null || !mounted || !widget.node.script) return;
+    final encoded = jsonEncode(DshUiPluginScope.maybeOf(context)?.data ?? const <String, Object?>{});
+    if (!force && encoded == _pushed) return;
+    _pushed = encoded;
+    // The payload is spliced in as one JSON string literal, so nothing in the
+    // data can end the expression and become code.
+    final literal = jsonEncode(encoded);
+    await controller
+        .runJavaScript('window.dshGo && window.dshGo.__receive(JSON.parse($literal));')
+        .catchError((Object _) {});
   }
 
   void _onMessage(String raw) {
