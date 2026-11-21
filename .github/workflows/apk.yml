@@ -106,7 +106,9 @@ jobs:
         env:
           DSH_MAVEN_MIRRORS: 0
         run: |
-          args=(--release -f arm64)
+          # The licensed companion pack is not in the repository; this fork
+          # ships without it (the setting stays usable, the whale does not).
+          args=(--release -f arm64 --no-companion)
           [[ -n "${{ inputs.build_name }}" ]] && args+=(--build-name "${{ inputs.build_name }}")
           bash tooling/build-apk.sh "${args[@]}"
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
