@@ -20,7 +20,7 @@
 | `OhosVoiceRecorder.ets` | 普通听写录音器复用 PCM 分流；启动、overflow 通过后放行 |
 | `SpeechPlugin.ets` | 原 13 个 Android 方法的实际调度，call 播放/采集状态，barge-in duck 与生命周期 |
 
-Android 对照文件在 `app/android/app/src/main/kotlin/io/github/ccch1mneyyy/dsh_app/` 下：`speech/SpeechPlugin.kt`、`speech/CallCapture.kt` 及 `nativemedia/SpeechGate.kt` / `TurnPause.kt`。测试从未改动的 Android `SpeechPlugin` 提取 13 个方法名，逐一调用实际 OH handler，防止再次遗漏 `callPause`。
+Android 对照文件在 `app/android/app/src/main/kotlin/io/github/social/dsh_app/` 下：`speech/SpeechPlugin.kt`、`speech/CallCapture.kt` 及 `nativemedia/SpeechGate.kt` / `TurnPause.kt`。测试从未改动的 Android `SpeechPlugin` 提取 13 个方法名，逐一调用实际 OH handler，防止再次遗漏 `callPause`。
 
 ## 方法与事件合同
 

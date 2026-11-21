@@ -6,7 +6,7 @@ The updater keeps its existing download, digest-binding and normal PackageInstal
 
 - Normal installation remains the default. A route is not silently changed after rejection, cancellation, lost transport or restart.
 - The privileged route has no command, target-package, install-flag or installer-identity argument. Its native schema accepts only an updater-cache APK, release SHA-256, expected build number, selected backend and optional local ADB port.
-- Native preparation creates a private, read-only snapshot from the updater cache, checks its digest and length, parses the APK, requires the fixed DSH Go package and strictly equal nonempty current signer sets, and requires a higher build number. Key rotation and reinstalling an equal build are deliberately outside this first version; these are product restrictions, not a claim that Android universally prohibits them.
+- Native preparation creates a private, read-only snapshot from the updater cache, checks its digest and length, parses the APK, requires the fixed DSH Pro package and strictly equal nonempty current signer sets, and requires a higher build number. Key rotation and reinstalling an equal build are deliberately outside this first version; these are product restrictions, not a claim that Android universally prohibits them.
 - A one-attempt foreground native prompt identifies the actual backend/UID, version and digest. It cannot inherit Phone control waivers. No general MCP installation tool is added.
 - Both routes accept only actual shell UID 2000. Root is neither requested nor used. Permission, pairing and installation are separate explicit actions; merely opening the update UI requests none of them.
 

@@ -22,7 +22,7 @@
 
 ### 通知正文与锁屏显示
 
-通知接收现有 `title`、`text`、`fullText` 参数，不另设 `body` 键；有 `fullText` 时映射 `NotificationLongTextContent`，折叠为 `title`/`text`，展开为同一标题与 `fullText`。SDK26 要求标题和正文非空，所以缺失或空标题回退「DSH Go」，缺失或空正文依次回退 `publicText`、通用提醒；真实非空内容不做替换。错误类型以 `bad_args` 拒绝。SDK声明标题超过1024字节、正文/长文本超过3072字节的部分由系统截断，实际样式与显示长度待设备核实。
+通知接收现有 `title`、`text`、`fullText` 参数，不另设 `body` 键；有 `fullText` 时映射 `NotificationLongTextContent`，折叠为 `title`/`text`，展开为同一标题与 `fullText`。SDK26 要求标题和正文非空，所以缺失或空标题回退「DSH Pro」，缺失或空正文依次回退 `publicText`、通用提醒；真实非空内容不做替换。错误类型以 `bad_args` 拒绝。SDK声明标题超过1024字节、正文/长文本超过3072字节的部分由系统截断，实际样式与显示长度待设备核实。
 
 这里将真实内容交给系统通知服务。Android 端另外实现了 `VISIBILITY_PRIVATE`/`publicVersion` 和锁定期间主动改发公开内容、解锁后静默更新；OHOS 本次没有等价的应用侧强制删减实现，不声称锁屏必定只显示 `publicText`。`publicText` 只作空正文兼容回退。正文不进入点击 Want、HMAC 路由或诊断日志。
 

@@ -472,7 +472,7 @@ int Function(int count) tipStart = (count) => math.Random().nextInt(count);
 const tipDwell = Duration(seconds: 7);
 
 /// One quiet line under the suggestions: a small bulb and one tip about using
-/// DSH Go. The tips turn on their own every [tipDwell]; a tap shows the next
+/// DSH Pro. The tips turn on their own every [tipDwell]; a tap shows the next
 /// one at once and starts the wait again. With reduced motion they stay put
 /// until tapped. Screen readers get the tip shown, not a live region. Every
 /// tip is shown whole: the line is as tall as the longest tip at this width

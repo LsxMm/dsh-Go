@@ -48,7 +48,7 @@ iOS: this page offers separate audio and location protection switches, both off 
 
 The iOS 26 system continued task remains the default path; the system can refuse, cancel or expire it. Enhanced protection is also best-effort, not unlimited background execution or survival after force quit. Keep long tasks in the foreground or use a remote host when reliable execution matters.
 
-For notifications, also turn on the alerts you want in the app's **Notifications** and allow DSH Go notifications in system settings. Alerts from remote hosts need the app running and the connection online.
+For notifications, also turn on the alerts you want in the app's **Notifications** and allow DSH Pro notifications in system settings. Alerts from remote hosts need the app running and the connection online.
 
 ## The engine keeps failing to start
 

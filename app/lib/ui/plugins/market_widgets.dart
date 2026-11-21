@@ -12,7 +12,7 @@ import '../theme/app_icons.dart';
 import '../theme/theme.dart';
 import 'plugin_widgets.dart';
 
-/// 「官方」 / 「适配 DSH Go」, then the risk tag: none for low, amber for
+/// 「官方」 / 「适配 DSH Pro」, then the risk tag: none for low, amber for
 /// medium, red for high.
 List<Widget> marketEntryBadges(BuildContext context, MarketEntry entry) {
   final l10n = context.l10n;

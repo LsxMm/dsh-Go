@@ -70,16 +70,16 @@
   ],
   "sources": [
     {
-      "path": "app/android/app/src/main/kotlin/io/github/ccch1mneyyy/dsh_app/speech/PcmStream.kt",
-      "url": "https://raw.githubusercontent.com/ccch1mneyyy/dsh-Go/dd130b31061e305cd9c06e103c3e5210fee1922f/app/android/app/src/main/kotlin/io/github/ccch1mneyyy/dsh_app/speech/PcmStream.kt",
+      "path": "app/android/app/src/main/kotlin/io/github/social/dsh_app/speech/PcmStream.kt",
+      "url": "https://raw.githubusercontent.com/ccch1mneyyy/dsh-Go/dd130b31061e305cd9c06e103c3e5210fee1922f/app/android/app/src/main/kotlin/io/github/social/dsh_app/speech/PcmStream.kt",
       "status": 200,
       "bytes": 9762,
       "git_blob_sha1": "4cdda089c0be04a2524f8f38e0747c8c46fe3670",
       "sha256": "6e17e03e84f1ea1b5f5202ff0791cde1ddc4c3ec878fd3cd5fb90602002b3423"
     },
     {
-      "path": "app/android/app/src/main/kotlin/io/github/ccch1mneyyy/dsh_app/speech/SpeechPlugin.kt",
-      "url": "https://raw.githubusercontent.com/ccch1mneyyy/dsh-Go/dd130b31061e305cd9c06e103c3e5210fee1922f/app/android/app/src/main/kotlin/io/github/ccch1mneyyy/dsh_app/speech/SpeechPlugin.kt",
+      "path": "app/android/app/src/main/kotlin/io/github/social/dsh_app/speech/SpeechPlugin.kt",
+      "url": "https://raw.githubusercontent.com/ccch1mneyyy/dsh-Go/dd130b31061e305cd9c06e103c3e5210fee1922f/app/android/app/src/main/kotlin/io/github/social/dsh_app/speech/SpeechPlugin.kt",
       "status": 200,
       "bytes": 13102,
       "git_blob_sha1": "c78dcf99f246858d56e5481d10abb877ddcdb75d",

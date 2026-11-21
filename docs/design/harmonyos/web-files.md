@@ -58,7 +58,7 @@ node --test --test-isolation=none tooling/ohos/tests/web-files.test.mjs
 - [OpenHarmony 文件选择指南](https://github.com/openharmony/docs/blob/OpenHarmony-v6.1-Release/zh-cn/application-dev/file-management/select-user-file.md)；[DocumentViewPicker API](https://github.com/openharmony/docs/blob/OpenHarmony-v6.1-Release/zh-cn/application-dev/reference/apis-core-file-kit/js-apis-file-picker.md)。当前公开页面和固定声明都区分选择器授权与持久化权限。
 - 固定 `interface_sdk-js` commit `8a86234f0d542e5062e24e948652f5a484d90904`：[picker 声明](https://github.com/openharmony/interface_sdk-js/blob/8a86234f0d542e5062e24e948652f5a484d90904/api/@ohos.file.picker.d.ts)，SHA256 `b1b583498eeb44fadc94e9b4e90ae20045b29265ab4484161dcf1ff8625a77b8`；URI 声明 SHA256 `b4159afd438c4754d4eee7a2a8d040dbebb0210e821b907b2197900f0e37b9d6`；UDMF 声明 SHA256 `657d4543c9c02ccaed7ee0373a0ac926d0a71319959a3f794d63031c30f8b1a2`。使用 API 10–12 起的公开字段，不新增系统权限。
 - 实际 Flutter OH `MethodCall.ets` SHA256 `7e2afe24d5cbd634d93b494ed137b8317c942d8ee596e391958157eb59ced3f6`；`StandardMessageCodec.ets` SHA256 `6f5fb3d4e307b4598a37f7beaf98a829ab8b04cdbe3301454086f60830b207f8`，其中 MAP 分支构造 `Map`。
-- 本仓库只读参照：`app/android/app/src/main/kotlin/io/github/ccch1mneyyy/dsh_app/web/{WebFilesPlugin,WebFilePolicy}.kt`、Dart chooser 与已有测试。未执行 Flutter widget 测试或 Android App 构建。
+- 本仓库只读参照：`app/android/app/src/main/kotlin/io/github/social/dsh_app/web/{WebFilesPlugin,WebFilePolicy}.kt`、Dart chooser 与已有测试。未执行 Flutter widget 测试或 Android App 构建。
 
 ## fd2890c 严格编译修订
 

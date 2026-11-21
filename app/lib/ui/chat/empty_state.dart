@@ -62,7 +62,7 @@ const defaultSuggestions = <ChatSuggestion>[
   ChatSuggestion._default(AppIcons.tip, 3, SuggestionTint.blue),
 ];
 
-/// Tips about using DSH Go, one at a time under the suggestions. Each names
+/// Tips about using DSH Pro, one at a time under the suggestions. Each names
 /// a gesture or entry the app really has (see the handlers it describes).
 List<String> defaultTips() => [
   appL10n.viewTipSteer,
