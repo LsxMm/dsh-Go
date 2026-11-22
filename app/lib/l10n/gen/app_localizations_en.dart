@@ -16044,18 +16044,6 @@ class L10nEn extends L10n {
   String get plugViewBadAspect => 'aspect must be a number from 0.25 to 4; ignored';
 
   @override
-  String plugViewHtmlTooLarge(int limit) {
-    String _temp0 = intl.Intl.pluralLogic(limit, locale: localeName, other: '$limit bytes', one: '1 byte');
-    return 'html exceeds $_temp0; this block is not drawn';
-  }
-
-  @override
-  String get plugViewHtmlUnavailable => 'This html block could not be shown';
-
-  @override
-  String get plugViewBadHeight => 'height should be a number in points; the default height is used';
-
-  @override
   String plugViewImageTooLarge(int limit) {
     String _temp0 = intl.Intl.pluralLogic(limit, locale: localeName, other: '$limit bytes', one: '1 byte');
     return 'data: image exceeds $_temp0';

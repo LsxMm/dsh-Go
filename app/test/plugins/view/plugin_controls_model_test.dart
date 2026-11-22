@@ -28,7 +28,7 @@ void main() {
     expect(parseDshUiPluginUncached(source), isA<DshUiInvalid>());
     expect(parseDshUiUncached(jsonEncode({'v': 2, ...source})), isA<DshUiInvalid>());
     expect(view({'v': 2, ...source}).version, 2);
-    expect(dshUiPluginComponents, hasLength(43));
+    expect(dshUiPluginComponents, hasLength(42));
   });
 
   test('all eleven inputs parse; binding wins over literal value', () {

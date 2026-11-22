@@ -31,7 +31,7 @@ Map<String, Object?> bind(String path) => {r'$': path};
 void main() {
   group('catalog', () {
     test('v2 extends the original 16 components', () {
-      expect(dshUiPluginComponents, hasLength(43));
+      expect(dshUiPluginComponents, hasLength(42));
       expect(dshUiPluginComponents, containsAll(['list', 'keyValue', 'progress', 'table', 'actions', 'image']));
       expect(dshUiPluginComponents, containsAll(['emptyState', 'gallery']));
     });

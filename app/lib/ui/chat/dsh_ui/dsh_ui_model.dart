@@ -537,7 +537,6 @@ class _Ctx {
 
   /// 插件视图里已经有一个实心主色按钮了（之后的按普通画）。
   bool primaryUsed = false;
-
   final issues = <DshUiIssue>[];
 
   DshUiPlaceholder broken(String path, String message, {String? type}) {
@@ -1279,7 +1278,7 @@ String? _componentSummary(DshUiNode node) {
     DshUiCallout(:final text) => appL10n.viewUiSummaryCallout(text.trim()),
     DshUiOptions(:final options) => appL10n.viewUiSummaryOptions(options.map((o) => o.label).join('/')),
     final DshUiConfirm c => appL10n.viewUiSummaryConfirm(c.confirmText, c.cancelText),
-    DshUiPlaceholder() || DshUiEmpty() || DshUiActions() || DshUiImage() || DshUiHtml() => null,
+    DshUiPlaceholder() || DshUiEmpty() || DshUiActions() || DshUiImage() => null,
     DshUiEmptyState(:final title) => title,
     DshUiGallery(:final items) => [for (final i in items) ?i.image.alt].join('/'),
     DshUiList(:final items) => items.map((i) => i.title).join('/'),

@@ -173,16 +173,5 @@
         "type": "int"
       }
     }
-  },
-  "plugViewHtmlTooLarge": "html 超过 {limit} 字节，这块不画",
-  "plugViewHtmlUnavailable": "这块 html 没能显示",
-  "@plugViewHtmlTooLarge": {
-    "placeholders": {
-      "limit": {
-        "type": "int"
-      }
-    }
-  },
-  "plugViewBadHeight": "height 应该是数字（点），已用默认高度",
-  "@plugViewBadHeight": {}
+  }
 }

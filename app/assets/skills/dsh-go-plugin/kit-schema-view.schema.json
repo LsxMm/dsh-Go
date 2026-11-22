@@ -125,7 +125,7 @@
         "type": {
           "enum": [
             "stack", "row", "text", "metric", "chart", "compare", "steps", "callout", "options", "confirm",
-            "list", "keyValue", "progress", "table", "actions", "image", "html",
+            "list", "keyValue", "progress", "table", "actions", "image",
             "textField", "number", "stepper", "toggle", "slider", "select", "segmented", "chips", "date", "time", "rating", "form", "tabs", "collapsible", "accordion", "carousel", "timeline", "grid", "badge", "tag", "avatar", "codeBlock", "divider", "spacer", "emptyState", "gallery"
           ]
         },
@@ -150,7 +150,6 @@
         { "if": { "properties": { "type": { "const": "table" } } }, "then": { "$ref": "#/$defs/table" } },
         { "if": { "properties": { "type": { "const": "actions" } } }, "then": { "$ref": "#/$defs/actions" } },
         { "if": { "properties": { "type": { "const": "image" } } }, "then": { "$ref": "#/$defs/image" } },
-        { "if": { "properties": { "type": { "const": "html" } } }, "then": { "$ref": "#/$defs/html" } },
         { "if": { "properties": { "type": { "const": "textField" } } }, "then": { "$ref": "#/$defs/inputV2" } },
         { "if": { "properties": { "type": { "const": "number" } } }, "then": { "$ref": "#/$defs/inputV2" } },
         { "if": { "properties": { "type": { "const": "stepper" } } }, "then": { "$ref": "#/$defs/inputV2" } },
@@ -179,14 +178,6 @@
         { "if": { "properties": { "type": { "const": "gallery" } } }, "then": { "$ref": "#/$defs/galleryV2" } }
       ],
       "unevaluatedProperties": false
-    },
-    "html": {
-      "required": ["html"],
-      "properties": {
-        "html": {"anyOf": [{"type": "string"}, {"$ref": "#/$defs/binding"}], "description": "A complete HTML document or a fragment; over 65536 characters is not drawn. The document runs in an empty about:blank page with no navigation and no network; the app's colours arrive as the CSS variables --dsh-bg, --dsh-surface, --dsh-text, --dsh-muted, --dsh-accent, --dsh-on-accent, --dsh-radius."},
-        "height": {"anyOf": [{"type": "number"}, {"$ref": "#/$defs/binding"}], "description": "How tall the block is, in dp; clamped to 40-1200. Defaults to 40."},
-        "script": {"type": "boolean", "description": "Whether the document's script runs. Default true. Script talks to the plugin through window.dshGo.invoke(action, args) / dshGo.resize(height) / dshGo.ready(), and any element with data-action (plus optional data-args JSON) fires that action when tapped."}
-      }
     },
     "layout": {
       "required": ["children"],

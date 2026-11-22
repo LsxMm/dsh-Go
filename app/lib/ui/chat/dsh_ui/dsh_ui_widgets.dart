@@ -10,7 +10,6 @@ import '../../theme/theme.dart';
 import '../render/markdown_body.dart';
 import 'dsh_ui_blocks.dart';
 import 'dsh_ui_plugin_controls.dart';
-import 'dsh_ui_plugin_html.dart';
 import 'dsh_ui_chart.dart';
 import 'dsh_ui_model.dart';
 import 'dsh_ui_plugin_styles.dart';
@@ -183,7 +182,6 @@ class DshUiNodeView extends StatelessWidget {
       DshUiTable() => DshUiTableBlock(node: node),
       DshUiActions() => DshUiActionsBlock(node: node),
       DshUiImage() => DshUiImageBlock(node: node),
-      DshUiHtml() => DshUiHtmlBlock(key: ValueKey(node.path), node: node),
       DshUiEmptyState() => DshUiEmptyStateBlock(node: node),
       DshUiGallery() => DshUiGalleryBlock(key: ValueKey(node.path), node: node),
       DshUiEmpty() => const DshUiEmptyBlock(),

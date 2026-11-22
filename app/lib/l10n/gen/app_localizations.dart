@@ -28088,24 +28088,6 @@ abstract class L10n {
   /// **'aspect 应该是 0.25 到 4 之间的数，已忽略'**
   String get plugViewBadAspect;
 
-  /// No description provided for @plugViewHtmlTooLarge.
-  ///
-  /// In zh, this message translates to:
-  /// **'html 超过 {limit} 字节，这块不画'**
-  String plugViewHtmlTooLarge(int limit);
-
-  /// No description provided for @plugViewHtmlUnavailable.
-  ///
-  /// In zh, this message translates to:
-  /// **'这块 html 没能显示'**
-  String get plugViewHtmlUnavailable;
-
-  /// No description provided for @plugViewBadHeight.
-  ///
-  /// In zh, this message translates to:
-  /// **'height 应该是数字（点），已用默认高度'**
-  String get plugViewBadHeight;
-
   /// No description provided for @plugViewImageTooLarge.
   ///
   /// In zh, this message translates to:

@@ -51,14 +51,6 @@ final class DshUiProfile {
   static const imageSide = 4096;
   static const imagePixels = 4000000;
 
-  /// `html` 块的字符数上限，以及它要的高度范围（点）。
-  static const htmlBytes = 65536;
-  static const htmlHeightMin = 40.0;
-  static const htmlHeightMax = 1200.0;
-
-  /// `html` 块外框的圆角，和别的插件卡片保持一致。
-  static const htmlRadius = 14.0;
-
   static const model = DshUiProfile._(
     name: 'model',
     plugin: false,
@@ -93,7 +85,7 @@ final class DshUiProfile {
   String toString() => 'DshUiProfile.$name';
 }
 
-const _pluginTypes = [..._types, 'list', 'keyValue', 'progress', 'table', 'actions', 'image', 'html'];
+const _pluginTypes = [..._types, 'list', 'keyValue', 'progress', 'table', 'actions', 'image'];
 
 /// 插件视图里能用的组件名（能力声明 `caps.components`）。
 const dshUiPluginComponents = [..._pluginTypes, ..._pluginControlTypes];
@@ -249,26 +241,6 @@ final class DshUiImage extends DshUiNode {
   final String? caption;
 }
 
-/// `html`：一块自由画的界面（插件自带 HTML/CSS/JS），画在 WebView 里。
-///
-/// 插件只交一段 [html] 和想要的高度 [height]；这段 HTML 在独立的
-/// `about:blank` 文档里跑，不碰 App 的页面、不联网（导航和外部请求都拦掉），
-/// 需要回调插件时调注入的 `dshGo.invoke(action, args)`。
-final class DshUiHtml extends DshUiNode {
-  const DshUiHtml({required super.path, required this.html, required this.height, this.script = true});
-
-  /// 完整的 HTML 文档或片段（`<style>` / `<script>` 一起给）。
-  final String html;
-
-  /// 画多高（点），40–1200。
-  final double height;
-
-  /// 允许跑脚本。插件视图里默认打开（视图可以写 `"script": false` 关掉）；
-  /// 脚本跑在空白的 `about:blank` 文档里，导航和外链都被拦掉，只能通过
-  /// 注入的 `dshGo` 回调插件。
-  final bool script;
-}
-
 /// 插件视图里需要数组的组件拿到空数组或取不到：一行「暂无数据」，不算错。
 final class DshUiEmpty extends DshUiNode {
   const DshUiEmpty({required super.path, required this.type});
@@ -288,7 +260,6 @@ DshUiNode? _pluginNode(String type, Map<String, Object?> raw, String path, int d
   'table' => _table(raw, path, ctx),
   'actions' => _actions(raw, path, ctx),
   'image' => _image(raw, path, ctx),
-  'html' => _html(raw, path, ctx),
   'confirm' => _markPrimary(ctx),
   _ => _pluginControlNode(type, raw, path, depth, ctx),
 };
@@ -682,38 +653,6 @@ DshUiNode _image(Map<String, Object?> raw, String path, _Ctx ctx) {
     aspect: aspect,
     caption: _optionalText(raw['caption'], DshUiLimits.label),
   );
-}
-
-/// `html`：插件自带的一段界面。只收字符串，大小有上限；高度是它要多高。
-DshUiNode _html(Map<String, Object?> raw, String path, _Ctx ctx) {
-  final body = raw['html'];
-  if (body is DshUiMissing || body == null) {
-    return ctx.broken('$path.html', appL10n.plugViewExpectedItems('html string'), type: 'html');
-  }
-  if (body is! String) {
-    return ctx.broken('$path.html', appL10n.plugViewExpectedItems('html string'), type: 'html');
-  }
-  if (body.trim().isEmpty) return DshUiEmpty(path: path, type: 'html');
-  var html = body;
-  if (html.length > DshUiProfile.htmlBytes) {
-    ctx.note('$path.html', appL10n.plugViewHtmlTooLarge(DshUiProfile.htmlBytes));
-    return DshUiEmpty(path: path, type: 'html');
-  }
-  final rawHeight = raw['height'];
-  var height = DshUiProfile.htmlHeightMin;
-  if (rawHeight is num) {
-    final h = rawHeight.toDouble();
-    if (h.isFinite) {
-      height = h.clamp(DshUiProfile.htmlHeightMin, DshUiProfile.htmlHeightMax);
-    } else {
-      ctx.note('$path.height', appL10n.plugViewBadHeight);
-    }
-  } else if (rawHeight != null && rawHeight is! DshUiMissing) {
-    ctx.note('$path.height', appL10n.plugViewBadHeight);
-  }
-  // 插件视图里脚本默认开；模型卡不走这个分支（`html` 只在插件目录里）。
-  final script = ctx.p.plugin && raw['script'] != false;
-  return DshUiHtml(path: path, html: html, height: height, script: script);
 }
 
 DshUiDataImage? _dataSource(String src, String path, _Ctx ctx) {

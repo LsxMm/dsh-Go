@@ -159,16 +159,5 @@
   },
   "plugViewRichLimit": "Rich text exceeds the limit; truncated",
   "plugViewBadTrend": "trend takes 2–{max} numbers (nulls allowed); ignored",
-  "plugViewGalleryPicture": "Picture {index}",
-  "plugViewHtmlTooLarge": "html is over {limit} bytes; this block is not drawn",
-  "plugViewHtmlUnavailable": "This html block could not be shown",
-  "@plugViewHtmlTooLarge": {
-    "placeholders": {
-      "limit": {
-        "type": "int"
-      }
-    }
-  },
-  "plugViewBadHeight": "height should be a number in points; the default height is used",
-  "@plugViewBadHeight": {}
+  "plugViewGalleryPicture": "Picture {index}"
 }

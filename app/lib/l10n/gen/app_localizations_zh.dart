@@ -15256,17 +15256,6 @@ class L10nZh extends L10n {
   String get plugViewBadAspect => 'aspect 应该是 0.25 到 4 之间的数，已忽略';
 
   @override
-  String plugViewHtmlTooLarge(int limit) {
-    return 'html 超过 $limit 字节，这块不画';
-  }
-
-  @override
-  String get plugViewHtmlUnavailable => '这块 html 没能显示';
-
-  @override
-  String get plugViewBadHeight => 'height 应该是数字（点），已用默认高度';
-
-  @override
   String plugViewImageTooLarge(int limit) {
     return 'data: 图片超过 $limit 字节';
   }

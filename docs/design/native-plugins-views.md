@@ -8,7 +8,7 @@
 
 | 项 | 规定 |
 |---|---|
-| 是什么 | 一棵 JSON 组件树。`dsh-ui` 一期 10 种组件的超集，另加 `list`、`keyValue`、`progress`、`table`、`actions`、`image`、`html`，共 17 种 |
+| 是什么 | 一棵 JSON 组件树。`dsh-ui` 一期 10 种组件的超集，另加 `list`、`keyValue`、`progress`、`table`、`actions`、`image`，共 16 种 |
 | 谁来画 | App 的 `dsh_ui` 渲染器。模型输出的 ```` ```dsh-ui ```` 卡和插件视图走同一个解析器，只是「档案」不同（§6） |
 | 用在哪 | 工具卡 `tool.card`（第 0 期）、面板 `panel`、状态条 `composer.strip`（第一期） |
 | 数据 | 视图和数据分开。任何值的位置都可以写绑定 `{ "$": "data.a.b" }`，取不到就显示「—」 |
@@ -69,7 +69,6 @@
 | `table` | `columns: [文字 \| {label, align?: start \| end}]`；`rows: [[单元格, …], …]` | 表格。整列都是数字时自动右对齐；放不下时横向滑动。单元格收文字或数字 |
 | `actions` | `items: [{label, icon?, style?: primary \| plain, action}]` | 按钮组。1–2 个并排等宽，3–4 个竖排。一张视图里至多一个 `primary`，多的按 `plain` 画 |
 | `image` | `src`；`alt?`；`aspect?`（宽 / 高，0.25–4）；`caption?` | 图片。`src` 只收两种：插件自己的资源 `asset:<路径>`（`dshGo.assets` 目录里的 png / jpg / webp / gif，App 拼成 NA 协议 §4.6 的 `/dsh-go/v1/assets/<包名>/<路径>` 并带凭据去取），和 ≤ 64 KiB 的 `data:image/{png,jpeg,webp,gif};base64,…`。写了 `aspect` 就先按比例占位，不跳动 |
-| `html` | `html`；`height?`（40–1200，默认 40）；`script?`（默认 `true`） | 插件自带的一段界面：给一份 HTML 文档或片段，App 在空白的 `about:blank` 页里画它——自己的排版、CSS、canvas、SVG 都行，是原生组件树之外的逃生口。字符串上限 65536 字符。导航和外链一律拦掉。`script` 为 `true` 时文档的脚本会跑，并通过注入的 `window.dshGo` 回调插件：`dshGo.invoke(action, args)` 发一次插件动作（和点 `actions` 的按钮同一条路），`dshGo.resize(height)` 改高度，`dshGo.ready()` 在准备好时报到；带 `data-action`（可配 `data-args` JSON）的元素被点一下也会发对应动作。App 的主题色以 CSS 变量给到文档：`--dsh-bg`、`--dsh-surface`、`--dsh-text`、`--dsh-muted`、`--dsh-accent`、`--dsh-on-accent`、`--dsh-radius` |
 
 `icon` 只收 ui.json 的图标名（与 `app/assets/skills/dsh-go-ui/schema.json` 的 `icon` 枚举相同，共 43 个）。不认识的名字画默认图标。
 
@@ -200,7 +199,7 @@ App 附上插件包名和作用域后发出，对应 NA 协议 §4.4：`surface:
 
 | | 模型卡（```` ```dsh-ui ````） | 插件视图 |
 |---|---|---|
-| 组件 | 一期 10 种 | 17 种 |
+| 组件 | 一期 10 种 | 16 种 |
 | 绑定 | 不认 | 认 |
 | `text` | 完整 Markdown | 受限文字（§7） |
 | `options` / `confirm` | 发 `[dsh-ui reply]` 消息 | invoke |

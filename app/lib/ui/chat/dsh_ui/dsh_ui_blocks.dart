@@ -26,21 +26,11 @@ import 'dsh_ui_widgets.dart';
 /// 有它就按插件视图画（options / confirm 走 invoke）；[onAction] 为 null 时
 /// 只读：`actions`、`confirm` 不显示，`options` 只读，`list` 行不可点。
 class DshUiPluginScope extends InheritedWidget {
-  const DshUiPluginScope({
-    super.key,
-    this.onAction,
-    this.imageResolver,
-    this.animate = false,
-    this.data,
-    required super.child,
-  });
+  const DshUiPluginScope({super.key, this.onAction, this.imageResolver, this.animate = false, required super.child});
 
   final PluginActionHandler? onAction;
   final PluginImageResolver? imageResolver;
   final bool animate;
-
-  /// 面板当前的数据：绑定的值和 `html` 块里的文档都从这里取。
-  final Object? data;
 
   bool get interactive => onAction != null;
 
@@ -65,10 +55,7 @@ class DshUiPluginScope extends InheritedWidget {
 
   @override
   bool updateShouldNotify(DshUiPluginScope old) =>
-      old.onAction != onAction ||
-      old.imageResolver != imageResolver ||
-      old.animate != animate ||
-      old.data != data;
+      old.onAction != onAction || old.imageResolver != imageResolver || old.animate != animate;
 }
 
 /// 发一次 invoke，并记住哪些元素在等结果（小环、防重复点）。

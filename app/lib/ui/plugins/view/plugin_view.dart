@@ -109,7 +109,6 @@ class _PluginViewState extends State<PluginView> {
       imageResolver: widget.imageResolver,
       showTitle: widget.showTitle,
       animate: widget.animate,
-      data: _drafts.data,
     );
     return view.version >= 2 ? PluginControlsScope(controller: _drafts, child: body) : body;
   }
@@ -125,11 +124,9 @@ class PluginViewBody extends StatelessWidget {
     this.imageResolver,
     this.showTitle = true,
     this.animate = false,
-    this.data,
   });
 
   final DshUiView view;
-  final Object? data;
   final PluginViewBudget budget;
   final PluginActionHandler? onAction;
   final PluginImageResolver? imageResolver;
@@ -165,7 +162,6 @@ class PluginViewBody extends StatelessWidget {
       onAction: onAction,
       imageResolver: imageResolver ?? PluginImages.maybeOf(context)?.resolver,
       animate: animate,
-      data: data,
       child: DshUiPictureViewer(
         open: openGalleryPictures,
         child: view.version == 2
