@@ -2,7 +2,7 @@
 // (30–100 %, 70 % by default, sent to the native side on every step so a showing
 // pill follows), 闲置时自动收起 (off by default), 屏幕边缘光效 (on by default),
 // 用系统灵动岛显示 (on by default, usable only where the phone has an island)
-// and 完成后返回 DSH Go, shown once phone control is on.
+// and 完成后返回 DSH Pro, shown once phone control is on.
 
 import 'dart:ui' show Tristate;
 
@@ -26,7 +26,7 @@ const _opacity = '闲置时不透明度';
 const _auto = '闲置时自动收起';
 const _glow = '屏幕边缘光效';
 const _island = '用系统灵动岛显示';
-const _return = '完成后返回 DSH Go';
+const _return = '完成后返回 DSH Pro';
 
 Finder _row(String title) => find.ancestor(of: find.text(title), matching: find.byType(ListPageRow)).first;
 
@@ -168,7 +168,7 @@ void main() {
       expect(_container(tester).read(phoneOverlayPrefsProvider).edgeGlow, isFalse);
     });
 
-    testWidgets('完成后返回 DSH Go: toggled and kept in the app', (tester) async {
+    testWidgets('完成后返回 DSH Pro: toggled and kept in the app', (tester) async {
       await pumpPhone(tester, const PhoneControlScreen(), native: FakePhoneNative(status: phoneStatus()));
       await openPhoneFold(tester, 'phone-more-options');
       await _reveal(tester);

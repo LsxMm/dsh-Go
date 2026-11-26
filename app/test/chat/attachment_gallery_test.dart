@@ -47,7 +47,7 @@ List<MethodCall> _mockGallery(WidgetTester tester) {
   const channel = MethodChannel('dsh/media');
   tester.binding.defaultBinaryMessenger.setMockMethodCallHandler(channel, (call) async {
     calls.add(call);
-    return 'Pictures/DSH Go/saved.png';
+    return 'Pictures/DSH Pro/saved.png';
   });
   addTearDown(() => tester.binding.defaultBinaryMessenger.setMockMethodCallHandler(channel, null));
   return calls;

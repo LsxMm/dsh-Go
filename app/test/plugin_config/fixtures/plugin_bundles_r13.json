@@ -2975,10 +2975,10 @@
     "official": false,
     "availability": "profile",
     "version": "1.0.0",
-    "description": "A local third-party plugin for the DSH Go plugin-config catalog fixture",
+    "description": "A local third-party plugin for the DSH Pro plugin-config catalog fixture",
     "meta": {
       "title": "dsh-go-fixture-local-notes",
-      "description": "A local third-party plugin for the DSH Go plugin-config catalog fixture"
+      "description": "A local third-party plugin for the DSH Pro plugin-config catalog fixture"
     },
     "source": "link:/root/plugins/local-notes",
     "enabled": true,
@@ -2992,7 +2992,7 @@
         "entryId": "include:local-notes",
         "meta": {
           "title": "dsh-go-fixture-local-notes",
-          "description": "A local third-party plugin for the DSH Go plugin-config catalog fixture"
+          "description": "A local third-party plugin for the DSH Pro plugin-config catalog fixture"
         }
       }
     ],

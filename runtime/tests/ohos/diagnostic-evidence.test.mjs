@@ -258,7 +258,7 @@ test('actual native channel replies form the wire consumed by the real Dart data
 
 test('actual Android fixed value lists remain accepted by the same OH record method names', async t => {
   const repo=fileURLToPath(new URL('../../../',import.meta.url));
-  const source=await fs.readFile(join(repo,'app/android/app/src/main/kotlin/io/github/ccch1mneyyy/dsh_app/diagnostics/EvidenceStore.kt'),'utf8');
+  const source=await fs.readFile(join(repo,'app/android/app/src/main/kotlin/io/github/social/dsh_app/diagnostics/EvidenceStore.kt'),'utf8');
   const values=name=>{const block=source.match(new RegExp('val '+name+' = setOf\\(([\\s\\S]*?)\\)'));assert(block);return [...block[1].matchAll(/"([A-Za-z_]+)"/g)].map(v=>v[1]);};
   const f=await diagnosticsFixture(t),i=f.attach();await info(f,i);
   for(const stage of values('STAGES'))assert.deepEqual(await f.call(i,'recordVoiceStage',{stage,backend:'system'}).done,{value:null});

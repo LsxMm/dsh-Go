@@ -19,7 +19,7 @@ import threading
 import time
 import uuid
 
-PACKAGE = "io.github.ccch1mneyyy.dsh_app.test"
+PACKAGE = "io.github.social.dsh_app.test"
 PARENT = "89011333285efa14b525708ff652eaf2ed1d2309"
 CONFIG_NAME = "dsh-a3-config.json"
 RESULT_NAMES = ("events.jsonl", "summary.json", "human-review.md")

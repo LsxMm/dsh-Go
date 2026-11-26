@@ -6,7 +6,7 @@
 
 `app/lib/ui/companion/companion_page.dart::_widgetUpdate` 已在伙伴状态和话语变化时调用 `companionWidgetProvider.update`，没有 Android 平台门。本补丁不修改此页面，也不修改 `app/lib/companion/companion_widget.dart`。原 Dart 合同会捕获原生异常；卡片保存/刷新失败不会影响伙伴页面，但也不会向页面假报“已添加”。
 
-基底 Android 合同来自 `app/android/app/src/main/kotlin/io/github/ccch1mneyyy/dsh_app/companion/CompanionWidget.kt`：通道仅有 `update`，成功返回 null，没有事件；非 Map 是无操作，未知方法 notImplemented。下面九个字段由当前真实生产者发送。字段缺省保留旧值，显式 null 删除，布尔/对象忽略。鸿蒙只保存这九个有消费者的键；未知键忽略。
+基底 Android 合同来自 `app/android/app/src/main/kotlin/io/github/social/dsh_app/companion/CompanionWidget.kt`：通道仅有 `update`，成功返回 null，没有事件；非 Map 是无操作，未知方法 notImplemented。下面九个字段由当前真实生产者发送。字段缺省保留旧值，显式 null 删除，布尔/对象忽略。鸿蒙只保存这九个有消费者的键；未知键忽略。
 
 | 字段 | 有效类型 | 意义 |
 | --- | --- | --- |

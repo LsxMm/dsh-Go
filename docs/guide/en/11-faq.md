@@ -46,13 +46,13 @@ Android: follow the guide to turn off battery optimization, keep the "engine run
 
 On supported Android app versions, **Silent audio protection** and **Background location protection** can be enabled separately. Both switches are off by default and work only while a local task runs and the app is in the background. They may use more battery and do not prevent the system from pausing or stopping a task. Older app versions don’t show these switches.
 
-Turning on location protection asks for approximate location if it hasn’t already been granted. On Android 10 and later, select “Allow all the time.” If the prompt doesn’t offer it or you only allowed access while using the app, tap **Current status** to open system settings and choose “Allow all the time” under Location in DSH Go’s Permissions. Denying access leaves the preference on but location protection inactive. If system location services are off, tap the status to open their settings. This feature doesn’t save or send coordinates. Turning the switch off stops location updates without revoking system permission; revoke it in system settings.
+Turning on location protection asks for approximate location if it hasn’t already been granted. On Android 10 and later, select “Allow all the time.” If the prompt doesn’t offer it or you only allowed access while using the app, tap **Current status** to open system settings and choose “Allow all the time” under Location in DSH Pro’s Permissions. Denying access leaves the preference on but location protection inactive. If system location services are off, tap the status to open their settings. This feature doesn’t save or send coordinates. Turning the switch off stops location updates without revoking system permission; revoke it in system settings.
 
 iOS: this page offers separate audio and location protection switches, both off by default. They are used only while a local task is running in the background, and released when the task ends, the engine stops or the switch is turned off. Audio protection plays silence, uses more battery and yields to recording, calls or other audio use. Location protection needs Always location access and uses extra power and location permissions, but does not store coordinates. If access is denied, this page links to system settings.
 
 The iOS 26 system continued task remains the default path; the system can refuse, cancel or expire it. Enhanced protection is also best-effort, not unlimited background execution or survival after force quit. Keep long tasks in the foreground or use a remote host when reliable execution matters.
 
-For notifications, also turn on the alerts you want in the app's **Notifications** and allow DSH Go notifications in system settings. Alerts from remote hosts need the app running and the connection online.
+For notifications, also turn on the alerts you want in the app's **Notifications** and allow DSH Pro notifications in system settings. Alerts from remote hosts need the app running and the connection online.
 
 ## The engine keeps failing to start
 

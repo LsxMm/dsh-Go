@@ -17,7 +17,7 @@ const _name = 'dsh-go-1.2.0-arm64.apk';
 const _url = 'https://github.com/ccch1mneyyy/dsh-go/releases/download/v1.2.0/$_name';
 final _bytes = utf8.encode('fixed host-only privileged update bytes');
 const _inspection = ApkInspection(
-  valid: true, packageName: 'io.github.ccch1mneyyy.dsh_app', versionName: '1.2.0', versionCode: 2, signatureMatches: true,
+  valid: true, packageName: 'io.github.social.dsh_app', versionName: '1.2.0', versionCode: 2, signatureMatches: true,
 );
 
 class _Privileged implements PrivilegedInstaller {

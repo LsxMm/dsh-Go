@@ -4,7 +4,7 @@ import fs from 'node:fs';
 import { captureFixture, pcm, settle, deferred } from './call-capture-fixture.mjs';
 
 test('actual dsh/speech handler covers every Android method including callPause',async()=>{
-  const source=fs.readFileSync(new URL('../../../app/android/app/src/main/kotlin/io/github/ccch1mneyyy/dsh_app/speech/SpeechPlugin.kt',import.meta.url),'utf8');
+  const source=fs.readFileSync(new URL('../../../app/android/app/src/main/kotlin/io/github/social/dsh_app/speech/SpeechPlugin.kt',import.meta.url),'utf8');
   const dispatch=source.slice(source.indexOf('override fun onMethodCall'),source.indexOf('private fun open'));
   const methods=[...dispatch.matchAll(/^\s*"([A-Za-z]+)"\s*->/gm)].map(m=>m[1]);
   assert.equal(methods.length,13);

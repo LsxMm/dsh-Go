@@ -119,7 +119,7 @@ class CompanionAgentPhotoTools {
   CompanionAgentToolResult _failed(PlatformException error) => switch (error.code) {
     'permission' => _error(
       'photos_permission',
-      '还没有相册权限。系统弹窗里点允许就行；没弹窗的话，请对方到 系统设置 → 应用 → DSH Go → 权限 里打开「照片和视频」，再让你看。',
+      '还没有相册权限。系统弹窗里点允许就行；没弹窗的话，请对方到 系统设置 → 应用 → DSH Pro → 权限 里打开「照片和视频」，再让你看。',
     ),
     'missing' => _error('photo_missing', '这张照片已经不在相册里了，重新列一下。'),
     _ => _error('photos_failed', '没读到相册：${error.message ?? error.code}'),

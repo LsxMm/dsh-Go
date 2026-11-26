@@ -164,7 +164,7 @@ class ReleaseBuildTest(unittest.TestCase):
             check_abis("arm64", ["lib/arm64-v8a/"])
 
     def test_badging_line(self):
-        line = ("package: name='io.github.ccch1mneyyy.dsh_app' versionCode='10251234' versionName='1.2.0-beta.1' "
+        line = ("package: name='io.github.social.dsh_app' versionCode='10251234' versionName='1.2.0-beta.1' "
                 "platformBuildVersionName='16'\nminSdkVersion:'26'\n")
         m = BADGING_RE.search(line)
         self.assertEqual((m.group(1), m.group(2)), ("10251234", "1.2.0-beta.1"))

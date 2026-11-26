@@ -1,6 +1,6 @@
 // 系统操作 (HarmonyOS): the local engine's phone tools reach the system through
 // one [DshPhoneSession], which this controller opens and closes. It lives while
-// the switch is on, the local engine is connected and DSH Go is on screen; the
+// the switch is on, the local engine is connected and DSH Pro is on screen; the
 // engine refuses new work off screen anyway. A call already under way is left to
 // finish when the app goes away (`open` itself sends it away; a handoff waits for
 // the person to come back), and the session goes once that call has ended.
@@ -47,7 +47,7 @@ enum SystemActionsLink {
   /// On, without a connected local engine.
   waitingEngine,
 
-  /// On, and DSH Go isn't on screen: nothing new can start.
+  /// On, and DSH Pro isn't on screen: nothing new can start.
   offScreen,
   connecting,
 

@@ -49,12 +49,12 @@ void main() {
     final notices = _Notices()..granted = false;
     await pump(tester, notices);
     expect(find.text('开启后收到过通知的 App 会出现在这里'), findsOneWidget);
-    expect(find.text('还差一步：允许 DSH Go 读取通知'), findsNothing);
+    expect(find.text('还差一步：允许 DSH Pro 读取通知'), findsNothing);
 
     await tester.tap(find.byKey(const ValueKey('notices-switch')));
     await tester.pumpAndSettle();
     expect(notices.enables, [true]);
-    expect(find.text('还差一步：允许 DSH Go 读取通知'), findsOneWidget);
+    expect(find.text('还差一步：允许 DSH Pro 读取通知'), findsOneWidget);
 
     await tester.tap(find.byKey(const ValueKey('notices-allow')));
     await tester.pumpAndSettle();
@@ -65,7 +65,7 @@ void main() {
     tester.binding.handleAppLifecycleStateChanged(AppLifecycleState.inactive);
     tester.binding.handleAppLifecycleStateChanged(AppLifecycleState.resumed);
     await tester.pumpAndSettle();
-    expect(find.text('还差一步：允许 DSH Go 读取通知'), findsNothing);
+    expect(find.text('还差一步：允许 DSH Pro 读取通知'), findsNothing);
     expect(find.text('微信'), findsOneWidget);
   });
 

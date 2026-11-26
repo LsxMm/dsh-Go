@@ -671,7 +671,7 @@ void main() {
   group('first run', () {
     final harmony = [operatingSystemProvider.overrideWithValue('ohos')];
 
-    testWidgets('on Android: 外观 → what DSH Go should do → 连接, four steps', (tester) async {
+    testWidgets('on Android: 外观 → what DSH Pro should do → 连接, four steps', (tester) async {
       final rig = await pumpGate(tester);
       await chooseThisPhone(tester);
       expect(find.bySemanticsLabel('第 2 步，共 4 步'), findsOneWidget);

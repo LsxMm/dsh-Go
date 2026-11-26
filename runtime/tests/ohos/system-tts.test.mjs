@@ -25,7 +25,7 @@ test('actual EntryAbility registers Android companion-voice contract and offline
 });
 
 test('channel method names and argument keys agree with unchanged Android source', () => {
-  const android = fs.readFileSync(new URL('../../../app/android/app/src/main/kotlin/io/github/ccch1mneyyy/dsh_app/companion/CompanionVoicePlugin.kt', import.meta.url), 'utf8');
+  const android = fs.readFileSync(new URL('../../../app/android/app/src/main/kotlin/io/github/social/dsh_app/companion/CompanionVoicePlugin.kt', import.meta.url), 'utf8');
   for (const method of ['ready', 'speak', 'play', 'stop']) assert(android.includes('"' + method + '" ->'));
   for (const key of ['language', 'id', 'text', 'rate', 'pitch', 'flush', 'path']) assert(android.includes('("' + key + '")'));
   for (const type of ['start', 'range', 'done', 'stopped', 'error']) assert(android.includes('send("' + type + '"'));

@@ -14,7 +14,7 @@
 
 ## 方法全集
 
-来源：`app/lib/runtime/runtime_bridge.dart` 和 `app/android/app/src/main/kotlin/io/github/ccch1mneyyy/dsh_app/runtime/RuntimePlugin.kt`，包含 Kotlin 额外接收的两个方法。已知但未支持的方法返回 `PlatformException(code: "ohos_unsupported", message: 中文原因及替代路径)`；未知方法才使用 `notImplemented()`。
+来源：`app/lib/runtime/runtime_bridge.dart` 和 `app/android/app/src/main/kotlin/io/github/social/dsh_app/runtime/RuntimePlugin.kt`，包含 Kotlin 额外接收的两个方法。已知但未支持的方法返回 `PlatformException(code: "ohos_unsupported", message: 中文原因及替代路径)`；未知方法才使用 `notImplemented()`。
 
 | 方法 | 鸿蒙行为与返回 |
 | --- | --- |

@@ -52,7 +52,7 @@ void main() {
         case 'openBackgroundProtectionSettings':
           return opens;
         case 'backgroundSettings':
-          return {'vendor': 'vivo', 'label': 'DSH Go'};
+          return {'vendor': 'vivo', 'label': 'DSH Pro'};
         default:
           return null;
       }

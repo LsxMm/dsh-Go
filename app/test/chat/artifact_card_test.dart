@@ -406,7 +406,7 @@ void main() {
       final messenger = tester.binding.defaultBinaryMessenger;
       messenger.setMockMethodCallHandler(media, (call) async {
         gallery.add(call);
-        return 'Movies/DSH Go/${(call.arguments as Map)['name']}';
+        return 'Movies/DSH Pro/${(call.arguments as Map)['name']}';
       });
       addTearDown(() => messenger.setMockMethodCallHandler(media, null));
       await tester.pumpWidget(batch());

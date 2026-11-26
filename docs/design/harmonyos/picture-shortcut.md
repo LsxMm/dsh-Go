@@ -8,13 +8,13 @@
 
 ## 既有合同
 
-权威源是 `app/android/app/src/main/kotlin/io/github/ccch1mneyyy/dsh_app/icons/PictureShortcutPlugin.kt` 和 `app/lib/state/icon_shortcut_state.dart`。
+权威源是 `app/android/app/src/main/kotlin/io/github/social/dsh_app/icons/PictureShortcutPlugin.kt` 和 `app/lib/state/icon_shortcut_state.dart`。
 
 | 项目 | 保持的行为 |
 |---|---|
 | 通道 / 方法 | `dsh/picture_shortcut` / `pin`；其他方法 `notImplemented` |
 | 参数 | `label` 字符串及 `png` 字节数组；零长、缺失或超过 2 MiB 返回 `invalid` / `no picture` |
-| 名称 | 合并空白、trim、空白回退 `DSH Go`，最多 24 个 Unicode 码点 |
+| 名称 | 合并空白、trim、空白回退 `DSH Pro`，最多 24 个 Unicode 码点 |
 | 不支持 | `{supported:false, requested:false}`；Dart 为 `PinRequest.unsupported` |
 | 校验、系统拒绝、取消或运行错误 | `{supported:true, requested:false}`；Dart 为 `PinRequest.failed` |
 | 成功 | `{supported:true, requested:true}`；Dart 为 `PinRequest.asked` |

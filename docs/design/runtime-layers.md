@@ -54,4 +54,4 @@ schema 1 的 rootfs 字段保持。schema 2 的 `layers.base`、`layers.engine` 
 4. 用隔离安装测 schema 1 首装/升级、schema 2 首装/升级、旧环境兼容采纳、每个事务提交点中断及不兼容拒绝，确认用户 Linux 数据保留。
 5. 完整 host smoke、Android/JVM、release APK 和设备验收通过前，保持 RUNTIME_LAYERS 默认 0。
 
-源码依据：`runtime/build-runtime.sh`、`runtime/lib/rtbuild.py`、`runtime/test-host.sh`、`.github/workflows/ci.yml`、`app/android/app/src/main/kotlin/io/github/ccch1mneyyy/dsh_app/runtime/RuntimeInstaller.kt` 及同目录 `EngineUpgrade.kt`。本说明没有用轻量测试替代真实安装性能测量。
+源码依据：`runtime/build-runtime.sh`、`runtime/lib/rtbuild.py`、`runtime/test-host.sh`、`.github/workflows/ci.yml`、`app/android/app/src/main/kotlin/io/github/social/dsh_app/runtime/RuntimeInstaller.kt` 及同目录 `EngineUpgrade.kt`。本说明没有用轻量测试替代真实安装性能测量。

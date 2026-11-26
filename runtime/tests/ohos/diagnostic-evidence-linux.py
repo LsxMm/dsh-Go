@@ -40,7 +40,7 @@ def main():
                 ['diagnostic-evidence.test.mjs', 'diagnostic-keyboard.test.mjs', 'diagnostic-evidence-cold.mjs', 'diagnostics-fixture.mjs',
                  'diagnostic-evidence-linux.py', 'diagnostic-evidence-host.d.ts', 'keyboard-geometry-host.d.ts', 'diagnostic-evidence-data_test.dart']]
     sources += [repo / 'tooling/ohos/tests/runtime-archive-fixture.mjs', repo / 'tooling/ohos/run-gates.py']
-    sources += [repo / 'app/android/app/src/main/kotlin/io/github/ccch1mneyyy/dsh_app/diagnostics/EvidenceStore.kt']
+    sources += [repo / 'app/android/app/src/main/kotlin/io/github/social/dsh_app/diagnostics/EvidenceStore.kt']
     sources += [repo / 'app/lib/diagnostics' / name for name in
                 ['diagnostics_channel.dart', 'automatic_diagnostics.dart', 'diagnostics_sections.dart']]
     snapshot = lambda: {str(path.relative_to(repo)): sha(path) for path in sources}

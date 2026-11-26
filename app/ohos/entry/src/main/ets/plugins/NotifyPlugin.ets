@@ -16,7 +16,7 @@ import {
   FlutterPluginBinding, MethodCall, MethodChannel, MethodResult, NewWantListener
 } from '@ohos/flutter_ohos';
 
-const ACTION = 'io.github.ccch1mneyyy.dsh_app.NOTIFICATION';
+const ACTION = 'io.github.social.dsh_app.NOTIFICATION';
 const APPROVAL_ACTION = ACTION + '_APPROVAL';
 const LABEL = 'dsh-chat:';
 const LIVE_LABEL = LABEL + 'live';

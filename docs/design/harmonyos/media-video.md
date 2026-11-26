@@ -1,6 +1,6 @@
 # 鸿蒙聊天视频原生后端（1305）
 
-本项以 `8faafe6` 为基底，补 `dsh/media_video`。实际消费者是 `app/lib/media/video.dart` 和 `app/lib/ui/chat/media/media_video_viewer.dart`；Android 合同来自 `app/android/app/src/main/kotlin/io/github/ccch1mneyyy/dsh_app/media/MediaVideoPlugin.kt`。本项没有修改这些文件、UI、启动视频、Android 或原生文件授权实现。
+本项以 `8faafe6` 为基底，补 `dsh/media_video`。实际消费者是 `app/lib/media/video.dart` 和 `app/lib/ui/chat/media/media_video_viewer.dart`；Android 合同来自 `app/android/app/src/main/kotlin/io/github/social/dsh_app/media/MediaVideoPlugin.kt`。本项没有修改这些文件、UI、启动视频、Android 或原生文件授权实现。
 
 ## 通道合同与明确差异
 

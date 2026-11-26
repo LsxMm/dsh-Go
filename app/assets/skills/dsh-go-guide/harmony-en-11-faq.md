@@ -38,7 +38,7 @@ Turning the switch on is not system approval. Missing ordinary permissions, rest
 
 To keep it going, keep the app on screen, or run it on a connected remote host. HarmonyOS has no battery-optimization or lock-in-Recents steps to try.
 
-Alerts need the app running, and none go out while it's suspended; also turn on the alerts you want in the app's **Notifications** and allow DSH Go notifications in system settings. Scheduled tasks on this phone only fire while the app is running too, and won't run on time while it's suspended.
+Alerts need the app running, and none go out while it's suspended; also turn on the alerts you want in the app's **Notifications** and allow DSH Pro notifications in system settings. Scheduled tasks on this phone only fire while the app is running too, and won't run on time while it's suspended.
 
 ## The engine keeps failing to start
 
@@ -65,7 +65,7 @@ Adding the app's sign-in patch alone does not enable the services that headless 
 The top of the system actions page says where things stand:
 
 - **On, waiting for the local engine**: start the local engine.
-- **On, works once you're back in DSH Go**: the system doesn't let background apps do these, so come back to DSH Go.
+- **On, works once you're back in DSH Pro**: the system doesn't let background apps do these, so come back to DSH Pro.
 - **On, can't connect right now, retrying**: give it a moment.
 - **Not available in this version**: this version doesn't support system actions.
 - **You're connected to a remote host**: switch to **This phone**.

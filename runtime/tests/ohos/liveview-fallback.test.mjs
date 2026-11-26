@@ -125,7 +125,7 @@ function fixture(t, { directory, hooks = {}, launchWant = {} } = {}) {
   const application = { filesDir: root };
   const messenger = { removed: [], setMessageHandler(name, handler) { assert.equal(handler, null); this.removed.push(name); } };
   const engine = { getApplicationContext: () => application, getBinaryMessenger: () => messenger };
-  const ability = { launchWant, context: { abilityInfo: { bundleName: 'io.github.ccch1mneyyy.dsh_app', name: 'EntryAbility' } } };
+  const ability = { launchWant, context: { abilityInfo: { bundleName: 'io.github.social.dsh_app', name: 'EntryAbility' } } };
   const binding = { getAbility: () => ability, addOnNewWantListener: x => listeners.add(x), removeOnNewWantListener: x => listeners.delete(x) };
   const Plugin = module.exports.default;
   const make = () => { const value = new Plugin(); value.onAttachedToEngine(engine); return value; };

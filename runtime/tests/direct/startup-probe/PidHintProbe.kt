@@ -1,4 +1,4 @@
-package io.github.ccch1mneyyy.dsh_app.runtime
+package io.github.social.dsh_app.runtime
 
 import android.content.Context
 import android.os.Process as AndroidProcess
