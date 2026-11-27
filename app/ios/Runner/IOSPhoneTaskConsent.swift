@@ -122,7 +122,7 @@ final class IOSPhoneTaskConsent {
     // wait for this app and pull the person out of the target again.
     guard live(), await waitForForeground(request, current: live), live() else { return false }
     let granted = await actions.confirm(request, title: "允许 AI 操控这台手机？",
-      detail: "授权本次对话接下来最多 30 分钟的手机操控任务。AI 可读取屏幕、打开应用、点击、滚动和输入普通文字；本任务内不再逐次弹窗，也不需要反复返回 DSH Go。\n\n密码、验证码和支付步骤仍交给你处理。关闭连接、暂停或结束任务会撤销授权；切到其他 App 后由系统持续任务接续，系统仍可能中断后台工作。\n\n首次动作：\n" + detail,
+      detail: "授权本次对话接下来最多 30 分钟的手机操控任务。AI 可读取屏幕、打开应用、点击、滚动和输入普通文字；本任务内不再逐次弹窗，也不需要反复返回 DSH Pro。\n\n密码、验证码和支付步骤仍交给你处理。关闭连接、暂停或结束任务会撤销授权；切到其他 App 后由系统持续任务接续，系统仍可能中断后台工作。\n\n首次动作：\n" + detail,
       allow: "允许 30 分钟", deny: "拒绝", preview: preview)
     guard granted, live(), foreground, let now = self.now(), now.isFinite, now >= 0,
       (now + 30 * 60).isFinite, now + 30 * 60 > now else { return false }
@@ -136,7 +136,7 @@ final class IOSPhoneTaskConsent {
   }
 
   /// A focus check in the target must precede this additional staging sheet.
-  /// Returning to DSH Go alone does not authorize a clipboard replacement.
+  /// Returning to DSH Pro alone does not authorize a clipboard replacement.
   func prepareClipboard(_ request: IOSPhoneRequest, current: @escaping () -> Bool) async -> Bool {
     guard (try? IOSPhoneOperation(request))?.usesClipboard == true else { return false }
     let operation = generation
@@ -149,11 +149,11 @@ final class IOSPhoneTaskConsent {
     var admitted = false
     defer { if !admitted { refused?() } }
     guard await waitForForeground(request, current: live,
-      notificationBody: "已检查本次输入目标的键盘线索。请回到 DSH Go 确认临时剪贴板；尚未修改剪贴板或输入文字。"),
+      notificationBody: "已检查本次输入目标的键盘线索。请回到 DSH Pro 确认临时剪贴板；尚未修改剪贴板或输入文字。"),
       live(), foreground else { return false }
     let windowSeconds = Int(IOSPhoneClipboard.pasteLifetime)
     let allowed = await actions.confirm(request, title: "准备本次非 ASCII 粘贴？",
-      detail: "刚才已复核目标画面并检查键盘和敏感输入线索；这些线索不是输入焦点或安全性的证明。\n\n现在会在前台保存原剪贴板，并临时写入本次已批准的全文。原内容只保存在本 App 内存，不发送给模型。\n\n允许后请在 \(windowSeconds) 秒内自行切回刚才的输入界面，期间不要复制其他内容。DSH Go 会再次核对画面；后台无法回读剪贴板，不能保证发现其他 App 的并发复制。\n\n粘贴后只返回固定状态，不回传新的读屏文字或图片，也不会自动派发回车／发送按键；请你核对目标应用的实际结果。\n\n粘贴后请回到 DSH Go 核对并恢复原剪贴板；App 终止会丢失保存的原内容。取消不会撤回已派发的焦点点击。",
+      detail: "刚才已复核目标画面并检查键盘和敏感输入线索；这些线索不是输入焦点或安全性的证明。\n\n现在会在前台保存原剪贴板，并临时写入本次已批准的全文。原内容只保存在本 App 内存，不发送给模型。\n\n允许后请在 \(windowSeconds) 秒内自行切回刚才的输入界面，期间不要复制其他内容。DSH Pro 会再次核对画面；后台无法回读剪贴板，不能保证发现其他 App 的并发复制。\n\n粘贴后只返回固定状态，不回传新的读屏文字或图片，也不会自动派发回车／发送按键；请你核对目标应用的实际结果。\n\n粘贴后请回到 DSH Pro 核对并恢复原剪贴板；App 终止会丢失保存的原内容。取消不会撤回已派发的焦点点击。",
       allow: "准备剪贴板", deny: "取消输入")
     admitted = allowed && live() && foreground
     return admitted
@@ -184,7 +184,7 @@ final class IOSPhoneTaskConsent {
       case .refused:
         if !unlocked { targetWaitFailureMessage = "手机已锁定，没有派发动作；请解锁后重新发起。" }
         else if !eligible { targetWaitFailureMessage = "本次请求已取消、过期或暂停，没有派发动作；这不表示增强开关关闭。" }
-        else if !background { targetWaitFailureMessage = "DSH Go 仍在前台，未取得目标画面，没有派发动作。" }
+        else if !background { targetWaitFailureMessage = "DSH Pro 仍在前台，未取得目标画面，没有派发动作。" }
         #if DSH_PHONE_SELF_RUNNER_DIAGNOSTICS
         IOSPhoneSelfRunner.diagnostic("target wait refused bg=\(background) eligible=\(eligible)")
         #endif
@@ -204,7 +204,7 @@ final class IOSPhoneTaskConsent {
   }
 
   private func waitForForeground(_ request: IOSPhoneRequest, current: () -> Bool,
-                                notificationBody: String = "请回到 DSH Go 授权本次手机操控任务。点这条通知只打开 App，不会批准或执行。") async -> Bool {
+                                notificationBody: String = "请回到 DSH Pro 授权本次手机操控任务。点这条通知只打开 App，不会批准或执行。") async -> Bool {
     if foreground { return current() }
     let center = UNUserNotificationCenter.current()
     let settings = await center.notificationSettings()

@@ -207,7 +207,7 @@ final class IOSPhoneCoreActions {
       return .failure(message + (execution.mayHaveActed
         ? "\n本次已有准备或动作可能产生效果，结果不明；请核对屏幕，不要自动重试或切换后端。"
         : "\n没有派发这个输入；请重新观察并由用户确认，不要自动重试。")
-        + (IOSPhoneClipboard.shared.hasPendingRestore ? "\n请回到 DSH Go 恢复保存的原剪贴板；内容没有发送给模型。" : ""))
+        + (IOSPhoneClipboard.shared.hasPendingRestore ? "\n请回到 DSH Pro 恢复保存的原剪贴板；内容没有发送给模型。" : ""))
     }
   }
 
@@ -235,7 +235,7 @@ final class IOSPhoneCoreActions {
       execution.clipboardLease = prepared.id
       execution.mayHaveActed = true
       guard await consent.waitForTarget(request, current: current) else {
-        throw IOSPhoneOperationError(message: "临时剪贴板已准备，但用户未返回目标；没有派发粘贴，请回到 DSH Go 恢复原剪贴板。")
+        throw IOSPhoneOperationError(message: "临时剪贴板已准备，但用户未返回目标；没有派发粘贴，请回到 DSH Pro 恢复原剪贴板。")
       }
       try requireBackground(current)
       let returned = try await capture(execution, current: current)
@@ -296,7 +296,7 @@ final class IOSPhoneCoreActions {
   /// before returning, so a later action needs a separately approved new screen.
   static func clipboardPasteOutcome(submitRequested: Bool, discardObservation: () -> Void) -> IOSPhoneOutcome {
     discardObservation()
-    var message = "粘贴请求已派发，但后台不能确认粘贴来源；可能粘贴了其他内容，请用户核对。\n本次不回传粘贴后的读屏文字或图片，也不保留它们作为操作依据。请回到 DSH Go 恢复原剪贴板；不要自动重试。"
+    var message = "粘贴请求已派发，但后台不能确认粘贴来源；可能粘贴了其他内容，请用户核对。\n本次不回传粘贴后的读屏文字或图片，也不保留它们作为操作依据。请回到 DSH Pro 恢复原剪贴板；不要自动重试。"
     if submitRequested {
       message += "\n本次未派发回车／发送按键，请用 handoff 交给用户核对；目标应用也可能自行处理粘贴，不能保证内容尚未提交。"
     }
@@ -415,7 +415,7 @@ final class IOSPhoneCoreActions {
   private func requireBackground(_ current: () -> Bool) throws {
     try require(current)
     guard UIApplication.shared.applicationState == .background else {
-      throw IOSPhoneOperationError(message: "DSH Go 尚未离开前台，没有取得目标界面。")
+      throw IOSPhoneOperationError(message: "DSH Pro 尚未离开前台，没有取得目标界面。")
     }
   }
   private func swipe(_ direction: String, anchor: CGPoint?, frame: String) -> [String: Any] {

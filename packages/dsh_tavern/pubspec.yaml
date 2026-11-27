@@ -1,6 +1,6 @@
 name: dsh_tavern
 description: >-
-  The tavern (酒馆) behind DSH Go's role-play mode: SillyTavern-compatible
+  The tavern (酒馆) behind DSH Pro's role-play mode: SillyTavern-compatible
   cards, world books, presets and chats, and the turn engine, in pure Dart.
   Design: docs/design/roleplay.md.
 version: 0.1.0

@@ -314,8 +314,8 @@ final class IOSPetOverlay: NSObject {
     let message = always
       ? words("The pet may keep its video and audio session active after phone control ends, allowing the local engine to continue while Picture in Picture is playing. iOS may interrupt it. This uses more battery; you can turn it off at any time.",
           "手机操控任务结束后，宠物可以继续播放画中画，让本机引擎在画中画有效时继续运行。系统仍可能中断，会增加耗电；你随时可以关闭。")
-      : words("While a phone-control task is running, a visible pet video can continue in Picture in Picture when you leave DSH Go. iOS may interrupt it. This uses an audio session and may affect other audio. It stops when the task ends unless you separately choose Always show.",
-          "手机操控任务进行时，离开 DSH Go 后可以在画中画里继续显示宠物。系统仍可能中断。它会使用音频会话，可能影响其他音频；任务结束即收起，除非另行选择始终显示。")
+      : words("While a phone-control task is running, a visible pet video can continue in Picture in Picture when you leave DSH Pro. iOS may interrupt it. This uses an audio session and may affect other audio. It stops when the task ends unless you separately choose Always show.",
+          "手机操控任务进行时，离开 DSH Pro 后可以在画中画里继续显示宠物。系统仍可能中断。它会使用音频会话，可能影响其他音频；任务结束即收起，除非另行选择始终显示。")
     let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
     prompt = alert
     var answered = false
@@ -502,8 +502,8 @@ final class IOSPetOverlay: NSObject {
       prompt == nil, let presenter = presenter(), presenter.presentedViewController == nil else { return }
     let id = task.id
     let alert = UIAlertController(title: words("Phone control paused", "手机操控已暂停"),
-      message: words("Choose whether to continue this task or stop it. Returning to DSH Go is not approval for another action.",
-        "请选择继续或停止本次任务。返回 DSH Go 不会批准新的操作。"), preferredStyle: .alert)
+      message: words("Choose whether to continue this task or stop it. Returning to DSH Pro is not approval for another action.",
+        "请选择继续或停止本次任务。返回 DSH Pro 不会批准新的操作。"), preferredStyle: .alert)
     prompt = alert
     stopPromptTaskID = id
     let finish: () -> Bool = { [weak self, weak alert] in
@@ -625,7 +625,7 @@ final class IOSPetOverlay: NSObject {
     result(FlutterError(code: "overlay_arguments", message: "Invalid pet overlay arguments", details: nil))
   }
   private func foregroundRequired(_ result: FlutterResult) {
-    result(FlutterError(code: "overlay_foreground_required", message: "Return to DSH Go to confirm", details: nil))
+    result(FlutterError(code: "overlay_foreground_required", message: "Return to DSH Pro to confirm", details: nil))
   }
 
   private struct RenderKey: Equatable {

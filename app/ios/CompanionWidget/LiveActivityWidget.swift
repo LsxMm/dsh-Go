@@ -240,7 +240,7 @@ private struct LiveLockScreen: View {
         Text(state.text)
           .font(.system(size: 15, weight: .semibold))
           .foregroundStyle(.primary)
-        Text(stale && state.running ? state.staleLabel : "DSH Go")
+        Text(stale && state.running ? state.staleLabel : "DSH Pro")
           .font(.system(size: 13))
           .foregroundStyle(.secondary)
       }

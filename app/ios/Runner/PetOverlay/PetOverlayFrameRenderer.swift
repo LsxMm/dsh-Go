@@ -166,6 +166,6 @@ final class PetOverlayFrameRenderer {
 
   private static var pausedLine: String {
     Locale.preferredLanguages.first?.hasPrefix("zh") == true
-      ? "已暂停 · 返回 DSH Go 继续或停止" : "Paused · Return to DSH Go to continue or stop"
+      ? "已暂停 · 返回 DSH Pro 继续或停止" : "Paused · Return to DSH Pro to continue or stop"
   }
 }

@@ -55,7 +55,7 @@ sealed class LauncherEntry {
   }
 
   /// Her full-mode session works the phone too. Its way back (a finished
-  /// task, 回到 DSH Go, a prompt) is her room like her own runs', never a chat.
+  /// task, 回到 DSH Pro, a prompt) is her room like her own runs', never a chat.
   /// Her room shows the [active] host's conversation: one on another host
   /// opens as the chat it is there.
   LauncherEntry forCompanion(bool Function(HostRef host, String sessionId) hers, {required HostRef active}) =>
@@ -99,7 +99,7 @@ class OpenChatEntry extends LauncherEntry {
   final String sessionId;
 }
 
-/// Back from a companion phone task (it finished, 回到 DSH Go, a prompt
+/// Back from a companion phone task (it finished, 回到 DSH Pro, a prompt
 /// opened): her [room] when it was asked for there; from her floating self or
 /// her notification, the app as the person left it.
 class OpenCompanionEntry extends LauncherEntry {

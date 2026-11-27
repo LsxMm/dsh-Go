@@ -250,7 +250,7 @@ Android/iOS 后台执行的机制、系统回收恢复和三方方案取舍见 [
 | `tooling/ios/ish/`、`GuestChannel.swift` | 可选 Linux guest。未安装时用 just-bash；安装 guest 后才有真实 Linux 环境，Python 等包还取决于 guest 内实际安装情况 |
 | `runtime/ios/phone/`、`IOSPhoneBridge.swift`、`IOSPhoneRunner.swift` | 引擎的手机工具请求以运行代/会话所有者绑定，经原生任务授权后选择 CoreDevice 或已启用的 XCTest；失败结果不自动跨路线重放 |
 | `IOSPhoneCoreDevice.swift`、`IOSPhoneSelfRunner.swift`、`PhoneRunner/` | CoreDevice 负责可用的应用控制和观察；本机缺少输入服务时，已签名的独立 PhoneRunner 承担 XCTest 元素观察与点按。能力以设备实际服务和用户设置为准 |
-| `IOSPhoneTaskConsent.swift`、`ContinuedRun.swift` | 每个手机任务首次在前台授权，最长 30 分钟；后续普通动作可在目标 App 前台继续。离开 DSH Go 时才请求 iOS 26 持续任务，系统可拒绝、过期或中止；画中画不是手机操控准入条件 |
+| `IOSPhoneTaskConsent.swift`、`ContinuedRun.swift` | 每个手机任务首次在前台授权，最长 30 分钟；后续普通动作可在目标 App 前台继续。离开 DSH Pro 时才请求 iOS 26 持续任务，系统可拒绝、过期或中止；画中画不是手机操控准入条件 |
 | `CompanionWidget/`、`IOSCompanionWidget.swift` | WidgetKit 小/中尺寸伙伴卡；主 App 写有限展示快照到专用 Keychain，扩展只读快照，不分享 Host 凭据 |
 | `PetOverlay/IOSPetOverlay.swift`、`VoiceChannel.swift`、`IOSAudioSessionCoordinator.swift` | 像素宠物 PiP 默认关闭且可选；`dsh/voice` 负责系统听写/录音，`dsh/speech` 负责通话与朗读 PCM，音频会话由原生协调器管理 |
 

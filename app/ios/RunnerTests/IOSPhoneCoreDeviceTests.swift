@@ -792,7 +792,7 @@ final class IOSPhoneCoreDeviceTests: XCTestCase {
     assertFailure(result, code: "ERR_PHONE_STOP_UNCONFIRMED")
     XCTAssertTrue(value.native.stops.isEmpty)
     XCTAssertEqual(value.native.launches.count, 1)
-    XCTAssertTrue(IOSPhoneRunner.coreStopUnconfirmed.contains("彻底关闭 DSH Go"))
+    XCTAssertTrue(IOSPhoneRunner.coreStopUnconfirmed.contains("彻底关闭 DSH Pro"))
     XCTAssertTrue(IOSPhoneRunner.coreStopUnconfirmed.contains("不要自动重试"))
   }
 

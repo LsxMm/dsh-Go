@@ -10,7 +10,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 const _host = HostRef.ssh('remote');
-const _channel = MethodChannel('io.github.ccch1mneyyy.dsh_app/remote_background');
+const _channel = MethodChannel('io.github.social.dsh_app/remote_background');
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();

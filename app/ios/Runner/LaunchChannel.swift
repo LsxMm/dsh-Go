@@ -477,7 +477,7 @@ final class StartupWatch {
     let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "?"
     let build = Bundle.main.infoDictionary?["CFBundleVersion"] as? String ?? "?"
     return [
-      "DSH Go is stuck starting. Please send a photo of this.",
+      "DSH Pro is stuck starting. Please send a photo of this.",
       "\(version) (\(build))  iOS \(UIDevice.current.systemVersion)",
       "root \(root.map { "\(type(of: $0))" } ?? "none")  drawing \(flutter?.isDisplayingFlutterUI == true)",
       "App binary \(has("App.framework/App"))  assets \(has("App.framework/flutter_assets"))",

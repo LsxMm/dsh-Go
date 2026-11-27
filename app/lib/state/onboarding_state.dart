@@ -51,7 +51,7 @@ enum SetupStep {
   /// 选择外观.
   appearance,
 
-  /// 想让 DSH Go 帮你做哪些事, and the permissions that takes.
+  /// 想让 DSH Pro 帮你做哪些事, and the permissions that takes.
   access,
 
   /// 连接 DeepSeek.

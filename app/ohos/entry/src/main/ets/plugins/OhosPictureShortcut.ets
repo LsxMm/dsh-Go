@@ -52,7 +52,7 @@ function missing(error: Error): boolean { return (error as BusinessError).code =
 
 // Android uses 24 Unicode code points, not 24 UTF-16 code units.
 export function pictureShortcutLabel(value: string): string {
-  const cleaned: string = value.replace(/\s+/g, ' ').trim() || 'DSH Go';
+  const cleaned: string = value.replace(/\s+/g, ' ').trim() || 'DSH Pro';
   let end: number = 0;
   for (let count: number = 0; count < 24 && end < cleaned.length; count++) {
     const first: number = cleaned.charCodeAt(end++);

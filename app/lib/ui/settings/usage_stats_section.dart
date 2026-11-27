@@ -1,4 +1,4 @@
-// 设置 › 隐私与分享 › 改进 DSH Go: the switch for anonymous usage statistics
+// 设置 › 隐私与分享 › 改进 DSH Pro: the switch for anonymous usage statistics
 // (lib/usage/usage_stats.dart) and, under it, what goes out.
 
 import 'dart:async';

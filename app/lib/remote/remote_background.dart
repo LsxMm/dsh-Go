@@ -9,7 +9,7 @@ import '../state/android_features.dart';
 import '../state/connection_state.dart';
 import '../state/hosts_state.dart';
 
-const _channel = MethodChannel('io.github.ccch1mneyyy.dsh_app/remote_background');
+const _channel = MethodChannel('io.github.social.dsh_app/remote_background');
 
 typedef RemoteBackgroundOptions = ({bool audio, bool location});
 

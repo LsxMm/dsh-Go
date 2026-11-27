@@ -117,7 +117,7 @@ struct IOSPhoneOperation {
       var message = "在屏幕 \(Self.quotedDisplay(screen ?? "")) 的编号 \(parameters["id"] as? Int ?? 0) 输入以下全文，并替换原内容：\n\(displayedText)" + target
       message += "\n\n显示说明：连续空白显示为一个空格；反斜线转义表示原始特殊字符。实际输入保留原文。"
       if usesClipboard {
-        message += "\n\nCoreDevice 路线输入非 ASCII 文字时会临时使用剪贴板：原内容只在本 App 内存保存，不发送给模型。请在粘贴后回到 DSH Go 恢复原内容；若本 App 在恢复前终止，保存内容会丢失。恢复内容仅在此设备可用。"
+        message += "\n\nCoreDevice 路线输入非 ASCII 文字时会临时使用剪贴板：原内容只在本 App 内存保存，不发送给模型。请在粘贴后回到 DSH Pro 恢复原内容；若本 App 在恢复前终止，保存内容会丢失。恢复内容仅在此设备可用。"
         message += "\nCoreDevice 的后台粘贴无法核实来源，可能粘贴其他内容；这次只返回固定状态，不回传粘贴后的读屏文字或图片，请你核对。"
       }
       if submits {

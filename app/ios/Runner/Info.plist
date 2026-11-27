@@ -25,7 +25,7 @@
 		<string>zh-Hans</string>
 	</array>
 	<key>CFBundleDisplayName</key>
-	<string>DSH Go</string>
+	<string>DSH Pro</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -118,7 +118,7 @@
 	<array>
 		<dict>
 			<key>CFBundleTypeName</key>
-			<string>DSH Go share</string>
+			<string>DSH Pro share</string>
 			<key>CFBundleTypeRole</key>
 			<string>Viewer</string>
 			<key>LSHandlerRank</key>
@@ -137,7 +137,7 @@
 				<string>public.json</string>
 			</array>
 			<key>UTTypeDescription</key>
-			<string>DSH Go share</string>
+			<string>DSH Pro share</string>
 			<key>UTTypeIdentifier</key>
 			<string>io.github.ccch1mneyyy.dshgo.share</string>
 			<key>UTTypeTagSpecification</key>

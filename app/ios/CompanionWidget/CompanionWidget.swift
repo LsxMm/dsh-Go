@@ -55,7 +55,7 @@ private struct CompanionView: View {
           Image(systemName: index < entry.snapshot.bond ? "heart.fill" : "heart")
         }
         Spacer()
-        Text("DSH Go").font(.caption2)
+        Text("DSH Pro").font(.caption2)
       }.font(.caption2).foregroundColor(.white.opacity(0.65))
     }.foregroundColor(.white).padding(4)
       .widgetURL(URL(string: "dshgo://open/companion"))

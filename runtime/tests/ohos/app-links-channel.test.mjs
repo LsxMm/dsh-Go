@@ -56,7 +56,7 @@ function fixture({ start = () => Promise.resolve(), zone = () => 'Asia/Shanghai'
     launchWant: view('dshgo://forum/auth?payload=cold-secret'),
     context: {
       cacheDir,
-      abilityInfo: { name: 'EntryAbility', bundleName: 'io.github.ccch1mneyyy.dsh_app' },
+      abilityInfo: { name: 'EntryAbility', bundleName: 'io.github.social.dsh_app' },
       startAbility(want) { starts.push(plain(want)); return start(); },
     },
   };
@@ -165,7 +165,7 @@ test('foreground launch targets only the attached own ability and reports platfo
   assert.equal((await f.call('dsh/app', 'bringToFront')).error, 'no_ability');
   f.plugin.onAttachedToAbility(f.binding);
   assert.deepEqual(await f.call('dsh/app', 'bringToFront', { bundleName: 'attacker' }), { value: null });
-  assert.deepEqual(JSON.parse(JSON.stringify(f.starts)), [{ bundleName: 'io.github.ccch1mneyyy.dsh_app', abilityName: 'EntryAbility' }]);
+  assert.deepEqual(JSON.parse(JSON.stringify(f.starts)), [{ bundleName: 'io.github.social.dsh_app', abilityName: 'EntryAbility' }]);
   const denied = fixture({ start: () => Promise.reject(new Error('background start denied')) });
   denied.plugin.onAttachedToAbility(denied.binding);
   assert.equal((await denied.call('dsh/app', 'bringToFront')).error, 'ohos_foreground');
@@ -267,7 +267,7 @@ test('own, empty, encoded and credential-bearing authorities and missing read gr
   const f = await fileFixture(t); await f.call('dsh/links', 'ready');
   let count = 0;
   for (const uri of [
-    'file:///data/private', 'file://io.github.ccch1mneyyy.dsh_app/data/private',
+    'file:///data/private', 'file://io.github.social.dsh_app/data/private',
     'file://' + f.ability.context.abilityInfo.bundleName.toUpperCase() + '/data/private', 'file://%73ender.example/private',
     'file://user@sender.example/private', 'file://sender.example:99/private',
     'file://../data/private', 'file://sender.example/data/%2e%2e/private', 'file://sender.example/data/a%00b',

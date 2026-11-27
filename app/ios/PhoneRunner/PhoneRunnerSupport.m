@@ -101,7 +101,7 @@
     }
     id path = ((id(*)(id, SEL, CGPoint, NSTimeInterval))objc_msgSend)([pathClass alloc], pathInit, point, 0);
     build(path);
-    id record = ((id(*)(id, SEL, NSString *))objc_msgSend)([recordClass alloc], recordInit, @"DSH Go");
+    id record = ((id(*)(id, SEL, NSString *))objc_msgSend)([recordClass alloc], recordInit, @"DSH Pro");
     ((void (*)(id, SEL, id))objc_msgSend)(record, add, path);
     NSError *error = nil;
     return ((BOOL(*)(id, SEL, NSError **))objc_msgSend)(record, send, &error);

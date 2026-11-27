@@ -14,7 +14,7 @@ The affinity case installs labelled historical replay facts through public prese
 
 ## Owner invocation
 
-Use an Android device without the side-build package io.github.ccch1mneyyy.dsh_app.test in any user/profile. The read-only preflight explicitly queries pm list packages --user all; a failed all-user query is not treated as a clean device. A clean selected profile alone is insufficient because install -R checks device-wide. The launcher refuses an existing side build and never clears another profile. Flutter, adb and ordinary repository Android prerequisites must already be available. The regular app package is not changed. Choose one explicit Android user with --android-user (default 0); use adb shell pm list users to find profile IDs. That same numeric user is still used for installation, Flutter launch, force-stop, run-as configuration/collection/removal, the owned-package cleanup check and uninstall. An unavailable profile is a failure, never a fallback to user 0.
+Use an Android device without the side-build package io.github.social.dsh_app.test in any user/profile. The read-only preflight explicitly queries pm list packages --user all; a failed all-user query is not treated as a clean device. A clean selected profile alone is insufficient because install -R checks device-wide. The launcher refuses an existing side build and never clears another profile. Flutter, adb and ordinary repository Android prerequisites must already be available. The regular app package is not changed. Choose one explicit Android user with --android-user (default 0); use adb shell pm list users to find profile IDs. That same numeric user is still used for installation, Flutter launch, force-stop, run-as configuration/collection/removal, the owned-package cleanup check and uninstall. An unavailable profile is a failure, never a fallback to user 0.
 
 Set DEEPSEEK_API_KEY in the invoking process environment. From the repository root:
 
@@ -69,7 +69,7 @@ Do not rerun the normal launcher against a retained package: its refusal to over
 For a confirmed owned installation, stop the same user's side build before collecting a still-running target:
 
 ~~~text
-adb -s ACTUAL_ADB_ID shell -T am force-stop --user ACTUAL_USER_ID io.github.ccch1mneyyy.dsh_app.test
+adb -s ACTUAL_ADB_ID shell -T am force-stop --user ACTUAL_USER_ID io.github.social.dsh_app.test
 ~~~
 
 The following Python 3 snippet can be saved and run on the owner's host, including Windows. Set report_path to the failed run's actual launcher-summary.json. It keeps binary stdout unchanged and writes a file only after that individual remote cat succeeds; it avoids shell-redirection encoding differences.
@@ -89,7 +89,7 @@ recovered = report_path.parent / "recovered"
 recovered.mkdir(exist_ok=False)
 
 def read(parts):
-    command = ["run-as", "io.github.ccch1mneyyy.dsh_app.test",
+    command = ["run-as", "io.github.social.dsh_app.test",
                "--user", str(report["androidUser"]), *parts]
     return subprocess.run(["adb", "-s", report["device"], "shell", "-T",
                            shlex.join(command)], stdout=subprocess.PIPE,
@@ -113,7 +113,7 @@ A successful directory listing that lacks a requested file means there was no su
 Confirm each requested copy succeeded and inspect the recovered files, including the expected summary runId/outcome/counts when a summary exists. Preserve an invalid summary as diagnostic evidence; it is not a valid replay result. Only after the needed files or failure evidence are safely retained should the owner remove this confirmed run's package for the same user:
 
 ~~~text
-adb -s ACTUAL_ADB_ID shell -T pm uninstall --user ACTUAL_USER_ID io.github.ccch1mneyyy.dsh_app.test
+adb -s ACTUAL_ADB_ID shell -T pm uninstall --user ACTUAL_USER_ID io.github.social.dsh_app.test
 ~~~
 
 Check the Success response. Do not delete build outputs, the regular app or other profiles' data as part of recovery. A fresh run needs a new output directory and a device-wide absent side-build package; switching to another profile does not establish absence.

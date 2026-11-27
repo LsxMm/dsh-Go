@@ -16,7 +16,7 @@ import {
   FlutterPluginBinding, MethodCall, MethodChannel, MethodResult, NewWantListener
 } from '@ohos/flutter_ohos';
 
-const ACTION = 'io.github.ccch1mneyyy.dsh_app.NOTIFICATION';
+const ACTION = 'io.github.social.dsh_app.NOTIFICATION';
 const APPROVAL_ACTION = ACTION + '_APPROVAL';
 const LABEL = 'dsh-chat:';
 const LIVE_LABEL = LABEL + 'live';
@@ -330,7 +330,7 @@ export default class NotifyPlugin implements FlutterPlugin, AbilityAware, NewWan
       entry.request.actionButtons = [entry.openButton];
       entry.request.content = {
         notificationContentType: notificationManager.ContentType.NOTIFICATION_CONTENT_BASIC_TEXT,
-        normal: { title: 'DSH Go', text: '未能完成审批，请打开应用处理。' }
+        normal: { title: 'DSH Pro', text: '未能完成审批，请打开应用处理。' }
       };
       await notificationManager.publish(entry.request);
     } else {
@@ -415,7 +415,7 @@ export default class NotifyPlugin implements FlutterPlugin, AbilityAware, NewWan
       id: 0, label: LIVE_LABEL, notificationSlotType: SLOT,
       tapDismissed: true, isAlertOnce: true, wantAgent: agent,
       content: { notificationContentType: notificationManager.ContentType.NOTIFICATION_CONTENT_BASIC_TEXT,
-        normal: { title: 'DSH Go', text: text } }
+        normal: { title: 'DSH Pro', text: text } }
     };
     this.ensureCurrent(generation);
     await notificationManager.publish(request);
@@ -435,7 +435,7 @@ export default class NotifyPlugin implements FlutterPlugin, AbilityAware, NewWan
     if (!group || !key || !route.sessionId || route.sessionId.length > 200) throw new NotifyError('bad_args', '通知缺少有效的会话标识。');
     const label = await this.label(group, key);
     this.approvals.delete(label);
-    const title = (call.argument('title') ?? 'DSH Go') as string;
+    const title = (call.argument('title') ?? 'DSH Pro') as string;
     const text = (call.argument('text') ?? '') as string;
     const publicText = (call.argument('publicText') ?? '有新的会话提醒') as string;
     const fullText = (call.argument('fullText') ?? '') as string;
@@ -443,7 +443,7 @@ export default class NotifyPlugin implements FlutterPlugin, AbilityAware, NewWan
       throw new NotifyError('bad_args', '通知标题和正文必须是文字。');
     }
     // Public SDK content fields cannot be empty. Keep real nonempty content verbatim.
-    const shownTitle = title || 'DSH Go';
+    const shownTitle = title || 'DSH Pro';
     const shownText = text || publicText || '有新的会话提醒';
     let content: notificationManager.NotificationContent = {
       notificationContentType: notificationManager.ContentType.NOTIFICATION_CONTENT_BASIC_TEXT,

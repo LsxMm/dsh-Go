@@ -27,7 +27,7 @@ enum SystemEntries {
 
 @available(iOS 16.0, *)
 struct AskDshIntent: AppIntent {
-  static var title: LocalizedStringResource = "Ask DSH Go"
+  static var title: LocalizedStringResource = "Ask DSH Pro"
   static var description = IntentDescription("Opens a new conversation with this message in the composer.")
   static var openAppWhenRun = true
 
@@ -35,7 +35,7 @@ struct AskDshIntent: AppIntent {
   var text: String
 
   static var parameterSummary: some ParameterSummary {
-    Summary("Ask DSH Go \(\.$text)")
+    Summary("Ask DSH Pro \(\.$text)")
   }
 
   @MainActor
@@ -72,7 +72,7 @@ struct NewChatIntent: AppIntent {
 }
 
 /// What Siri and the Shortcuts app offer without any setup. A free-text message can't be part
-/// of a spoken phrase, so Siri asks for it after "Ask DSH Go".
+/// of a spoken phrase, so Siri asks for it after "Ask DSH Pro".
 @available(iOS 16.0, *)
 struct DshShortcuts: AppShortcutsProvider {
   static var appShortcuts: [AppShortcut] {

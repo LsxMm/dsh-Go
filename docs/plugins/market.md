@@ -20,7 +20,7 @@ App 默认读 dshfind 的 format-1 索引。先给公开仓库加 `dsh-plugin` t
 
 ## 3. 上架官方市场（dsh-go-market）
 
-App 的插件市场分**官方**、**适配 DSH Go**、**全部**三个入口。官方目录里的同名包使用经过检查的固定版本，详情显示风险标记、适配能力、最低 App 版本、截图和双语介绍。
+App 的插件市场分**官方**、**适配 DSH Pro**、**全部**三个入口。官方目录里的同名包使用经过检查的固定版本，详情显示风险标记、适配能力、最低 App 版本、截图和双语介绍。
 
 投稿步骤：
 
@@ -44,7 +44,7 @@ App 的插件市场分**官方**、**适配 DSH Go**、**全部**三个入口。
 |---|---|
 | npm 已发布 | `npm view … --json` |
 | dshfind 索引有条目 | 用精确包名查 dshfind 的 format-1 索引 `https://api.dshfind.com/market/dsh-index.json`（见 from-zero 示例）；它决定「全部」分区 |
-| 官方市场索引有条目 | 用精确包名查官方市场的 format-1 索引 `https://go.dshtui.com/market/index.json`；它决定「官方」和「适配 DSH Go」分区 |
+| 官方市场索引有条目 | 用精确包名查官方市场的 format-1 索引 `https://go.dshtui.com/market/index.json`；它决定「官方」和「适配 DSH Pro」分区 |
 | App 市场能看到 | App 里搜包名，核对版本、来源和筛选分区 |
 | 能安装并运行 | 装到目标主机，做一次真实工具调用 |
 

@@ -344,7 +344,7 @@ final class IOSPhoneOperationTests: XCTestCase {
     XCTAssertTrue(description.contains("临时使用剪贴板"))
     XCTAssertTrue(description.contains("CoreDevice 路线"))
     XCTAssertTrue(description.contains("不发送给模型"))
-    XCTAssertTrue(description.contains("回到 DSH Go 恢复原内容"))
+    XCTAssertTrue(description.contains("回到 DSH Pro 恢复原内容"))
     XCTAssertTrue(description.contains("本 App 在恢复前终止"))
     XCTAssertTrue(description.contains("还请求按回车／发送"))
     XCTAssertTrue(description.contains("完整输入文字"))

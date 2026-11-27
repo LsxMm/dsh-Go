@@ -18,7 +18,7 @@
 | 许可 | MIT：作者授权本项目按 MIT 许可使用 |
 | 用途 | 手机操控：无障碍读屏与操作、控制浮层，以及「不打扰模式」的特权虚拟屏 |
 
-上游路径前缀为 `android/app/src/main/kotlin/app/xiangyue/phase/`；本仓库路径前缀为 `app/android/app/src/main/kotlin/io/github/ccch1mneyyy/dsh_app/phone/`。
+上游路径前缀为 `android/app/src/main/kotlin/app/xiangyue/phase/`；本仓库路径前缀为 `app/android/app/src/main/kotlin/io/github/social/dsh_app/phone/`。
 
 | 本仓库文件 | 上游来源 |
 |---|---|
@@ -47,12 +47,12 @@ used under the MIT License with the author's permission.
 
 | 项 | 内容 |
 |---|---|
-| 作品 | DSH Go 展示网站：HTML、CSS、JavaScript、内容检查与发布脚本、八张功能展示图 |
+| 作品 | DSH Pro 展示网站：HTML、CSS、JavaScript、内容检查与发布脚本、八张功能展示图 |
 | 作者 | ClayGao233 / 采云师烧饼（https://github.com/ClayGao233 、https://space.bilibili.com/28879571） |
 | 许可 | 作者交付给本项目用于 go.dshtui.com；交付包未附许可证声明，不在本仓库的 AGPL-3.0 授权范围内 |
 | 用途 | `https://go.dshtui.com/` 首页 |
 
-本仓库位置：`site/home/`。在交付版本上的改动：产品名统一写作「DSH Go」，填写作者、下载、仓库、贡献者和分享元信息（`dist/site-config.js`），加入页面 CSP、下载二维码、第二个下载链接和 Star 数（`dist/index.html`、`dist/author-ui.js`、`dist/refinements.css` 末尾），统一换行符；没有发布的工作文件（作者说明、备份脚本、未用到的图片）未收入。功能展示图依据 DSH Go 的界面截图制作，含 DSH Go 的品牌图形和鲸娘形象（见 `ASSETS.md`）。页底保留作者的「网页开发」署名。
+本仓库位置：`site/home/`。在交付版本上的改动：产品名统一写作「DSH Pro」，填写作者、下载、仓库、贡献者和分享元信息（`dist/site-config.js`），加入页面 CSP、下载二维码、第二个下载链接和 Star 数（`dist/index.html`、`dist/author-ui.js`、`dist/refinements.css` 末尾），统一换行符；没有发布的工作文件（作者说明、备份脚本、未用到的图片）未收入。功能展示图依据 DSH Pro 的界面截图制作，含 DSH Pro 的品牌图形和鲸娘形象（见 `ASSETS.md`）。页底保留作者的「网页开发」署名。
 
 ### PiPilot（MIT）
 
@@ -168,7 +168,7 @@ DS Bot 的 NOTICE 原文附在文末。
 | 许可 | MIT（只用代码；`LICENSE-MODEL.md` 管的模型文件 `Magnet.mfxl`、`VoicePosition.mfxl` 和 Pro 内容都没有用） |
 | 用途 | 界面特效：思考光球、边框流光、语音辉光、语音光环、机器人头像等，从作者的 TypeScript / Swift / Metal 源码翻译成 Dart、Flutter 着色器和 Kotlin；手机操控时屏幕边缘的色带取自 Distortion waves（`packages/distortion-waves`）着色器里留在屏幕边缘的那部分颜色（rim）和 `WaveRim.lumps`，叠加的贴边亮线、外晕和绕圈光束取自 Border beam（`packages/border-beam`）的 stroke、bloom 和 rotate |
 
-本仓库位置：`app/lib/ui/fx/`（每个文件第一行注明出处）及其 `app/shaders/fx/` 下的着色器；手机操控的边缘色带在 `app/android/app/src/main/kotlin/io/github/ccch1mneyyy/dsh_app/phone/a11y/EdgeBeam.kt`、`EdgeBeamModel.kt`，悬浮条（灵动岛）边上的光束在同目录的 `OverlayLook.kt`（同样在文件第一行注明出处）。
+本仓库位置：`app/lib/ui/fx/`（每个文件第一行注明出处）及其 `app/shaders/fx/` 下的着色器；手机操控的边缘色带在 `app/android/app/src/main/kotlin/io/github/social/dsh_app/phone/a11y/EdgeBeam.kt`、`EdgeBeamModel.kt`，悬浮条（灵动岛）边上的光束在同目录的 `OverlayLook.kt`（同样在文件第一行注明出处）。
 
 金属质感的着色器 `app/shaders/fx/metal_liquid.frag` 是 metal-fx 用的 Paper Shaders `liquidMetal`（Apache-2.0，Paper Design, Inc.，`@paper-design/shaders` 0.0.80）的 GLSL 翻译，按 metal-fx 的 NOTICE 原文保留：
 
@@ -193,7 +193,7 @@ Libraries.dev metal-fx, translated to Flutter GLSL.
 | 版权人 | Copyright (c) 2026 qiannianhuanxiang |
 | 许可 | MIT |
 | 用途 | 不打扰模式特权进程的 `app_process` 入口 |
-| 文件 | `app/android/app/src/main/kotlin/io/github/ccch1mneyyy/dsh_app/phone/background/PrivilegedDisplayEntry.kt` |
+| 文件 | `app/android/app/src/main/kotlin/io/github/social/dsh_app/phone/background/PrivilegedDisplayEntry.kt` |
 
 ### discourse_docker（MIT）
 
@@ -332,7 +332,7 @@ Libraries.dev metal-fx, translated to Flutter GLSL.
 | AndroidX WebKit | 1.15.0 | Apache-2.0 | The Android Open Source Project | 网页插件的深色模式 |
 | flutter_webrtc（pub 包，含 Android 插件代码） | 1.6.3 | MIT；其 NOTICE 另含 react-native-webrtc（MIT，Copyright (c) 2015 Howard Yang）与 `SimulcastVideoEncoderFactoryWrapper.kt`（Apache-2.0，Copyright 2017, Lyo Kato；Copyright 2017-2021, Shiguredo Inc.），原文见文末 | Copyright (c) 2018 湖北捷智云技术有限公司 | DSH Remote 直连（P2P / TURN）的 DataChannel；只用数据通道，不碰麦克风、摄像头和音频会话 |
 | WebRTC Android SDK（`io.github.webrtc-sdk:android`，libwebrtc m150） | 150.7871.04 | BSD-3-Clause，另附 Google 的专利授权（PATENTS） | Copyright (c) 2011, The WebRTC project authors | flutter_webrtc 的原生 WebRTC（`libjingle_peerconnection_so.so`，每个 ABI 一份） |
-| AudioSwitch（`com.github.davidliu:audioswitch`，twilio/audioswitch 的分支） | `039a35aefab7747c557242fa216c9ea11743b604` | Apache-2.0 | Copyright 2020 Twilio, inc. | flutter_webrtc 的音频路由依赖；DSH Go 不建音频轨，不会启用 |
+| AudioSwitch（`com.github.davidliu:audioswitch`，twilio/audioswitch 的分支） | `039a35aefab7747c557242fa216c9ea11743b604` | Apache-2.0 | Copyright 2020 Twilio, inc. | flutter_webrtc 的音频路由依赖；DSH Pro 不建音频轨，不会启用 |
 | mobile_scanner（pub 包，含 Android 插件代码） | 7.5.0 | BSD-3-Clause | Copyright (c) 2022, Julian Steenbakker | Remote「扫码配对电脑」的相机扫码和相册识图 |
 | ML Kit Barcode Scanning（`com.google.mlkit:barcode-scanning`，模型随 APK 打包） | 17.3.0 | [ML Kit 服务条款](https://developers.google.com/ml-kit/terms)（Google 免费分发的二进制，非开源） | Google LLC | mobile_scanner 的二维码识别，在手机本地运行，不需要 Google Play 服务 |
 | CameraX（`androidx.camera:*`，mobile_scanner 的依赖） | 随 mobile_scanner 7.5.0 | Apache-2.0 | The Android Open Source Project | 扫码时的相机预览 |

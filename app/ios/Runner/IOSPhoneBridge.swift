@@ -239,7 +239,7 @@ final class IOSPhoneBridge: NSObject, URLSessionTaskDelegate {
         if kind.hasPrefix("browser-") || kind.hasPrefix("runner-") {
           if kind.hasPrefix("runner-"), !IOSPhoneControl.shared.enabled || IOSPhoneControl.shared.isPaused {
             _ = try? await self.post("result", ["id": request.id,
-              "text": IOSPhoneControl.shared.isPaused ? "手机操控已暂停；请回到 App，由用户确认继续。" : "手机操控已关闭，请在 DSH Go 设置中开启。", "isError": true])
+              "text": IOSPhoneControl.shared.isPaused ? "手机操控已暂停；请回到 App，由用户确认继续。" : "手机操控已关闭，请在 DSH Pro 设置中开启。", "isError": true])
             self.active = nil; self.operation = nil
             return
           }

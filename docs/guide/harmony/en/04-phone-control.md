@@ -33,13 +33,13 @@ Once on, the top of the page says where things stand; if it isn't working, see [
 
 **Confirmation** is always **Follows permissions**, with nothing else to pick: it follows the chat's permissions, so it usually asks each time, and not with full access. For permissions, see Permissions in [Settings](10-settings.md). The last step of a call, a share or a calendar event is always yours, in the system page.
 
-## Only with DSH Go on screen
+## Only with DSH Pro on screen
 
-The system doesn't let background apps do these. After the AI opens another app, it can't go on until you're back in DSH Go.
+The system doesn't let background apps do these. After the AI opens another app, it can't go on until you're back in DSH Pro.
 
 ## Your turn
 
-When **Your turn** appears, do the step, come back to DSH Go and press **Continue**. That only says you confirmed; the AI can't see what happened in other apps. To end it, press **Stop**.
+When **Your turn** appears, do the step, come back to DSH Pro and press **Continue**. That only says you confirmed; the AI can't see what happened in other apps. To end it, press **Stop**.
 
 ## Results and the log
 

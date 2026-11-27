@@ -23,7 +23,7 @@ export default class RemoteBackgroundPlugin implements FlutterPlugin, MethodCall
   getUniqueClassName(): string { return 'DshRemoteBackgroundPlugin'; }
 
   onAttachedToEngine(binding: FlutterPluginBinding): void {
-    this.channel = new MethodChannel(binding.getBinaryMessenger(), 'io.github.ccch1mneyyy.dsh_app/remote_background');
+    this.channel = new MethodChannel(binding.getBinaryMessenger(), 'io.github.social.dsh_app/remote_background');
     this.channel.setMethodCallHandler(this);
   }
 

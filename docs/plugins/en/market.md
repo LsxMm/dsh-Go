@@ -20,7 +20,7 @@ Listing conditions (2026-10): recognised as a plugin, no risk flag, ship a bundl
 
 ## 3. List in the official market (dsh-go-market)
 
-The app's plugin market has three entries: **official**, **adapted for DSH Go**, and **all**. For packages in the official catalogue it uses a pinned, reviewed version, and shows risk flags, adaptation notes, the minimum app version, screenshots and bilingual descriptions.
+The app's plugin market has three entries: **official**, **adapted for DSH Pro**, and **all**. For packages in the official catalogue it uses a pinned, reviewed version, and shows risk flags, adaptation notes, the minimum app version, screenshots and bilingual descriptions.
 
 To submit:
 
@@ -44,7 +44,7 @@ A web page, an npm release, a market index entry and an installable app are four
 |---|---|
 | Published on npm | `npm view … --json` |
 | In the dshfind index | query dshfind's format-1 index `https://api.dshfind.com/market/dsh-index.json` by exact name (see the from-zero example); it feeds the **all** section |
-| In the official market index | query the official market's format-1 index `https://go.dshtui.com/market/index.json` by exact name; it feeds the **official** and **adapted for DSH Go** sections |
+| In the official market index | query the official market's format-1 index `https://go.dshtui.com/market/index.json` by exact name; it feeds the **official** and **adapted for DSH Pro** sections |
 | Visible in the app | search the app, check version, source and section filter |
 | Installs and runs | install on the target host and make one real tool call |
 

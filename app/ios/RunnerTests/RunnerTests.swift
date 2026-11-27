@@ -375,7 +375,7 @@ final class NativeToolsTests: XCTestCase {
     let picture = UIGraphicsImageRenderer(size: CGSize(width: 900, height: 300)).pngData { context in
       UIColor.white.setFill()
       context.fill(CGRect(x: 0, y: 0, width: 900, height: 300))
-      NSString(string: "DSH Go 工具检查 12345").draw(
+      NSString(string: "DSH Pro 工具检查 12345").draw(
         at: CGPoint(x: 40, y: 100),
         withAttributes: [.font: UIFont.systemFont(ofSize: 72), .foregroundColor: UIColor.black])
     }

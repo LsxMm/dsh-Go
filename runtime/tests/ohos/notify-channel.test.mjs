@@ -119,7 +119,7 @@ function fixture(t, { directory, hooks = {}, launchWant = {} } = {}) {
   const application = { filesDir: root };
   const messenger = { removed: [], setMessageHandler(name, handler) { assert.equal(handler, null); this.removed.push(name); } };
   const engine = { getApplicationContext: () => application, getBinaryMessenger: () => messenger };
-  const ability = { launchWant, context: { abilityInfo: { bundleName: 'io.github.ccch1mneyyy.dsh_app', name: 'EntryAbility' } } };
+  const ability = { launchWant, context: { abilityInfo: { bundleName: 'io.github.social.dsh_app', name: 'EntryAbility' } } };
   const binding = { getAbility: () => ability, addOnNewWantListener: x => listeners.add(x), removeOnNewWantListener: x => listeners.delete(x) };
   const Plugin = module.exports.default;
   const make = () => { const value = new Plugin(); value.onAttachedToEngine(engine); return value; };
@@ -187,7 +187,7 @@ test('real notification content, fixed own target, immutable Want and real persi
   const request = f.published[0], info = clone(f.agents[0]), want = info.wants[0];
   assert.deepEqual(clone(request.content), { notificationContentType: 1, longText: { title: post.title, text: post.text, longText: post.fullText, briefText: post.text, expandedTitle: post.title } });
   assert.deepEqual(clone(request.actionButtons), [{ title: '打开应用处理', wantAgent: { agentId: 1 } }]);
-  assert.equal(want.bundleName, 'io.github.ccch1mneyyy.dsh_app'); assert.equal(want.abilityName, 'EntryAbility');
+  assert.equal(want.bundleName, 'io.github.social.dsh_app'); assert.equal(want.abilityName, 'EntryAbility');
   assert.deepEqual(info.actionFlags, [4]); assert.equal(info.actionType, 1);
   const key = JSON.parse(readFileSync(f.storeFile, 'utf8')).hmacKey;
   assert.match(key, /^[0-9a-f]{64}$/);
@@ -409,14 +409,14 @@ test('438 an alive signed approval notification replies without starting an abil
   assert.deepEqual(actions.errors, []); assert.equal(actions.ended, 0);
   assert.equal(f.subscribers.length, 1);
   assert.deepEqual(clone(f.subscribers[0].info), {
-    events: ['io.github.ccch1mneyyy.dsh_app.NOTIFICATION_APPROVAL'],
-    publisherBundleName: 'io.github.ccch1mneyyy.dsh_app',
+    events: ['io.github.social.dsh_app.NOTIFICATION_APPROVAL'],
+    publisherBundleName: 'io.github.social.dsh_app',
   });
   const button = request.actionButtons.find(button => button.title === '允许本次');
   const info = f.agents[button.wantAgent.agentId - 1], want = info.wants[0];
   assert.equal(info.actionType, 4, 'SEND_COMMON_EVENT cannot start a UI ability');
   assert.deepEqual(Array.from(info.actionFlags), [4], 'the button Want is immutable');
-  await f.broadcast({ event: want.action, bundleName: 'io.github.ccch1mneyyy.dsh_app', parameters: want.parameters });
+  await f.broadcast({ event: want.action, bundleName: 'io.github.social.dsh_app', parameters: want.parameters });
   assert.equal(actions.values.length, 1);
   const action = actions.values[0];
   assert.deepEqual({ ...action, actionId: 'INSTANCE' }, {
@@ -430,7 +430,7 @@ test('438 an alive signed approval notification replies without starting an abil
 
 
 const approvalPost = { ...post, key: 'approval-1', kind: 'approval', eventId: 'approval-1', canApprove: true, requestToken: 17 };
-const ownBundle = 'io.github.ccch1mneyyy.dsh_app';
+const ownBundle = 'io.github.social.dsh_app';
 function actionData(f, request, title = '允许本次') {
   const button = request.actionButtons.find(button => button.title === title);
   assert(button, title);

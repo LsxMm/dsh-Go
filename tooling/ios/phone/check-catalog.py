@@ -11,7 +11,7 @@ p.add_argument('--kotlinc', default='kotlinc')
 p.add_argument('--java', default='java')
 a = p.parse_args()
 root = a.repo.resolve()
-android = root / 'app/android/app/src/main/kotlin/io/github/ccch1mneyyy/dsh_app/phone'
+android = root / 'app/android/app/src/main/kotlin/io/github/social/dsh_app/phone'
 with tempfile.TemporaryDirectory(prefix='ios-phone-catalog-') as directory:
     jar = str(pathlib.Path(directory) / 'catalog.jar')
     subprocess.run([a.kotlinc, str(android / 'PhoneToolCatalog.kt'), str(android / 'Json.kt'),

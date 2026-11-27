@@ -42,7 +42,7 @@ Android `GlobalShellThrottle` 将所有 AI 会话的 shell 入口排成共享队
 
 ### Android：只恢复先前明确启动的引擎
 
-实现入口：[DshService](../../app/android/app/src/main/kotlin/io/github/ccch1mneyyy/dsh_app/runtime/DshService.kt)、[RuntimeController](../../app/android/app/src/main/kotlin/io/github/ccch1mneyyy/dsh_app/runtime/RuntimeController.kt)、[RuntimeServiceRecovery](../../app/android/app/src/main/kotlin/io/github/ccch1mneyyy/dsh_app/runtime/RuntimeServiceRecovery.kt)。
+实现入口：[DshService](../../app/android/app/src/main/kotlin/io/github/social/dsh_app/runtime/DshService.kt)、[RuntimeController](../../app/android/app/src/main/kotlin/io/github/social/dsh_app/runtime/RuntimeController.kt)、[RuntimeServiceRecovery](../../app/android/app/src/main/kotlin/io/github/social/dsh_app/runtime/RuntimeServiceRecovery.kt)。
 
 - 明确的启动请求保存非敏感的 `phoneStorage` / `visualReplies`，编码仅含两个布尔值；安全模式和启动方式继续使用已有持久化来源。运行且快照更新已提交时才请求 `START_STICKY`。偏好沿用异步 `apply()`，不让前台通知或停止请求等待磁盘；若被杀时尚未落盘，新进程读不到快照就不启动，不用默认值猜恢复配置。若已有旧快照而新写入/删除尚未刷盘，突然被杀仍可能读回旧的两个布尔选项；这是 best-effort 恢复提示，不是事务检查点。已处理的手动停止由系统服务停止语义阻止重建，但尚未送达的停止请求不能承诺跨崩溃生效。
 - 系统用空 intent 重建服务时，只有有效快照才启动；不存在快照就结束。未知 action 不启动引擎，安装不请求自动重建。
@@ -84,7 +84,7 @@ Android `GlobalShellThrottle` 将所有 AI 会话的 shell 入口排成共享队
 
 已增加/接入的自动检查：
 
-- [Android 恢复策略测试](../../app/android/app/src/test/kotlin/io/github/ccch1mneyyy/dsh_app/runtime/RuntimeServiceRecoveryTest.kt)：快照往返、临时环境、撤销、保存失败和跨代/跨进程自动停止；由现有 Android JVM CI 编译运行。不是完整 Service 生命周期真机测试。
+- [Android 恢复策略测试](../../app/android/app/src/test/kotlin/io/github/social/dsh_app/runtime/RuntimeServiceRecoveryTest.kt)：快照往返、临时环境、撤销、保存失败和跨代/跨进程自动停止；由现有 Android JVM CI 编译运行。不是完整 Service 生命周期真机测试。
 - [iOS 暂停时序夹具](../../tooling/ios/engine-smoke/test-pause-task.py)：抽取真实生产方法，用确定性队列/UIKit 替身验证申请先于排队、到期、回前台、闲置、旧回调和系统拒绝；不能替代 iOS 系统实际授予额度。
 - [iOS 生命周期夹具](../../tooling/ios/engine-smoke/test-engine-background.py)：对真实 `EngineLifecycle` 做回环 HTTP 应答，22 步核对 PiP、持续任务、音频、定位四个来源独立授权和撤回；修正过时的初始化、应答结构和前后台断言。
 - [iOS 增强保护夹具](../../tooling/ios/engine-smoke/test-background-protection.py)：对生产控制器、音频协调器和生命周期执行系统边界替身检查，覆盖默认关闭、显式授权、后台有任务、结束释放、音频抢占/中断和定位撤回。三份 Swift 夹具接入 [iOS compile](../../.github/workflows/ios-compile.yml) 的 PR 也运行的 engine job。
@@ -97,7 +97,7 @@ Android `GlobalShellThrottle` 将所有 AI 会话的 shell 入口排成共享队
 
 仅学习机制并在主仓独立修改，没有合并、cherry-pick 或复制第三方实现。OpenMinis 的 [GPLv3](https://github.com/OpenMinis/OpenMinis/blob/1a71df0f381cefde80bf912b723de6f9831bc177/LICENSE) 与本仓 AGPLv3 的具体移植仍需逐目录核对并保留许可/来源，不因“开源”就免除义务。
 
-- [主仓基线前台服务](https://github.com/ccch1mneyyy/dsh-Go/blob/5996f1dae5e69f542e3b5fc05f1477ef86e14163/app/android/app/src/main/kotlin/io/github/ccch1mneyyy/dsh_app/runtime/DshService.kt)、[iOS 持续处理任务](https://github.com/ccch1mneyyy/dsh-Go/blob/5996f1dae5e69f542e3b5fc05f1477ef86e14163/app/ios/Runner/ContinuedRun.swift)。
+- [主仓基线前台服务](https://github.com/ccch1mneyyy/dsh-Go/blob/5996f1dae5e69f542e3b5fc05f1477ef86e14163/app/android/app/src/main/kotlin/io/github/social/dsh_app/runtime/DshService.kt)、[iOS 持续处理任务](https://github.com/ccch1mneyyy/dsh-Go/blob/5996f1dae5e69f542e3b5fc05f1477ef86e14163/app/ios/Runner/ContinuedRun.swift)。
 - [fork iOS 保活](https://github.com/WhyWhySeeYa/dsh-Go/blob/6c6c3b72852f2bda608c5aed3d337189e24b7ebf/app/ios/Runner/ContinuedRun.swift#L134-L343)、[额外后台声明](https://github.com/WhyWhySeeYa/dsh-Go/blob/6c6c3b72852f2bda608c5aed3d337189e24b7ebf/app/ios/Runner/Info.plist#L7-L17)。
 - [Minis Android 服务](https://github.com/OpenMinis/OpenMinis/blob/1a71df0f381cefde80bf912b723de6f9831bc177/src/android/app/src/main/java/com/openminis/app/service/AgentForegroundService.kt)、[全局 shell 软预算](https://github.com/OpenMinis/OpenMinis/blob/1a71df0f381cefde80bf912b723de6f9831bc177/src/android/app/src/main/java/com/openminis/app/sandbox/GlobalShellThrottle.kt)。
 - [Minis iOS 后台保护](https://github.com/OpenMinis/OpenMinis/blob/1a71df0f381cefde80bf912b723de6f9831bc177/src/ios/Agent/Background/BackgroundKeepAliveManager.swift)、[独立 Live Activity](https://github.com/OpenMinis/OpenMinis/blob/1a71df0f381cefde80bf912b723de6f9831bc177/src/ios/Agent/Background/AgentLiveActivityManager.swift)。

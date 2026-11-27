@@ -26,7 +26,7 @@ enum IOSPhoneSelfRunnerError: Error {
     case .stopping:
       return "上一份端上 XCTest 会话还在停止，没有启动新的运行器。请等待停止完成，不要自动重复这一步。"
     case .faulted:
-      return "无法确认旧 PhoneRunner 已退出，本次不会继续操控或切换后端。请先结束旧运行器，再完全退出并重新打开 DSH Go。"
+      return "无法确认旧 PhoneRunner 已退出，本次不会继续操控或切换后端。请先结束旧运行器，再完全退出并重新打开 DSH Pro。"
     case .developerImageRequired:
       return "本机开发者镜像（DDI）尚未就绪。请回到手机连接设置，由用户选择下载并挂载；这一步不会自动安装镜像或重试操控。"
     case .setup:

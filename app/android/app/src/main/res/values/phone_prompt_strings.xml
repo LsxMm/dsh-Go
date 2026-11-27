@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="phone_prompt_approval_title">DSH Go · Approval</string>
-    <string name="phone_prompt_review_title">DSH Go · Review needed</string>
-    <string name="phone_prompt_native_title">DSH Go · Phone control</string>
-    <string name="phone_prompt_handoff_title">DSH Go · Your turn</string>
+    <string name="phone_prompt_approval_title">DSH Pro · Approval</string>
+    <string name="phone_prompt_review_title">DSH Pro · Review needed</string>
+    <string name="phone_prompt_native_title">DSH Pro · Phone control</string>
+    <string name="phone_prompt_handoff_title">DSH Pro · Your turn</string>
     <string name="phone_prompt_allow_once">Allow once</string>
     <string name="phone_prompt_allow_app">Allow this turn</string>
     <string name="phone_prompt_reject">Cancel</string>
@@ -13,7 +13,7 @@
     <string name="phone_prompt_continue">Continue</string>
     <string name="phone_prompt_remaining">%1$d s remaining · no response will not allow an action</string>
     <string name="phone_prompt_result_channel">Phone control results</string>
-    <string name="phone_prompt_result_title">DSH Go · Task complete</string>
+    <string name="phone_prompt_result_title">DSH Pro · Task complete</string>
     <string name="phone_prompt_result_text">View results</string>
     <string name="phone_skill_draft_title">DSH learned a new procedure: %1$s</string>
     <string name="phone_skill_draft_open">Tap to review the draft in this chat.</string>

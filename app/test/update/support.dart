@@ -76,7 +76,7 @@ class FakeInstaller implements UpdateInstaller {
     this.canInstall = true,
     this.inspection = const ApkInspection(
       valid: true,
-      packageName: 'io.github.ccch1mneyyy.dsh_app',
+      packageName: 'io.github.social.dsh_app',
       signatureMatches: true,
     ),
     this.result = const InstallResult(InstallStatus.success),

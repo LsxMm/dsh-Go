@@ -234,7 +234,7 @@ final class IOSPhoneActions: NSObject, EKEventEditViewDelegate, MFMessageCompose
   }
   private func present(_ controller: UIViewController) async -> IOSPhoneOutcome {
     guard let host = presenter(), host.viewIfLoaded?.window != nil, host.presentedViewController == nil else {
-      return .failure("确认界面当前不可用，请回到 DSH Go 后由用户重新发起。")
+      return .failure("确认界面当前不可用，请回到 DSH Pro 后由用户重新发起。")
     }
     return await withCheckedContinuation { continuation in
       modal = controller
@@ -248,7 +248,7 @@ final class IOSPhoneActions: NSObject, EKEventEditViewDelegate, MFMessageCompose
   func run(_ request: IOSPhoneRequest, current: @escaping () -> Bool,
            authorize: @escaping () async -> Bool, validate: @escaping () async -> Bool) async -> IOSPhoneOutcome {
     guard foreground, current(), request.expiresAt > Date().timeIntervalSince1970 * 1000 else {
-      return .failure("请先解锁并打开 DSH Go；后台或已过期的动作不执行。")
+      return .failure("请先解锁并打开 DSH Pro；后台或已过期的动作不执行。")
     }
     requestId = request.id
     let confirmation = UUID(); confirmationID = confirmation; confirmationAnswered = false
@@ -355,7 +355,7 @@ final class IOSPhoneActions: NSObject, EKEventEditViewDelegate, MFMessageCompose
       let recipient = try a.number.map { try phoneNumber($0) } ?? "由用户选择"
       return "打开短信草稿，最终由用户点发送：\n收件人：\(recipient)\n全文：\(try required(a.text))"
     case "share": return "打开系统分享面板，由用户选择目标并完成分享：\n\(try required(a.text))"
-    case "settings": return "打开 DSH Go 本 App 的系统设置页；不会更改任何设置。"
+    case "settings": return "打开 DSH Pro 本 App 的系统设置页；不会更改任何设置。"
     case "navigate":
       guard ["drive", "walk", "transit"].contains(a.mode ?? "") else { throw CocoaError(.coderInvalidValue) }
       return "在 Apple Maps 打开路线请求，由用户核对目的地并开始导航：\n目的地：\(try required(a.destination, max: 1024))\n方式：\(a.mode!)"

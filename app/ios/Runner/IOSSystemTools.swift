@@ -77,7 +77,7 @@ final class IOSSystemTools: NSObject, PHPickerViewControllerDelegate, CLLocation
 
   func run(_ request: IOSPhoneRequest, authorize: () async -> Bool, current: () -> Bool) async -> IOSPhoneOutcome {
     guard UIApplication.shared.applicationState == .active, current() else {
-      return .failure("系统工具要用户在 DSH Go 里才能用。没有执行。")
+      return .failure("系统工具要用户在 DSH Pro 里才能用。没有执行。")
     }
     let kind = String(request.action.kind.dropFirst("system-".count))
     guard let data = request.action.params?.data(using: .utf8),
@@ -120,7 +120,7 @@ final class IOSSystemTools: NSObject, PHPickerViewControllerDelegate, CLLocation
   private func stillWanted(_ current: () -> Bool) throws {
     guard current() else { throw Failure("这个工具调用已经结束，没有执行。") }
     guard UIApplication.shared.applicationState == .active, UIApplication.shared.isProtectedDataAvailable else {
-      throw Failure("请先解锁并打开 DSH Go；没有继续读取或写入。")
+      throw Failure("请先解锁并打开 DSH Pro；没有继续读取或写入。")
     }
   }
 

@@ -63,7 +63,7 @@ final class ContinuedRun {
     guard registered else { trace("registration-failed"); return }
     let request = BGContinuedProcessingTaskRequest(
       identifier: identifier,
-      title: String(localized: "DSH Go is working"),
+      title: String(localized: "DSH Pro is working"),
       subtitle: String(localized: "This conversation is still going"))
     // Now or not at all: a turn is no use to anyone once it has already paused.
     request.strategy = .fail

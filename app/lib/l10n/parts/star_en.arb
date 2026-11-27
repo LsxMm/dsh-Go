@@ -1,5 +1,5 @@
 {
-  "starPromptTitle": "{hours, plural, =0{I’ve kept you company in DSH Go for half an hour now~} =1{I’ve kept you company in DSH Go for an hour now~} other{I’ve kept you company in DSH Go for {hours} hours now~}}",
+  "starPromptTitle": "{hours, plural, =0{I’ve kept you company in DSH Pro for half an hour now~} =1{I’ve kept you company in DSH Pro for an hour now~} other{I’ve kept you company in DSH Pro for {hours} hours now~}}",
   "@starPromptTitle": {
     "placeholders": {
       "hours": {
@@ -7,18 +7,18 @@
       }
     }
   },
-  "starPromptBody": "DSH Go is free and open source. If it’s made your phone a little nicer to use, please give it a Star — it means so much to this little whale!",
+  "starPromptBody": "DSH Pro is free and open source. If it’s made your phone a little nicer to use, please give it a Star — it means so much to this little whale!",
   "starPromptPlea": "Pretty please~ It really matters!!",
-  "starPromptBody2": "Looks like you like it here! A Star takes a few seconds, helps more people find DSH Go, and keeps this little whale going!",
+  "starPromptBody2": "Looks like you like it here! A Star takes a few seconds, helps more people find DSH Pro, and keeps this little whale going!",
   "starPromptPlea2": "Just one star from you~",
-  "starPromptBody3": "DSH Go is free, with no ads — Stars are how more people get to see it. If it’s helped you, would you give this little whale a star?",
+  "starPromptBody3": "DSH Pro is free, with no ads — Stars are how more people get to see it. If it’s helped you, would you give this little whale a star?",
   "starPromptPlea3": "Waiting here with hopeful eyes~",
-  "starPromptBody4": "I’ve been here all along. If DSH Go is something you open every day now, a Star is the best thank-you its author could get.",
+  "starPromptBody4": "I’ve been here all along. If DSH Pro is something you open every day now, a Star is the best thank-you its author could get.",
   "starPromptPlea4": "Pretty please, just one tap~",
   "starPromptBody5": "This is the last time I’ll ask. Star or not, I’ll keep you company all the same. But if you’d like, a Star would make this little whale very happy!",
   "starPromptPlea5": "Last time, pretty please!",
   "starPromptStar": "Star it on GitHub",
   "starPromptDone": "Already starred",
   "starPromptLater": "Maybe later",
-  "starSettingsTitle": "Star DSH Go on GitHub"
+  "starSettingsTitle": "Star DSH Pro on GitHub"
 }

@@ -67,7 +67,7 @@ App 侧真正缺的有四样：
 | 产物 | 有 `ArtifactKind.video` 和图标、MIME 表，但预览页没有视频播放。`pubspec.yaml` 里没有任何视频播放依赖 | `app/lib/state/artifacts.dart:17-58`；`app/lib/ui/chat/widgets/artifact_card.dart:388` |
 | 远程读文件 | `workspaceFiles/stat` + `workspaceFiles/readBytes` 分块读取，**所有通道都能用**（中转走 base64）。单个产物上限 300 MiB，缩略图上限 8 MiB | `packages/dsh_client/lib/src/files_api.dart:1-13`；`app/lib/state/artifact_files.dart:19-22` |
 | 全屏看图 | 黑底，左上返回 + 标题，右上「保存到相册」，双指缩放到 8 倍。一次只看一张，不能左右滑 | `app/lib/ui/chat/artifact_preview.dart:1372-1487` |
-| 保存到相册 | `dsh/media` 的 `saveImage {bytes, name, mime}` 写进 `Pictures/DSH Go`，只收 png / jpeg / gif / webp，**字节整块走 MethodChannel**。文件图片按原字节保存，不重新编码 | `MediaPlugin.kt:27-40,214-233`；`app/lib/media/gallery.dart:101-125` |
+| 保存到相册 | `dsh/media` 的 `saveImage {bytes, name, mime}` 写进 `Pictures/DSH Pro`，只收 png / jpeg / gif / webp，**字节整块走 MethodChannel**。文件图片按原字节保存，不重新编码 | `MediaPlugin.kt:27-40,214-233`；`app/lib/media/gallery.dart:101-125` |
 | 保存到下载 | `dsh/files` 的 `saveToDownloads {path, name, mime}` 按路径走 MediaStore Downloads，任何类型都行 | `FilesPlugin.kt:32-49` |
 | 斜杠命令 | `commands/execute` 现在总是发 `submittedAttachments: []`，但已经解析了命令是否接收附件 | `packages/dsh_client/lib/src/session_api.dart:693-696`；`app/lib/state/commands_state.dart:132` |
 | 后台任务完成 | 完成通知作为一条「后台任务」消息显示（`BackgroundTaskNotice`） | `app/lib/ui/chat/widgets/background_task_notice.dart` |

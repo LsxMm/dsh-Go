@@ -4,7 +4,7 @@
 
 追加8所说的版本后缀变化会触发已有本机运行环境的重新安装。`RuntimeInstaller.isCurrent()` 直接比较已安装 `rootfs.version` 与资产 manifest 的完整 `runtimeVersion`；不等时 `RuntimeController.install()` 调用安装器，重新校验整包、解压到 staging、激活并写新版本。已有 installedVersion、没有选择放弃本机的用户在正常启动流程中会自动进入这条升级路径。
 
-依据为 c0949d6 的 `app/android/app/src/main/kotlin/io/github/ccch1mneyyy/dsh_app/runtime/RuntimeInstaller.kt:35–45,70–101`、`RuntimeController.kt:108–114,180–194`，以及 `app/lib/ui/shell/root_gate.dart:49–83,330–348`、`app/lib/ui/onboarding/runtime_setup_page.dart:87–104`。完整13文件调用链和 SHA256 在本项交付证据 `source-chain.json`、`M5-2-android-reinstall-source.md`。没有改 Android、Flutter、direct 或 bridge 源码，也没有运行 Android 安装器。约750MB来自追加8，本次没有测量该数值。
+依据为 c0949d6 的 `app/android/app/src/main/kotlin/io/github/social/dsh_app/runtime/RuntimeInstaller.kt:35–45,70–101`、`RuntimeController.kt:108–114,180–194`，以及 `app/lib/ui/shell/root_gate.dart:49–83,330–348`、`app/lib/ui/onboarding/runtime_setup_page.dart:87–104`。完整13文件调用链和 SHA256 在本项交付证据 `source-chain.json`、`M5-2-android-reinstall-source.md`。没有改 Android、Flutter、direct 或 bridge 源码，也没有运行 Android 安装器。约750MB来自追加8，本次没有测量该数值。
 
 本补丁接 M4-7 的显式目标目录与 M5-1 的 required `--target`。版本锁定 DSH `0.2.1-rc.4`；只在本批精确已审的源码上保留 afb5cdd recipe 身份。DSH Android 选择集为既有11个公共 diff。M4-7、M5-1 的实际树对照覆盖30,444路径、26,871普通文件，字节及模式一致；那份测量用于证明补丁选择的等价性。这里另外验证 recipe 自身，不能用前一结论代替后一结论。
 

@@ -11,7 +11,7 @@ body:
   - type: input
     id: version
     attributes:
-      label: DSH Go 版本
+      label: DSH Pro 版本
       description: 设置 › 关于 里那个版本号
       placeholder: 1.0.4 (10400021)
     validations:

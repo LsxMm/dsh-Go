@@ -11,7 +11,7 @@ final class IOSPhoneRunner {
   private static let missing =
     "手机操控没有运行，所以这一步没有执行。请告诉用户：先在 Mac 上运行 tooling/ios/phone-runner.sh，让手机操控的测试进程跑起来，再重试。不要自动反复重试。"
   static let coreStopUnconfirmed =
-    "ERR_PHONE_STOP_UNCONFIRMED：开发者连接的清理尚未确认，不能继续操控或切换到 XCTest。请告诉用户：彻底关闭 DSH Go 后重新打开，再由用户发起；不要自动重试。"
+    "ERR_PHONE_STOP_UNCONFIRMED：开发者连接的清理尚未确认，不能继续操控或切换到 XCTest。请告诉用户：彻底关闭 DSH Pro 后重新打开，再由用户发起；不要自动重试。"
 
   private typealias Endpoint = PhoneRunnerEndpoint
 
@@ -185,7 +185,7 @@ final class IOSPhoneRunner {
     guard !mustCore || link.enabled else { return .failure("这个应用固定使用 CoreDevice，但本机连接已关闭。") }
     let returnTarget = needsTarget ? targetApplication : nil
     let returnDescription = returnTarget.map {
-      "\n\n本任务已选择目标应用：\($0)。需要离开 DSH Go 时会请求系统将它置于前台，再重新核对画面；不会重复已经派发的动作。"
+      "\n\n本任务已选择目标应用：\($0)。需要离开 DSH Pro 时会请求系统将它置于前台，再重新核对画面；不会重复已经派发的动作。"
     } ?? ""
     let description = plan.consentDescription(targetLabel: coreActions.targetLabel(plan, ownerID: ownerID,
       sessionID: request.owner.sessionId))
@@ -195,7 +195,7 @@ final class IOSPhoneRunner {
       guard await consent.prepareForeground(request, current: live), live(),
         await IOSPhoneClipboard.shared.resolvePending(request, actions: actions, current: live), live() else {
         retireConnection(ownerID: ownerID, invocationID: invocationID)
-        return .failure("请先回到 DSH Go 处理上次剪贴板恢复；没有执行新动作。")
+        return .failure("请先回到 DSH Pro 处理上次剪贴板恢复；没有执行新动作。")
       }
     }
     let preview = coreActions.approvalPreview(plan, ownerID: ownerID, sessionID: request.owner.sessionId)
@@ -455,7 +455,7 @@ final class IOSPhoneRunner {
   }
 
   /// The user does something themselves, likely in another app, and comes back to say they did.
-  /// A notification is how they find out when DSH Go isn't in front. Tapping it only opens the app.
+  /// A notification is how they find out when DSH Pro isn't in front. Tapping it only opens the app.
   private func handOver(_ request: IOSPhoneRequest) async -> IOSPhoneOutcome {
     let reason = request.action.text ?? ""
     if UIApplication.shared.applicationState != .active {
